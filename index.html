@@ -3,472 +3,596 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>J2M Medical | Distribuição profissional • Logística eficiente</title>
-  <meta name="description" content="Distribuidora B2B de materiais e insumos. Distribuição profissional com logística eficiente e entregas rápidas em Mato Grosso do Sul." />
+  <title>J2M Medical | Distribuição profissional com logística eficiente</title>
+  <meta name="description" content="Distribuição B2B no MS com entregas rápidas, padronização e reposição organizada. Hospitais, clínicas e operações profissionais." />
 
   <style>
     :root{
-      --bg:#f5faf8;
+      --bg:#f4f8f7;
       --card:#ffffff;
-      --text:#0f2d2a;
-      --muted:#5f7774;
-      --line:#dbe7e4;
-
+      --text:#0f2330;
+      --muted:#54626d;
+      --border:#e2ebe7;
       --green:#1f8f5f;
-      --green-2:#136a46;
-
-      --shadow: 0 18px 50px rgba(12, 40, 36, .08);
+      --green2:#136a46;
+      --shadow:0 14px 30px rgba(10,35,48,.08);
       --radius:18px;
+      --radius2:14px;
     }
 
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 12% 0%, rgba(31,143,95,.10), transparent 55%),
-        radial-gradient(900px 520px at 90% 8%, rgba(19,106,70,.08), transparent 55%),
+        radial-gradient(1000px 520px at 10% 0%, rgba(31,143,95,.11), transparent 55%),
+        radial-gradient(900px 520px at 90% 4%, rgba(15,35,48,.08), transparent 55%),
         var(--bg);
+      line-height:1.45;
     }
 
     a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
-    .wrap{max-width:1120px;margin:0 auto;padding:26px 22px 90px}
-    .topbar{
-      background: rgba(255,255,255,.78);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px 18px;
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 10px;
-      z-index: 10;
-    }
+    /* Header */
     header{
       display:flex;align-items:center;justify-content:space-between;gap:18px;
+      padding:14px 0 16px;
+      border-bottom:2px solid var(--border);
+      position:sticky;top:0;z-index:20;
+      background:rgba(244,248,247,.86);
+      backdrop-filter: blur(10px);
     }
-
     .brand{display:flex;align-items:center;gap:14px}
-    .brand-badge{
-      width:74px;height:74px;
-      border-radius: 18px;
-      background: #fff;
-      border:1px solid var(--line);
-      box-shadow: 0 14px 30px rgba(12,40,36,.10);
-      display:flex;align-items:center;justify-content:center;
-      overflow:hidden;
+    .brand img{
+      height:64px; width:auto; display:block;
+      padding:8px; background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 10px 22px rgba(15,35,48,.10);
     }
-    .brand-badge img{
-      width:64px;height:64px;
-      object-fit:contain;
-      display:block;
-    }
-
-    .brand-text strong{display:block;font-size:18px;line-height:1.05}
-    .brand-text span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
-
-    nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .brand .tagline{display:flex;flex-direction:column;gap:2px}
+    .brand .tagline strong{font-size:16px;letter-spacing:.2px}
+    .brand .tagline span{font-size:12.5px;color:var(--muted)}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     nav a{
-      color:var(--muted);
-      font-size:14px;
-      padding:8px 10px;
-      border-radius: 10px;
-    }
-    nav a:hover{
-      background: rgba(31,143,95,.08);
-      color: var(--text);
-    }
-
-    .hero{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:24px;
-      align-items:start;
-    }
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
-      nav{justify-content:flex-start}
-    }
-
-    .kicker{
-      color: var(--green-2);
-      font-weight: 800;
-      letter-spacing:.08em;
-      text-transform: uppercase;
-      font-size:12px;
-      margin: 14px 0 10px;
-    }
-    h1{
-      margin:0;
-      font-size:56px;
-      line-height:1.05;
-      letter-spacing:-.02em;
-    }
-    @media (max-width: 520px){
-      h1{font-size:40px}
-    }
-
-    .lead{
-      color: var(--muted);
-      font-size:16px;
-      line-height:1.7;
-      margin: 14px 0 18px;
-      max-width: 58ch;
-    }
-
-    .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:8px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 18px;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size:14px;
+      font-size:14px;color:var(--muted);
+      padding:8px 10px;border-radius:12px;
       border:1px solid transparent;
+    }
+    nav a:hover{border-color:var(--border);background:rgba(255,255,255,.7);color:var(--text)}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-weight:800;font-size:14.5px;
+      box-shadow:0 10px 20px rgba(10,35,48,.06);
       cursor:pointer;
     }
-    .btn-primary{
-      background: var(--green);
-      color:#fff;
-      box-shadow: 0 18px 38px rgba(31,143,95,.20);
+    .btn.primary{
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      color:#fff;border-color:transparent;
+      box-shadow:0 14px 26px rgba(31,143,95,.25);
     }
-    .btn-primary:hover{background: var(--green-2)}
-    .btn-ghost{
-      background:#fff;
-      color: var(--text);
-      border-color: var(--line);
-    }
-    .btn-ghost:hover{border-color: rgba(31,143,95,.35)}
+    .btn.ghost{background:rgba(255,255,255,.6)}
+    .btn.small{padding:10px 12px;border-radius:12px;font-size:14px}
 
-    .micro{
-      color: var(--muted);
-      font-size: 12.5px;
-      margin-top: 10px;
+    /* Hero */
+    .hero{padding:28px 0 12px}
+    .hero-grid{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;
     }
+    .kicker{
+      color:var(--green2);font-weight:900;font-size:13.5px;
+      letter-spacing:.4px;text-transform:uppercase;
+    }
+    h1{
+      font-size:clamp(34px,4.1vw,56px);
+      line-height:1.04;margin:10px 0 12px;letter-spacing:-.8px;
+    }
+    .lead{
+      margin:0 0 18px;
+      font-size:16.8px;color:var(--muted);
+      max-width:62ch;
+    }
+    .lead b{color:var(--text)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .subnote{margin-top:10px;color:var(--muted);font-size:13px}
 
+    /* Panels */
     .panel{
-      background: var(--card);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
       padding:18px;
     }
-    .panel h3{
-      margin:0 0 10px;
-      font-size:14px;
-      color: var(--green-2);
-      display:flex;gap:10px;align-items:center;
-    }
-    .pill{
+    .badge{
       display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(31,143,95,.25);
-      background: rgba(31,143,95,.06);
-      color: var(--green-2);
-      font-weight: 800;
-      margin-bottom: 10px;
+      font-size:12.5px;font-weight:900;
+      color:var(--green2);
+      background:rgba(31,143,95,.10);
+      border:1px solid rgba(31,143,95,.18);
+      padding:7px 10px;border-radius:999px;
+      margin-bottom:12px;
     }
-    .panel .card{
-      border:1px solid var(--line);
-      border-radius: 14px;
-      padding:14px;
-      margin-top:10px;
-      background: #fff;
+    .mini-grid{display:grid;gap:12px}
+    .mini{
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      padding:14px;background:#fff;
     }
-    .panel .card strong{display:block;margin-bottom:4px}
-    .panel .card span{color:var(--muted);font-size:13px;line-height:1.5}
+    .mini b{display:block;margin-bottom:4px}
+    .mini p{margin:0;color:var(--muted);font-size:14px}
 
-    section{margin-top:42px}
-    h2{margin:0 0 10px;font-size:26px}
-    .sub{color:var(--muted);margin:0 0 16px;line-height:1.6}
+    /* Sections */
+    section{padding:18px 0}
+    h2{margin:0 0 10px;font-size:22px;letter-spacing:-.3px}
+    .subtitle{margin:0 0 12px;color:var(--muted);font-size:14.5px}
 
-    .chips{display:flex;gap:10px;flex-wrap:wrap}
-    .chip{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: 999px;
-      padding:10px 14px;
-      font-size:13px;
-      color: var(--text);
+    /* Segments */
+    .segments{display:flex;flex-wrap:wrap;gap:10px}
+    .seg{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.82);
+      box-shadow:0 10px 18px rgba(10,35,48,.04);
+      font-size:14px;
     }
+    .segments-note{margin:10px 0 0;color:var(--muted);font-size:14px}
 
-    .grid-steps{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 980px){ .grid-steps{grid-template-columns:1fr 1fr} }
-    @media (max-width: 520px){ .grid-steps{grid-template-columns:1fr} }
-
-    .step{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
+    /* Brands */
+    .brands-wrap{
+      background:rgba(255,255,255,.70);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 12px 22px rgba(10,35,48,.05);
       padding:16px;
-      box-shadow: 0 10px 25px rgba(12,40,36,.06);
     }
-    .step .num{
-      width:34px;height:34px;border-radius: 10px;
+    .brands{
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:12px;
+      align-items:center;
+    }
+    .brand-logo{
+      height:72px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#fff;
       display:flex;align-items:center;justify-content:center;
-      background: rgba(31,143,95,.10);
-      color: var(--green-2);
-      font-weight: 900;
+      padding:10px;
+      overflow:hidden;
+    }
+    .brand-logo img{
+      max-height:52px; max-width:100%;
+      width:auto; height:auto;
+      display:block;
+      object-fit:contain;
+    }
+
+    /* Product tiles (sem imagens reais, leve e vendedor) */
+    .prod-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+    .prod{
+      background:#fff;border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      padding:14px;
+    }
+    .prod b{display:block;margin-bottom:6px}
+    .prod p{margin:0;color:var(--muted);font-size:14px}
+    .prod .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;font-weight:900;
+      color:var(--green2);
+      background:rgba(31,143,95,.10);
+      border:1px solid rgba(31,143,95,.18);
+      padding:6px 10px;border-radius:999px;
       margin-bottom:10px;
     }
-    .step strong{display:block;margin-bottom:6px}
-    .step span{color:var(--muted);font-size:13px;line-height:1.5}
 
-    /* Marcas */
-    .brands{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:16px;
-      box-shadow: 0 10px 25px rgba(12,40,36,.06);
-    }
-    .brand-grid{
+    /* Steps */
+    .steps{
       display:grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:12px;
+      margin-top:10px;
     }
-    @media (max-width: 980px){ .brand-grid{grid-template-columns: repeat(3, 1fr);} }
-    @media (max-width: 520px){ .brand-grid{grid-template-columns: repeat(2, 1fr);} }
+    .step{
+      background:#fff;border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      padding:14px;
+    }
+    .step .n{
+      width:34px;height:34px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;color:#fff;
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      margin-bottom:10px;
+    }
+    .step h3{margin:0 0 6px;font-size:15px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .cta-final{
+      margin-top:12px;
+      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    }
+    .cta-final span{color:var(--muted);font-size:13px}
 
-    .brand-tile{
-      background:#ffffff;
-      border:1px solid var(--line);
-      border-radius: 14px;
-      height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px;
+    /* Whats niche buttons */
+    .whats-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:10px;
     }
-    .brand-tile img{
-      max-width: 100%;
-      max-height: 52px;
-      object-fit: contain;
-      display:block;
+    .whats-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      padding:14px;
     }
+    .whats-card b{display:block;margin-bottom:6px}
+    .whats-card p{margin:0 0 10px;color:var(--muted);font-size:14px}
 
-    /* Contato */
-    .footer{
-      margin-top:46px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color: var(--muted);
+    /* Contact */
+    .contact-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;
+      margin-top:10px;
+    }
+    .contact{
+      background:#fff;border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      padding:14px;
+    }
+    .contact b{display:block;margin-bottom:6px}
+    .contact p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{
+      margin-top:28px;
+      padding:18px 0 30px;
+      border-top:2px solid var(--border);
+      color:var(--muted);
       font-size:13px;
-      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     }
-    .addr{line-height:1.6}
+
+    /* Responsive */
+    @media (max-width: 1020px){
+      .hero-grid{grid-template-columns:1fr}
+      .brands{grid-template-columns:repeat(4,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .whats-grid{grid-template-columns:repeat(2,1fr)}
+      .prod-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 640px){
+      header{position:static;background:transparent;backdrop-filter:none}
+      nav{justify-content:flex-start}
+      .brands{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:1fr}
+      .whats-grid{grid-template-columns:1fr}
+      .prod-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .brand img{height:60px}
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-
-    <div class="topbar">
-      <header>
-        <div class="brand">
-          <div class="brand-badge" title="J2M Medical">
-            <!-- IMPORTANTE: este arquivo precisa estar no repositório com este nome -->
-            <img src="logo opção final 1.png" alt="J2M Medical" />
-          </div>
-          <div class="brand-text">
-            <strong>J2M Medical</strong>
-            <span>Distribuição profissional • Logística eficiente</span>
-          </div>
+    <header>
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/carlospereirams/j2mmedical-site/refs/heads/main/logo%20op%C3%A7%C3%A3o%20final%201.png" alt="J2M Medical" />
+        <div class="tagline">
+          <strong>J2M Medical</strong>
+          <span>Distribuição profissional • logística eficiente</span>
         </div>
+      </div>
 
-        <nav>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#marcas">Marcas</a>
-          <a href="#quem-atendemos">Quem atendemos</a>
-          <a href="#cotacao">Cotação</a>
-          <a href="#contato">Contato</a>
-        </nav>
-      </header>
-    </div>
+      <nav>
+        <a href="#produtos">Solução</a>
+        <a href="#diagnostico">Quando trocar</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#segmentos">Quem atendemos</a>
+        <a href="#como">Como funciona</a>
+        <a href="#cotacao">Cotação</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-    <main>
-      <section class="hero" id="atendimento">
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="hero-grid">
         <div>
           <div class="kicker">Distribuição B2B • Mato Grosso do Sul</div>
           <h1>Seu atendimento não pode parar.</h1>
           <p class="lead">
-            Reposição profissional com <b>logística eficiente</b> para hospitais, clínicas e empresas
-            que precisam de entrega rápida e padrão de fornecimento.
+            Abastecimento com <b>logística ágil</b>, processo padronizado e acompanhamento ativo.
+            <br/>Entregas em até <b>24h no MS</b> • Campo Grande com atendimento contínuo.
           </p>
 
           <div class="cta">
-            <a class="btn btn-primary"
-               href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20cota%C3%A7%C3%A3o.%20Meu%20nicho%20%C3%A9%3A%20(Hospital%2FCl%C3%ADnica%2FConsult%C3%B3rio%2FVeterin%C3%A1ria%2FCasa%20de%20repouso%2FOutro).%20Pode%20me%20ajudar%3F"
-               target="_blank" rel="noopener">
-              Chamar no WhatsApp
+            <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical.%20Posso%20enviar%20minha%20lista%20ou%20receber%20sugest%C3%B5es%20dos%20itens%20mais%20utilizados." target="_blank" rel="noopener">
+              Solicitar cotação no WhatsApp
             </a>
-
-            <a class="btn btn-ghost"
-               href="#cotacao">
-              Fazer cotação rápida
-            </a>
+            <a class="btn ghost" href="#cotacao">Começar pelos itens de maior consumo</a>
           </div>
 
-          <div class="micro">
-            Entregas rápidas em MS • Campo Grande: atendimento contínuo
+          <div class="subnote">
+            Nosso diferencial não é preço. É <b>atendimento</b> e <b>entrega rápida</b>, com padrão e previsibilidade.
           </div>
         </div>
 
-        <aside class="panel">
-          <div class="pill">✓ Entrega rápida no MS</div>
-
-          <div class="card">
-            <strong>Reposição programada</strong>
-            <span>Evita faltas e urgências. Mais previsibilidade para sua rotina.</span>
-          </div>
-
-          <div class="card">
-            <strong>Atendimento consultivo</strong>
-            <span>Foco em solução e continuidade do cuidado — não só em preço.</span>
-          </div>
-
-          <div class="card">
-            <strong>Operação de confiança</strong>
-            <span>Processo, regularidade e padrão de entrega para comprar com segurança.</span>
-          </div>
-        </aside>
-      </section>
-
-      <section id="marcas">
-        <h2>Marcas reconhecidas no mercado</h2>
-        <p class="sub">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
-
-        <div class="brands">
-          <div class="brand-grid">
-            <!-- IMPORTANTE: os arquivos precisam existir exatamente assim no repositório -->
-            <div class="brand-tile"><img src="m01.jpg" alt="Marca 01" loading="lazy"></div>
-            <div class="brand-tile"><img src="m02.jpg" alt="Marca 02" loading="lazy"></div>
-            <div class="brand-tile"><img src="m03.jpg" alt="Marca 03" loading="lazy"></div>
-            <div class="brand-tile"><img src="m04.jpg" alt="Marca 04" loading="lazy"></div>
-            <div class="brand-tile"><img src="m05.jpg" alt="Marca 05" loading="lazy"></div>
-            <div class="brand-tile"><img src="m06.jpg" alt="Marca 06" loading="lazy"></div>
-            <div class="brand-tile"><img src="m07.jpg" alt="Marca 07" loading="lazy"></div>
-            <div class="brand-tile"><img src="m08.jpg" alt="Marca 08" loading="lazy"></div>
-            <div class="brand-tile"><img src="m09.jpg" alt="Marca 09" loading="lazy"></div>
-            <div class="brand-tile"><img src="m10.jpg" alt="Marca 10" loading="lazy"></div>
-            <div class="brand-tile"><img src="m11.jpg" alt="Marca 11" loading="lazy"></div>
-            <div class="brand-tile"><img src="m12.jpg" alt="Marca 12" loading="lazy"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="quem-atendemos">
-        <h2>Quem atendemos</h2>
-        <p class="sub">
-          Mantemos nossa essência (hospital e clínicas) e também atendemos operações profissionais de uso contínuo
-          que precisam de reposição rápida e padronizada.
-        </p>
-
-        <div class="chips">
-          <div class="chip">Hospitais</div>
-          <div class="chip">Clínicas médicas</div>
-          <div class="chip">Consultórios</div>
-          <div class="chip">Clínicas veterinárias</div>
-          <div class="chip">Casas de repouso</div>
-        </div>
-      </section>
-
-      <section id="como-funciona">
-        <h2>Começar é simples</h2>
-        <p class="sub">Você não precisa trocar de fornecedor de uma vez. Comece pelos itens de maior consumo.</p>
-
-        <div class="grid-steps">
-          <div class="step">
-            <div class="num">1</div>
-            <strong>Envie sua lista</strong>
-            <span>Manda sua lista atual (ou foto do que mais usa).</span>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <strong>Padronizamos para você</strong>
-            <span>Organizamos recorrência, marcas e alternativas compatíveis.</span>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <strong>Você testa sem risco</strong>
-            <span>Primeiro pedido enxuto para validar o padrão de entrega.</span>
-          </div>
-          <div class="step">
-            <div class="num">4</div>
-            <strong>Reposição contínua</strong>
-            <span>Depois você só aprova: a reposição vira rotina.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="cotacao">
-        <h2>Cotação rápida</h2>
-        <p class="sub"><b>A</b> — “Me fale de quais produtos tem interesse” + sugestões por nicho (mais vendedor).</p>
-
+        <!-- BLOCO 2 (eficiência operacional) -->
         <div class="panel">
-          <div class="card">
-            <strong>Mensagem pronta (copiar e enviar)</strong>
-            <span>
-              Olá! Para agilizar sua cotação: você é <b>(Hospital / Clínica / Consultório / Veterinária / Casa de repouso / Outro)</b>?<br>
-              Quais itens você tem interesse hoje? Se preferir, posso te sugerir os itens de maior consumo do seu nicho.
-            </span>
+          <div class="badge">✓ Abastecimento sem complicação</div>
+          <div class="mini-grid">
+            <div class="mini">
+              <b>Entrega previsível</b>
+              <p>Você sabe quando chega — sem precisar cobrar.</p>
+            </div>
+            <div class="mini">
+              <b>Processo padronizado</b>
+              <p>Pedido sempre do mesmo jeito, com menos retrabalho.</p>
+            </div>
+            <div class="mini">
+              <b>Reposição organizada</b>
+              <p>Menos urgência e menos compras emergenciais.</p>
+            </div>
+            <div class="mini">
+              <b>Resposta rápida</b>
+              <p>Atendimento direto no WhatsApp comercial.</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="cta" style="margin-top:14px">
-            <a class="btn btn-primary"
-               href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Para%20agilizar%20minha%20cota%C3%A7%C3%A3o%3A%20meu%20nicho%20%C3%A9%20(Hospital%2FCl%C3%ADnica%2FConsult%C3%B3rio%2FVeterin%C3%A1ria%2FCasa%20de%20repouso%2FOutro).%20Quais%20itens%20voc%C3%AAs%20me%20recomendam%20para%20meu%20nicho%3F"
-               target="_blank" rel="noopener">
-              Abrir no WhatsApp
+    <!-- SOLUÇÃO COMPLETA + itens de reposição (sem virar catálogo) -->
+    <section id="produtos">
+      <h2>Uma única solução para tudo que seu atendimento precisa</h2>
+      <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos — com reposição organizada e entrega rápida.</p>
+
+      <div class="prod-grid">
+        <div class="prod">
+          <div class="tag">Reposição diária</div>
+          <b>Materiais descartáveis</b>
+          <p>Luva, seringa, agulha, gaze, máscara, papel lençol e itens de consumo contínuo.</p>
+        </div>
+        <div class="prod">
+          <div class="tag">Linha clínica</div>
+          <b>Soros e soluções</b>
+          <p>Itens críticos de rotina, com entrega previsível e padronização.</p>
+        </div>
+        <div class="prod">
+          <div class="tag">Centralização</div>
+          <b>Medicamentos e controlados</b>
+          <p>Uma operação só para reduzir retrabalho, urgências e compras emergenciais.</p>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:12px">
+        <div class="mini">
+          <b>Por que isso importa?</b>
+          <p>Menos pedidos quebrados, menos correria da equipe e mais previsibilidade de estoque — sem abandonar sua essência hospitalar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGNÓSTICO (consultivo + comercial) -->
+    <section id="diagnostico">
+      <h2>Talvez não seja preço…</h2>
+      <p class="subtitle">
+        Às vezes o problema não está no valor do produto, mas no impacto da falta dele.
+        Quando a equipe precisa parar para procurar material, adaptar procedimento ou reorganizar agenda por falta de reposição,
+        o custo não aparece na nota — aparece na rotina.
+      </p>
+
+      <div class="panel">
+        <div class="mini">
+          <b>Sinais de que a operação pode melhorar</b>
+          <p>
+            • pedidos feitos sempre em cima da hora<br>
+            • compras divididas em vários fornecedores<br>
+            • equipe perguntando diariamente se “chegou material”<br>
+            • procedimentos adaptados por falta de item específico<br>
+            • entregas fora de sequência
+          </p>
+        </div>
+
+        <div class="mini" style="margin-top:12px">
+          <b>Se isso acontece com frequência</b>
+          <p>Normalmente não é uma questão de preço — é organização de abastecimento.</p>
+        </div>
+
+        <div class="cta" style="margin-top:16px">
+          <a class="btn primary"
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20analisar%20minha%20rotina%20de%20reposi%C3%A7%C3%A3o%20com%20a%20J2M%20Medical."
+             target="_blank" rel="noopener">
+            Podemos analisar sua rotina de reposição
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section id="marcas">
+      <h2>Marcas reconhecidas no mercado</h2>
+      <p class="subtitle">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
+
+      <div class="brands-wrap">
+        <div class="brands" aria-label="Logos de fornecedores">
+          <div class="brand-logo"><img src="marcas/m01.jpg" alt="Fornecedor 01" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m02.jpg" alt="Fornecedor 02" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m03.jpg" alt="Fornecedor 03" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m04.jpg" alt="Fornecedor 04" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m05.jpg" alt="Fornecedor 05" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m06.jpg" alt="Fornecedor 06" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m07.jpg" alt="Fornecedor 07" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m08.jpg" alt="Fornecedor 08" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m09.jpg" alt="Fornecedor 09" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m10.jpg" alt="Fornecedor 10" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m11.jpg" alt="Fornecedor 11" loading="lazy"></div>
+          <div class="brand-logo"><img src="marcas/m12.jpg" alt="Fornecedor 12" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM ATENDEMOS (limpo e especialista) -->
+    <section id="segmentos">
+      <h2>Quem atendemos</h2>
+      <div class="segments">
+        <span class="seg">Hospitais</span>
+        <span class="seg">Clínicas médicas</span>
+        <span class="seg">Consultórios</span>
+        <span class="seg">Clínicas veterinárias</span>
+        <span class="seg">Casas de repouso</span>
+      </div>
+      <p class="segments-note">
+        Também atendemos estabelecimentos profissionais de uso contínuo que precisam de reposição rápida e padronizada.
+      </p>
+    </section>
+
+    <!-- COMO FUNCIONA (mais vendedor) -->
+    <section id="como">
+      <h2>Começar é simples</h2>
+      <p class="subtitle">Você não precisa trocar de fornecedor de uma vez. Comece pelos itens de maior consumo.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <h3>Envie sua lista</h3>
+          <p>Você manda sua lista atual ou foto do pedido no WhatsApp.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <h3>Padronizamos para você</h3>
+          <p>Organizamos itens recorrentes e reposição ideal para não faltar material.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <h3>Você testa sem risco</h3>
+          <p>Primeiro pedido pequeno para validar qualidade, prazo e atendimento.</p>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <h3>Reposição contínua</h3>
+          <p>Depois você só aprova. Nós lembramos, separamos e entregamos.</p>
+        </div>
+      </div>
+
+      <div class="cta-final">
+        <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical.%20Posso%20enviar%20minha%20lista%20ou%20receber%20sugest%C3%B5es." target="_blank" rel="noopener">
+          Enviar minha lista agora
+        </a>
+        <span>Resposta em horário comercial • Campo Grande: atendimento contínuo</span>
+      </div>
+    </section>
+
+    <!-- CTA por nicho (botões grandes) -->
+    <section id="cotacao">
+      <h2>Solicite sua cotação</h2>
+      <p class="subtitle">
+        Nos informe quais produtos você utiliza ou, se preferir, apresentamos sugestões dos itens mais consumidos no seu tipo de estabelecimento.
+      </p>
+
+      <div class="whats-grid">
+        <div class="whats-card">
+          <b>Hospital / Clínica</b>
+          <p>Começar pelos itens de maior consumo.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20uma%20cl%C3%ADnica%2Fhospital%20em%20Campo%20Grande.%20Quero%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+
+        <div class="whats-card">
+          <b>Consultório</b>
+          <p>Reposição rápida e padronizada.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Tenho%20um%20consult%C3%B3rio%20e%20quero%20testar%20a%20reposi%C3%A7%C3%A3o%20de%20materiais%20com%20voc%C3%AAs." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+
+        <div class="whats-card">
+          <b>Veterinária</b>
+          <p>Fornecimento recorrente para rotina clínica.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20uma%20cl%C3%ADnica%20veterin%C3%A1ria%20e%20quero%20entender%20como%20funciona%20o%20fornecimento%20recorrente." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+
+        <div class="whats-card">
+          <b>Farmácia / Drogaria</b>
+          <p>Itens de maior giro com entrega ágil.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Tenho%20uma%20farm%C3%A1cia%20e%20gostaria%20de%20conhecer%20os%20itens%20de%20maior%20giro%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+
+        <div class="whats-card">
+          <b>Casa de repouso</b>
+          <p>Reposição constante e previsível.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20respons%C3%A1vel%20por%20uma%20casa%20de%20repouso%20e%20preciso%20melhorar%20a%20reposi%C3%A7%C3%A3o%20dos%20materiais." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+
+        <div class="whats-card">
+          <b>Outro estabelecimento</b>
+          <p>Profissionais de uso contínuo.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Tenho%20um%20estabelecimento%20profissional%20e%20quero%20conhecer%20o%20fornecimento%20da%20J2M%20Medical." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contact-grid">
+        <div class="contact">
+          <b>WhatsApp</b>
+          <p>
+            <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20atendimento%20da%20J2M%20Medical." target="_blank" rel="noopener">
+              +55 (67) 98194-0129
             </a>
-            <a class="btn btn-ghost" href="#contato">Ver contato</a>
-          </div>
+          </p>
         </div>
-
-        <p class="micro" style="margin-top:10px">
-          (Quando você migrar para o Wattswap, a gente troca este link e coloca o fluxo de identificação do nicho.)
-        </p>
-      </section>
-
-      <section id="contato">
-        <h2>Contato</h2>
-        <p class="sub">Se preferir, fale direto com a equipe. Resposta rápida.</p>
-
-        <div class="panel">
-          <div class="card">
-            <strong>WhatsApp</strong>
-            <span>(67) 98194-0129</span>
-          </div>
-          <div class="card">
-            <strong>Endereço</strong>
-            <span>Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande - MS</span>
-          </div>
-
-          <div class="cta" style="margin-top:14px">
-            <a class="btn btn-primary"
-               href="https://wa.me/5567981940129"
-               target="_blank" rel="noopener">Chamar agora</a>
-          </div>
+        <div class="contact">
+          <b>E-mail</b>
+          <p>
+            <a class="btn small" href="mailto:comercial@j2mmedical.com.br" target="_blank" rel="noopener">
+              comercial@j2mmedical.com.br
+            </a>
+          </p>
         </div>
-
-        <div class="footer">
-          <div>© <span id="y"></span> J2M Medical</div>
-          <div class="addr">Distribuição profissional • logística eficiente • MS</div>
+        <div class="contact">
+          <b>Endereço</b>
+          <p>Rua Eugenio Silverio, 105 • Bairro Nova Lima • Campo Grande-MS</p>
         </div>
-      </section>
-    </main>
+        <div class="contact">
+          <b>Entrega</b>
+          <p>Em até 24h no MS • Campo Grande: atendimento contínuo</p>
+        </div>
+      </div>
+    </section>
 
+    <footer>
+      <div><b>J2M Medical</b> — distribuição profissional com logística eficiente.</div>
+      <div>Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande-MS</div>
+      <div>WhatsApp: +55 (67) 98194-0129 • E-mail: comercial@j2mmedical.com.br</div>
+    </footer>
   </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
