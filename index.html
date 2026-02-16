@@ -1,206 +1,212 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> <div class="brand">
-  <img src="logo.png" alt="J2M Medical">
-</div>
-| Distribuição e Entrega 24h em MS</title>
-  <meta name="description" content="Distribuidora B2B de materiais e insumos. Entrega em até 24h no Mato Grosso do Sul e atendimento contínuo em Campo Grande." />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#0f1a2e;
-      --text:#e9eef6;
-      --muted:#b7c3d6;
-      --green:#63b35a;
-      --line:rgba(255,255,255,.10);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(99,179,90,.25), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(99,179,90,.12), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{height:44px;width:auto}
-    .nav{display:flex;gap:14px;color:var(--muted);font-size:14px}
-    .nav a{padding:8px 10px;border-radius:10px}
-    .nav a:hover{background:rgba(255,255,255,.06)}
+<title>J2M Medical | Distribuição Hospitalar em MS</title>
+<meta name="description" content="Distribuidora B2B de materiais e insumos hospitalares. Entrega em até 24h no Mato Grosso do Sul." />
 
-    .hero{
-      padding:52px 0 28px;
-      border-top:1px solid var(--line);
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:26px;
-      align-items:center;
-    }
-    .kicker{color:var(--muted);font-size:14px;margin:0 0 10px}
-    h1{font-size:44px;line-height:1.08;margin:0 0 14px;letter-spacing:-.8px}
-    .sub{color:var(--muted);font-size:18px;line-height:1.5;margin:0 0 18px}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 10px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 16px;border-radius:12px;border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      font-weight:700;font-size:14px;
-      transition:.15s transform ease, .15s background ease;
-    }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
-    .btn.primary{background:linear-gradient(90deg, rgba(99,179,90,.95), rgba(99,179,90,.75));border-color:transparent;color:#06120a}
-    .trust{color:var(--muted);font-size:13px;margin:8px 0 0}
+<style>
+:root{
+--bg:#f4f7f6;
+--card:#ffffff;
+--text:#1c2b36;
+--muted:#6b7b88;
+--green:#2e9e5b;
+--line:#e4eaee;
+--radius:18px;
+--shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px;
-    }
-    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:999px;background:rgba(99,179,90,.10);border:1px solid rgba(99,179,90,.25);color:var(--text);font-size:13px}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-      margin-top:14px;
-    }
-    .mini{
-      background:rgba(0,0,0,.18);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.35;
-    }
-    .mini b{color:var(--text)}
-    section{padding:26px 0}
-    .section-title{font-size:18px;margin:0 0 12px}
-    .audience{
-      display:flex;flex-wrap:wrap;gap:10px
-    }
-    .tag{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      padding:10px 12px;border-radius:14px;font-size:14px
-    }
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,Segoe UI,Roboto,Arial;
+background:var(--bg);
+color:var(--text);
+}
 
-    footer{
-      margin-top:26px;
-      border-top:1px solid var(--line);
-      padding:18px 0 30px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .footgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-    .footgrid b{color:var(--text)}
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .grid{grid-template-columns:1fr}
-      .footgrid{grid-template-columns:1fr}
-      .nav{display:none}
-    }
-  </style>
+.wrap{max-width:1100px;margin:auto;padding:24px}
+
+header{
+display:flex;justify-content:space-between;align-items:center;
+border-bottom:1px solid var(--line);
+padding-bottom:12px;margin-bottom:30px;
+}
+
+.brand img{height:48px}
+
+.nav{display:flex;gap:18px;color:var(--muted)}
+.nav a:hover{color:var(--green)}
+
+.hero{
+display:grid;grid-template-columns:1.2fr .8fr;gap:40px;
+align-items:center;margin-bottom:40px;
+}
+
+h1{
+font-size:52px;
+margin:10px 0;
+color:#0e2a3a;
+}
+
+.lead{
+font-size:18px;color:var(--muted);
+max-width:520px;
+}
+
+.btn{
+padding:14px 18px;border-radius:14px;
+border:1px solid var(--line);
+background:white;cursor:pointer;
+font-weight:600;
+}
+
+.btn.primary{
+background:var(--green);
+color:white;border:none;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:var(--radius);
+padding:22px;
+box-shadow:var(--shadow);
+}
+
+.mini{
+border:1px solid var(--line);
+padding:14px;border-radius:14px;margin-top:12px;
+}
+
+.section{margin-top:50px}
+
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{
+border:1px solid var(--line);
+padding:10px 14px;border-radius:999px;
+background:white;
+}
+
+footer{
+margin-top:60px;padding-top:25px;
+border-top:1px solid var(--line);
+color:var(--muted);
+font-size:14px;
+}
+
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img src="assets/logo-j2m.png" alt="J2M Medical" />
-      </div>
-      <nav class="nav">
-        <a href="#publico">Atendimento</a>
-        <a href="#como">Como funciona</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
+<div class="wrap">
 
-    <main>
-      <section class="hero">
-        <div class="hero-grid">
-          <div>
-            <p class="kicker">Distribuição B2B • Mato Grosso do Sul</p>
-            <h1>Seu atendimento não pode parar.</h1>
-            <p class="sub">
-              Reposição profissional e entrega rápida para <b>hospitais, clínicas</b> e empresas
-              em todo Mato Grosso do Sul.
-            </p>
+<header>
+<div class="brand">
+<img src="logo.png">
+</div>
 
-            <div class="cta">
-              <!-- Troque o número no link do WhatsApp -->
-              <a class="btn primary" href="https://wa.me/55SEUNUMEROAQUI?text=Ol%C3%A1%21%20Quero%20organizar%20meu%20abastecimento%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
-                Chamar no WhatsApp
-              </a>
-              <a class="btn" href="mailto:comercial@j2mmedical.com.br?subject=Contato%20-%20J2M%20Medical">
-                Falar com especialista
-              </a>
-            </div>
+<nav class="nav">
+<a href="#atendimento">Atendimento</a>
+<a href="#como">Como funciona</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
 
-            <p class="trust">Entregas em até 24h no MS • Campo Grande: atendimento contínuo</p>
-          </div>
+<section class="hero">
 
-          <div class="card">
-            <span class="pill">✅ Entrega 24h no MS</span>
-            <div class="grid">
-              <div class="mini"><b>Reposição programada</b><br/>Evita falta e correria no dia a dia.</div>
-              <div class="mini"><b>Atendimento consultivo</b><br/>B2B com foco em solução, não em “preço”.</div>
-              <div class="mini"><b>Operação de confiança</b><br/>Processo, regularidade e padrão de entrega.</div>
-            </div>
-          </div>
-        </div>
-      </section>
+<div>
+<div style="color:var(--green);font-weight:600;">Distribuição B2B • Mato Grosso do Sul</div>
 
-      <section id="publico">
-        <h2 class="section-title">Para quem atendemos</h2>
-        <div class="audience">
-          <span class="tag">Hospitais</span>
-          <span class="tag">Clínicas médicas</span>
-          <span class="tag">Consultórios</span>
-          <span class="tag">Clínicas veterinárias</span>
-          <span class="tag">Farmácias e drogarias</span>
-          <span class="tag">Casas de repouso</span>
-          <span class="tag">Barbearias</span>
-          <span class="tag">Salões e estética</span>
-        </div>
-      </section>
+<h1>Seu atendimento não pode parar.</h1>
 
-      <section id="como">
-        <h2 class="section-title">Como funciona</h2>
-        <div class="grid">
-          <div class="mini"><b>1) Você chama</b><br/>WhatsApp rápido, sem burocracia.</div>
-          <div class="mini"><b>2) Padronizamos</b><br/>Lista de itens recorrentes + reposição.</div>
-          <div class="mini"><b>3) Entregamos</b><br/>Agilidade e acompanhamento para não faltar.</div>
-        </div>
-      </section>
-    </main>
+<p class="lead">
+Reposição profissional e entrega rápida para <b>hospitais, clínicas e empresas</b> em todo Mato Grosso do Sul.
+</p>
 
-    <footer id="contato">
-      <div class="footgrid">
-        <div>
-          <b>J2M Medical</b><br/>
-          <!-- Preencha aqui com o endereço completo -->
-          Rua NOME DA RUA, Nº X • Bairro NOME DO BAIRRO • Campo Grande - MS
-        </div>
-        <div>
-          <b>Contato</b><br/>
-          E-mail: <a href="mailto:comercial@j2mmedical.com.br">comercial@j2mmedical.com.br</a><br/>
-          WhatsApp: <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">+55 (67) SEU NÚMERO</a>
-        </div>
-      </div>
-    </footer>
-  </div>
+<div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn primary" href="https://wa.me/5567981940129?text=Olá! Quero organizar meu abastecimento com a J2M Medical." target="_blank">
+Chamar no WhatsApp
+</a>
+
+<a class="btn" href="mailto:comercial@j2mmedical.com.br">
+Falar com especialista
+</a>
+</div>
+
+<div style="margin-top:12px;color:var(--muted);font-size:13px">
+Entregas em até 24h no MS • Campo Grande atendimento contínuo
+</div>
+
+</div>
+
+<div class="card">
+<b style="color:var(--green)">Entrega 24h no MS</b>
+
+<div class="mini">
+<b>Reposição programada</b>
+<div>Evita falta e correria no dia a dia.</div>
+</div>
+
+<div class="mini">
+<b>Atendimento consultivo</b>
+<div>Foco em solução, não em preço.</div>
+</div>
+
+<div class="mini">
+<b>Operação de confiança</b>
+<div>Regularidade e padrão de entrega.</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="atendimento">
+<h2>Para quem atendemos</h2>
+<div class="pills">
+<span class="pill">Hospitais</span>
+<span class="pill">Clínicas médicas</span>
+<span class="pill">Consultórios</span>
+<span class="pill">Veterinárias</span>
+<span class="pill">Farmácias</span>
+<span class="pill">Casas de repouso</span>
+<span class="pill">Barbearias</span>
+<span class="pill">Estética</span>
+</div>
+</section>
+
+<section class="section" id="como">
+<h2>Como funciona</h2>
+
+<div class="mini"><b>1) Você chama</b><br>WhatsApp rápido sem burocracia</div>
+<div class="mini"><b>2) Padronizamos</b><br>Lista recorrente de reposição</div>
+<div class="mini"><b>3) Entregamos</b><br>Agilidade e acompanhamento</div>
+
+</section>
+
+<section class="section" id="contato">
+<h2>Contato</h2>
+
+<div class="card">
+<b>J2M Medical</b><br><br>
+
+Rua Eugenio Silverio 105<br>
+Bairro Nova Lima<br>
+Campo Grande - MS<br><br>
+
+E-mail: comercial@j2mmedical.com.br<br>
+WhatsApp: (67) 98194-0129
+</div>
+
+</section>
+
+<footer>
+J2M Medical • Distribuição profissional de materiais hospitalares
+</footer>
+
+</div>
 </body>
 </html>
