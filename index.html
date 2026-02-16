@@ -1,210 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <title>J2M Medical | Distribuição Hospitalar em MS</title>
-<meta name="description" content="Distribuidora B2B de materiais e insumos hospitalares. Entrega em até 24h no Mato Grosso do Sul." />
+<meta name="description" content="Distribuidora B2B de materiais e insumos hospitalares. Entrega em até 24h no Mato Grosso do Sul."/>
 
 <style>
 :root{
+--primary:#2e9e5b;
+--text:#1f2d3d;
+--muted:#6b7a88;
 --bg:#f4f7f6;
 --card:#ffffff;
---text:#1c2b36;
---muted:#6b7b88;
---green:#2e9e5b;
---line:#e4eaee;
---radius:18px;
---shadow:0 10px 25px rgba(0,0,0,.08);
+--border:#e2e8ee;
 }
 
 *{box-sizing:border-box}
 body{
 margin:0;
-font-family:system-ui,Segoe UI,Roboto,Arial;
+font-family:Segoe UI,Roboto,Arial;
 background:var(--bg);
 color:var(--text);
 }
 
-.wrap{max-width:1100px;margin:auto;padding:24px}
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
 
 header{
-display:flex;justify-content:space-between;align-items:center;
-border-bottom:1px solid var(--line);
-padding-bottom:12px;margin-bottom:30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+border-bottom:1px solid var(--border);
 }
 
-.brand img{height:48px}
-
-.nav{display:flex;gap:18px;color:var(--muted)}
-.nav a:hover{color:var(--green)}
-
-.hero{
-display:grid;grid-template-columns:1.2fr .8fr;gap:40px;
-align-items:center;margin-bottom:40px;
-}
-
-h1{
-font-size:52px;
-margin:10px 0;
-color:#0e2a3a;
-}
-
-.lead{
-font-size:18px;color:var(--muted);
-max-width:520px;
-}
-
-.btn{
-padding:14px 18px;border-radius:14px;
-border:1px solid var(--line);
-background:white;cursor:pointer;
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
 font-weight:600;
 }
 
-.btn.primary{
-background:var(--green);
-color:white;border:none;
+.logo img{
+height:42px;
+}
+
+nav a{
+margin-left:22px;
+text-decoration:none;
+color:var(--text);
+font-size:14px;
+}
+
+.hero{
+padding:60px 0 30px;
+}
+
+h1{
+font-size:44px;
+margin:10px 0 10px;
+}
+
+.subtitle{
+color:var(--muted);
+font-size:18px;
+max-width:600px;
+line-height:1.5;
+}
+
+.buttons{
+margin-top:28px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+margin-right:12px;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+
+.btn-secondary{
+border:1px solid var(--border);
+color:var(--text);
+background:white;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+margin-top:40px;
 }
 
 .card{
 background:var(--card);
-border:1px solid var(--line);
-border-radius:var(--radius);
 padding:22px;
-box-shadow:var(--shadow);
+border-radius:12px;
+border:1px solid var(--border);
 }
 
-.mini{
-border:1px solid var(--line);
-padding:14px;border-radius:14px;margin-top:12px;
+.section-title{
+margin-top:70px;
+font-size:26px;
 }
 
-.section{margin-top:50px}
+.badges{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:20px;
+}
 
-.pills{display:flex;flex-wrap:wrap;gap:10px}
-.pill{
-border:1px solid var(--line);
-padding:10px 14px;border-radius:999px;
+.badge{
+border:1px solid var(--border);
+padding:8px 14px;
+border-radius:20px;
+font-size:14px;
 background:white;
 }
 
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.step{
+background:white;
+padding:20px;
+border-radius:12px;
+border:1px solid var(--border);
+}
+
 footer{
-margin-top:60px;padding-top:25px;
-border-top:1px solid var(--line);
+margin-top:80px;
+padding:40px 0;
+border-top:1px solid var(--border);
 color:var(--muted);
 font-size:14px;
 }
-
 </style>
 </head>
 
 <body>
-<div class="wrap">
+
+<div class="container">
 
 <header>
-<div class="brand">
-<img src="logo.png">
+<div class="logo">
+<img src="https://raw.githubusercontent.com/carlospereirams/j2mmedical-site/refs/heads/main/logo%20op%C3%A7%C3%A3o%20final%201.png">
+<span>J2M Medical</span>
 </div>
 
-<nav class="nav">
-<a href="#atendimento">Atendimento</a>
-<a href="#como">Como funciona</a>
-<a href="#contato">Contato</a>
+<nav>
+<a href="#">Atendimento</a>
+<a href="#">Como funciona</a>
+<a href="#">Contato</a>
 </nav>
 </header>
 
 <section class="hero">
 
-<div>
-<div style="color:var(--green);font-weight:600;">Distribuição B2B • Mato Grosso do Sul</div>
+<div style="color:var(--primary);font-weight:600">Distribuição B2B • Mato Grosso do Sul</div>
 
 <h1>Seu atendimento não pode parar.</h1>
 
-<p class="lead">
-Reposição profissional e entrega rápida para <b>hospitais, clínicas e empresas</b> em todo Mato Grosso do Sul.
-</p>
-
-<div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
-<a class="btn primary" href="https://wa.me/5567981940129?text=Olá! Quero organizar meu abastecimento com a J2M Medical." target="_blank">
-Chamar no WhatsApp
-</a>
-
-<a class="btn" href="mailto:comercial@j2mmedical.com.br">
-Falar com especialista
-</a>
+<div class="subtitle">
+Reposição profissional e entrega rápida para hospitais, clínicas e empresas de saúde em todo Mato Grosso do Sul.
 </div>
 
-<div style="margin-top:12px;color:var(--muted);font-size:13px">
-Entregas em até 24h no MS • Campo Grande atendimento contínuo
-</div>
-
-</div>
-
-<div class="card">
-<b style="color:var(--green)">Entrega 24h no MS</b>
-
-<div class="mini">
-<b>Reposição programada</b>
-<div>Evita falta e correria no dia a dia.</div>
-</div>
-
-<div class="mini">
-<b>Atendimento consultivo</b>
-<div>Foco em solução, não em preço.</div>
-</div>
-
-<div class="mini">
-<b>Operação de confiança</b>
-<div>Regularidade e padrão de entrega.</div>
-</div>
-
+<div class="buttons">
+<a class="btn btn-primary" href="https://wa.me/5567981940129">Chamar no WhatsApp</a>
+<a class="btn btn-secondary" href="#">Falar com especialista</a>
 </div>
 
 </section>
 
-<section class="section" id="atendimento">
-<h2>Para quem atendemos</h2>
-<div class="pills">
-<span class="pill">Hospitais</span>
-<span class="pill">Clínicas médicas</span>
-<span class="pill">Consultórios</span>
-<span class="pill">Veterinárias</span>
-<span class="pill">Farmácias</span>
-<span class="pill">Casas de repouso</span>
-<span class="pill">Barbearias</span>
-<span class="pill">Estética</span>
-</div>
-</section>
-
-<section class="section" id="como">
-<h2>Como funciona</h2>
-
-<div class="mini"><b>1) Você chama</b><br>WhatsApp rápido sem burocracia</div>
-<div class="mini"><b>2) Padronizamos</b><br>Lista recorrente de reposição</div>
-<div class="mini"><b>3) Entregamos</b><br>Agilidade e acompanhamento</div>
-
-</section>
-
-<section class="section" id="contato">
-<h2>Contato</h2>
-
-<div class="card">
-<b>J2M Medical</b><br><br>
-
-Rua Eugenio Silverio 105<br>
-Bairro Nova Lima<br>
-Campo Grande - MS<br><br>
-
-E-mail: comercial@j2mmedical.com.br<br>
-WhatsApp: (67) 98194-0129
+<div class="cards">
+<div class="card"><b>Entrega 24h no MS</b><br>Logística própria e acompanhamento.</div>
+<div class="card"><b>Reposição programada</b><br>Evita faltas e urgências.</div>
+<div class="card"><b>Atendimento consultivo</b><br>Foco em solução, não preço.</div>
 </div>
 
-</section>
+<h2 class="section-title">Para quem atendemos</h2>
+
+<div class="badges">
+<span class="badge">Hospitais</span>
+<span class="badge">Clínicas médicas</span>
+<span class="badge">Consultórios</span>
+<span class="badge">Veterinárias</span>
+<span class="badge">Farmácias e drogarias</span>
+<span class="badge">Casas de repouso</span>
+<span class="badge">Barbearias</span>
+<span class="badge">Estética</span>
+</div>
+
+<h2 class="section-title">Como funciona</h2>
+
+<div class="steps">
+<div class="step"><b>1) Você chama</b><br>WhatsApp rápido, sem burocracia.</div>
+<div class="step"><b>2) Padronizamos</b><br>Lista recorrente + reposição.</div>
+<div class="step"><b>3) Entregamos</b><br>Agilidade e acompanhamento.</div>
+</div>
 
 <footer>
-J2M Medical • Distribuição profissional de materiais hospitalares
+<b>J2M Medical</b><br>
+Rua Eugênio Silvério, 105 • Nova Lima<br>
+Campo Grande - MS<br><br>
+WhatsApp: (67) 98194-0129
 </footer>
 
 </div>
