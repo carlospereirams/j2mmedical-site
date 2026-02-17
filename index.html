@@ -44,31 +44,19 @@
       background:rgba(244,248,247,.86);
       backdrop-filter: blur(10px);
     }
-
     .brand{display:flex;align-items:center;gap:14px}
-    /* BLOCO da LOGO maior e com destaque */
-    .brand .logo-box{
-      width:110px;
-      height:110px;
-      border-radius:18px;
+
+    /* ===== LOGO COM DESTAQUE (AJUSTADO) ===== */
+    .brand img{
+      height:96px;            /* AQUI aumenta a logo */
+      width:auto;
+      display:block;
+      padding:12px;           /* “moldura” */
       background:#fff;
       border:1px solid var(--border);
-      box-shadow:0 14px 26px rgba(15,35,48,.14);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px;
-      overflow:hidden;
+      border-radius:18px;
+      box-shadow:0 16px 34px rgba(15,35,48,.14);
     }
-    .brand .logo-box img{
-      max-width:100%;
-      max-height:100%;
-      width:auto;
-      height:auto;
-      display:block;
-      object-fit:contain;
-    }
-
     .brand .tagline{display:flex;flex-direction:column;gap:2px}
     .brand .tagline strong{font-size:16px;letter-spacing:.2px}
     .brand .tagline span{font-size:12.5px;color:var(--muted)}
@@ -178,7 +166,7 @@
       align-items:center;
     }
     .brand-logo{
-      height:78px;
+      height:72px;
       border:1px solid var(--border);
       border-radius:14px;
       background:#fff;
@@ -187,7 +175,7 @@
       overflow:hidden;
     }
     .brand-logo img{
-      max-height:56px; max-width:100%;
+      max-height:52px; max-width:100%;
       width:auto; height:auto;
       display:block;
       object-fit:contain;
@@ -301,7 +289,7 @@
       .whats-grid{grid-template-columns:1fr}
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .brand .logo-box{width:92px;height:92px}
+      .brand img{height:78px;padding:10px}
     }
   </style>
 </head>
@@ -310,11 +298,8 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo-box">
-          <!-- LOGO: coloque um arquivo chamado logo.png na raiz do repo -->
-          <img src="logo.png" alt="J2M Medical" />
-        </div>
-
+        <!-- LOGO NOVA -->
+        <img src="logo.jpg" alt="J2M Medical" />
         <div class="tagline">
           <strong>J2M Medical</strong>
           <span>Distribuição profissional • logística eficiente</span>
@@ -380,7 +365,7 @@
       </div>
     </section>
 
-    <!-- SOLUÇÃO -->
+    <!-- SOLUÇÃO COMPLETA -->
     <section id="produtos">
       <h2>Uma única solução para tudo que seu atendimento precisa</h2>
       <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos — com reposição organizada e entrega rápida.</p>
@@ -454,7 +439,7 @@
 
       <div class="brands-wrap">
         <div class="brands" aria-label="Logos de fornecedores">
-          <!-- MARCAS: arquivos m01.jpg ... m12.jpg na raiz do repo -->
+          <!-- AJUSTADO: arquivos na raiz (m01.jpg ... m12.jpg) -->
           <div class="brand-logo"><img src="m01.jpg" alt="Fornecedor 01" loading="lazy"></div>
           <div class="brand-logo"><img src="m02.jpg" alt="Fornecedor 02" loading="lazy"></div>
           <div class="brand-logo"><img src="m03.jpg" alt="Fornecedor 03" loading="lazy"></div>
@@ -595,7 +580,7 @@
         <div class="contact">
           <b>E-mail</b>
           <p>
-            <a class="btn small" href="mailto:comercial@j2mmedical.com.br">
+            <a class="btn small" href="mailto:comercial@j2mmedical.com.br" target="_blank" rel="noopener">
               comercial@j2mmedical.com.br
             </a>
           </p>
