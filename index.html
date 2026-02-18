@@ -59,20 +59,27 @@
 
     /* LOGO maior */
     .brand .logo-box{
-      width:150px;height:110px;
-      display:flex;align-items:center;justify-content:center;
-      padding:12px;
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:0 16px 32px rgba(15,35,48,.14);
+  width:170px;
+  height:120px;
+  display:flex;align-items:center;justify-content:center;
+  padding:6px;                /* era 12px */
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 16px 32px rgba(15,35,48,.14);
+  overflow:hidden;            /* importante */
+}
+
     }
     .brand img{
-      max-height:88px;
-      max-width:100%;
-      width:auto;height:auto;
-      display:block;
-      object-fit:contain;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  transform:scale(1.25);      /* “zoom” na marca */
+  transform-origin:center;
+}
+
     }
 
     .brand .tagline{display:flex;flex-direction:column;gap:2px}
