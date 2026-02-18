@@ -6,16 +6,6 @@
   <title>J2M Medical | Distribuição profissional com logística eficiente</title>
   <meta name="description" content="Distribuição B2B no MS com entregas rápidas, padronização e reposição organizada. Hospitais, clínicas e operações profissionais." />
 
-  <!-- Open Graph (pra ficar bonito ao compartilhar no WhatsApp) -->
-  <meta property="og:title" content="J2M Medical | Distribuição profissional com logística eficiente" />
-  <meta property="og:description" content="Entrega em até 24h no MS • Reposição organizada • Processo padronizado • +400 clientes/mês" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.jpg" />
-  <meta property="og:image:alt" content="Logo J2M Medical" />
-
-  <!-- Favicon simples -->
-  <link rel="icon" href="logo.jpg" />
-
   <style>
     :root{
       --bg:#f4f8f7;
@@ -51,16 +41,27 @@
       padding:14px 0 16px;
       border-bottom:2px solid var(--border);
       position:sticky;top:0;z-index:20;
-      background:rgba(244,248,247,.90);
+      background:rgba(244,248,247,.88);
       backdrop-filter: blur(10px);
     }
     .brand{display:flex;align-items:center;gap:14px}
-    .brand img{
-      height:92px; width:auto; display:block;
-      padding:10px; background:#fff;
+    /* OPÇÃO A: logo institucional com mais presença */
+    .brand .logo-box{
+      width:112px;
+      height:88px;
+      display:flex;align-items:center;justify-content:center;
+      padding:10px;
+      background:#fff;
       border:1px solid var(--border);
       border-radius:16px;
-      box-shadow:0 14px 26px rgba(15,35,48,.14);
+      box-shadow:0 14px 28px rgba(15,35,48,.12);
+    }
+    .brand img{
+      max-height:68px;
+      max-width:100%;
+      width:auto;
+      height:auto;
+      display:block;
       object-fit:contain;
     }
     .brand .tagline{display:flex;flex-direction:column;gap:2px}
@@ -72,7 +73,7 @@
       padding:8px 10px;border-radius:12px;
       border:1px solid transparent;
     }
-    nav a:hover{border-color:var(--border);background:rgba(255,255,255,.7);color:var(--text)}
+    nav a:hover{border-color:var(--border);background:rgba(255,255,255,.75);color:var(--text)}
 
     /* Buttons */
     .btn{
@@ -83,16 +84,14 @@
       font-weight:800;font-size:14.5px;
       box-shadow:0 10px 20px rgba(10,35,48,.06);
       cursor:pointer;
-      white-space:nowrap;
     }
     .btn.primary{
       background:linear-gradient(135deg,var(--green),var(--green2));
       color:#fff;border-color:transparent;
       box-shadow:0 14px 26px rgba(31,143,95,.25);
     }
-    .btn.ghost{background:rgba(255,255,255,.6)}
+    .btn.ghost{background:rgba(255,255,255,.65)}
     .btn.small{padding:10px 12px;border-radius:12px;font-size:14px}
-    .btn.full{width:100%}
 
     /* Hero */
     .hero{padding:28px 0 12px}
@@ -116,24 +115,6 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
     .subnote{margin-top:10px;color:var(--muted);font-size:13px}
 
-    /* Proof strip */
-    .proof{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      margin-top:14px;
-    }
-    .proof .p{
-      background:rgba(255,255,255,.75);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:12px;
-      box-shadow:0 12px 20px rgba(10,35,48,.05);
-      font-size:13.5px;
-      color:var(--muted);
-    }
-    .proof .p b{color:var(--text)}
-
     /* Panels */
     .panel{
       background:var(--card);
@@ -151,6 +132,7 @@
       padding:7px 10px;border-radius:999px;
       margin-bottom:12px;
     }
+    .badges-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
     .mini-grid{display:grid;gap:12px}
     .mini{
       border:1px solid var(--border);
@@ -191,7 +173,7 @@
       align-items:center;
     }
     .brand-logo{
-      height:74px;
+      height:72px;
       border:1px solid var(--border);
       border-radius:14px;
       background:#fff;
@@ -200,7 +182,7 @@
       overflow:hidden;
     }
     .brand-logo img{
-      max-height:56px; max-width:100%;
+      max-height:52px; max-width:100%;
       width:auto; height:auto;
       display:block;
       object-fit:contain;
@@ -253,6 +235,11 @@
     }
     .step h3{margin:0 0 6px;font-size:15px}
     .step p{margin:0;color:var(--muted);font-size:14px}
+    .cta-final{
+      margin-top:12px;
+      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    }
+    .cta-final span{color:var(--muted);font-size:13px}
 
     /* Whats niche buttons */
     .whats-grid{
@@ -300,7 +287,6 @@
       .steps{grid-template-columns:repeat(2,1fr)}
       .whats-grid{grid-template-columns:repeat(2,1fr)}
       .prod-grid{grid-template-columns:repeat(2,1fr)}
-      .proof{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width: 640px){
       header{position:static;background:transparent;backdrop-filter:none}
@@ -310,7 +296,8 @@
       .whats-grid{grid-template-columns:1fr}
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .brand img{height:78px}
+      .brand .logo-box{width:98px;height:78px}
+      .brand img{max-height:60px}
     }
   </style>
 </head>
@@ -319,8 +306,10 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <!-- LOGO LOCAL -->
-        <img src="logo.jpg" alt="J2M Medical" />
+        <div class="logo-box">
+          <!-- LOGO DO REPO (raiz) -->
+          <img src="logo.jpg" alt="J2M Medical" />
+        </div>
         <div class="tagline">
           <strong>J2M Medical</strong>
           <span>Distribuição profissional • logística eficiente</span>
@@ -344,33 +333,31 @@
         <div>
           <div class="kicker">Distribuição B2B • Mato Grosso do Sul</div>
           <h1>Seu atendimento não pode parar.</h1>
+
           <p class="lead">
             Abastecimento com <b>logística ágil</b>, processo padronizado e acompanhamento ativo.
             <br/>Entregas em até <b>24h no MS</b> • Campo Grande com atendimento contínuo.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical.%0A%0A1%29%20Meu%20segmento%3A%20_____%0A2%29%20Cidade%20%28MS%29%3A%20_____%0A3%29%20Quero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">
+            <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical.%20Posso%20enviar%20minha%20lista%20ou%20receber%20sugest%C3%B5es%20dos%20itens%20mais%20utilizados." target="_blank" rel="noopener">
               Solicitar cotação no WhatsApp
             </a>
-            <a class="btn ghost" href="#cotacao">Quero sugestão de itens por segmento</a>
+            <a class="btn ghost" href="#cotacao">Começar pelos itens de maior consumo</a>
           </div>
 
           <div class="subnote">
             Nosso diferencial não é preço. É <b>atendimento</b> e <b>entrega rápida</b>, com padrão e previsibilidade.
           </div>
-
-          <div class="proof" aria-label="Provas de operação">
-            <div class="p"><b>Entrega em até 24h</b><br/>em todo MS</div>
-            <div class="p"><b>Reposição organizada</b><br/>menos urgência</div>
-            <div class="p"><b>Processo padronizado</b><br/>menos retrabalho</div>
-            <div class="p"><b>+400 clientes/mês</b><br/>em operações ativas</div>
-          </div>
         </div>
 
         <!-- BLOCO 2 (eficiência operacional) -->
         <div class="panel">
-          <div class="badge">✓ Abastecimento sem complicação</div>
+          <div class="badges-row">
+            <div class="badge">✓ Abastecimento sem complicação</div>
+            <div class="badge">+400 clientes/mês</div>
+          </div>
+
           <div class="mini-grid">
             <div class="mini">
               <b>Entrega previsível</b>
@@ -418,8 +405,8 @@
 
       <div class="panel" style="margin-top:12px">
         <div class="mini">
-          <b>Resumo executivo</b>
-          <p>Você ganha previsibilidade de estoque e rotina mais leve — sem perder sua essência hospitalar.</p>
+          <b>Por que isso importa?</b>
+          <p>Menos pedidos quebrados, menos correria da equipe e mais previsibilidade de estoque — sem abandonar sua essência hospitalar.</p>
         </div>
       </div>
     </section>
@@ -429,17 +416,18 @@
       <h2>Talvez não seja preço…</h2>
       <p class="subtitle">
         Às vezes o problema não está no valor do produto, mas no impacto da falta dele.
-        Quando a equipe para por falta de item, o custo não aparece na nota — aparece na rotina.
+        Quando a equipe precisa parar para procurar material, adaptar procedimento ou reorganizar agenda por falta de reposição,
+        o custo não aparece na nota — aparece na rotina.
       </p>
 
       <div class="panel">
         <div class="mini">
           <b>Sinais de que a operação pode melhorar</b>
           <p>
-            • pedidos sempre em cima da hora<br>
+            • pedidos feitos sempre em cima da hora<br>
             • compras divididas em vários fornecedores<br>
             • equipe perguntando diariamente se “chegou material”<br>
-            • procedimento adaptado por falta de item específico<br>
+            • procedimentos adaptados por falta de item específico<br>
             • entregas fora de sequência
           </p>
         </div>
@@ -451,32 +439,33 @@
 
         <div class="cta" style="margin-top:16px">
           <a class="btn primary"
-             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20analisar%20minha%20rotina%20de%20reposi%C3%A7%C3%A3o%20com%20a%20J2M%20Medical.%0A%0ASegmento%3A%20_____%0ACidade%3A%20_____%0AHoje%20meu%20maior%20problema%20%C3%A9%3A%20_____" target="_blank" rel="noopener">
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20analisar%20minha%20rotina%20de%20reposi%C3%A7%C3%A3o%20com%20a%20J2M%20Medical."
+             target="_blank" rel="noopener">
             Podemos analisar sua rotina de reposição
           </a>
         </div>
       </div>
     </section>
 
-    <!-- MARCAS -->
+    <!-- MARCAS (CORRIGIDO: arquivos na raiz do repo) -->
     <section id="marcas">
       <h2>Marcas reconhecidas no mercado</h2>
       <p class="subtitle">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
 
       <div class="brands-wrap">
         <div class="brands" aria-label="Logos de fornecedores">
-          <div class="brand-logo"><img src="marcas/m01.jpg" alt="Fornecedor 01" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m02.jpg" alt="Fornecedor 02" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m03.jpg" alt="Fornecedor 03" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m04.jpg" alt="Fornecedor 04" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m05.jpg" alt="Fornecedor 05" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m06.jpg" alt="Fornecedor 06" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m07.jpg" alt="Fornecedor 07" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m08.jpg" alt="Fornecedor 08" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m09.jpg" alt="Fornecedor 09" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m10.jpg" alt="Fornecedor 10" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m11.jpg" alt="Fornecedor 11" loading="lazy"></div>
-          <div class="brand-logo"><img src="marcas/m12.jpg" alt="Fornecedor 12" loading="lazy"></div>
+          <div class="brand-logo"><img src="m01.jpg" alt="Fornecedor 01" loading="lazy"></div>
+          <div class="brand-logo"><img src="m02.jpg" alt="Fornecedor 02" loading="lazy"></div>
+          <div class="brand-logo"><img src="m03.jpg" alt="Fornecedor 03" loading="lazy"></div>
+          <div class="brand-logo"><img src="m04.jpg" alt="Fornecedor 04" loading="lazy"></div>
+          <div class="brand-logo"><img src="m05.jpg" alt="Fornecedor 05" loading="lazy"></div>
+          <div class="brand-logo"><img src="m06.jpg" alt="Fornecedor 06" loading="lazy"></div>
+          <div class="brand-logo"><img src="m07.jpg" alt="Fornecedor 07" loading="lazy"></div>
+          <div class="brand-logo"><img src="m08.jpg" alt="Fornecedor 08" loading="lazy"></div>
+          <div class="brand-logo"><img src="m09.jpg" alt="Fornecedor 09" loading="lazy"></div>
+          <div class="brand-logo"><img src="m10.jpg" alt="Fornecedor 10" loading="lazy"></div>
+          <div class="brand-logo"><img src="m11.jpg" alt="Fornecedor 11" loading="lazy"></div>
+          <div class="brand-logo"><img src="m12.jpg" alt="Fornecedor 12" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -489,18 +478,17 @@
         <span class="seg">Clínicas médicas</span>
         <span class="seg">Consultórios</span>
         <span class="seg">Clínicas veterinárias</span>
-        <span class="seg">Farmácias e drogarias</span>
         <span class="seg">Casas de repouso</span>
       </div>
       <p class="segments-note">
-        Mantemos essência hospitalar, mas também atendemos operações profissionais de uso contínuo com alta exigência de reposição.
+        Também atendemos estabelecimentos profissionais de uso contínuo que precisam de reposição rápida e padronizada.
       </p>
     </section>
 
     <!-- COMO FUNCIONA -->
     <section id="como">
       <h2>Começar é simples</h2>
-      <p class="subtitle">Você não precisa trocar tudo de uma vez. Comece pelos itens de maior consumo.</p>
+      <p class="subtitle">Você não precisa trocar de fornecedor de uma vez. Comece pelos itens de maior consumo.</p>
 
       <div class="steps">
         <div class="step">
@@ -525,56 +513,68 @@
         </div>
       </div>
 
-      <div class="cta" style="margin-top:12px">
-        <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical.%0A%0ASegmento%3A%20_____%0ACidade%3A%20_____%0APosso%20enviar%20minha%20lista%20agora." target="_blank" rel="noopener">
+      <div class="cta-final">
+        <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical.%20Posso%20enviar%20minha%20lista%20ou%20receber%20sugest%C3%B5es." target="_blank" rel="noopener">
           Enviar minha lista agora
         </a>
+        <span>Resposta em horário comercial • Campo Grande: atendimento contínuo</span>
       </div>
-      <div class="subnote">Resposta em horário comercial • Campo Grande: atendimento contínuo</div>
     </section>
 
-    <!-- COTAÇÃO POR BOTÕES (capta segmento) -->
+    <!-- COTAÇÃO (CAPTURA SEGMENTO) -->
     <section id="cotacao">
       <h2>Solicite sua cotação</h2>
       <p class="subtitle">
-        Informe seu segmento e escolha: <b>enviar lista</b> ou <b>receber sugestão de itens</b> mais consumidos.
+        Nos informe quais produtos você utiliza ou, se preferir, apresentamos sugestões dos itens mais consumidos no seu tipo de estabelecimento.
       </p>
 
       <div class="whats-grid">
         <div class="whats-card">
           <b>Hospital / Clínica</b>
-          <p>Itens de maior consumo + reposição programada.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20HOSPITAL%2FCL%C3%8DNICA.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <p>Começar pelos itens de maior consumo.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Hospital%2FCl%C3%ADnica)%20Quero%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo.%20Podem%20me%20passar%20sugest%C3%B5es%20e%20cota%C3%A7%C3%A3o%3F" target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
 
         <div class="whats-card">
           <b>Consultório</b>
           <p>Reposição rápida e padronizada.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20CONSULT%C3%93RIO.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Consult%C3%B3rio)%20Quero%20testar%20reposi%C3%A7%C3%A3o%20de%20materiais%20com%20voc%C3%AAs.%20Podem%20me%20enviar%20sugest%C3%B5es%20dos%20itens%20mais%20utilizados%3F" target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
 
         <div class="whats-card">
           <b>Veterinária</b>
           <p>Fornecimento recorrente para rotina clínica.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20CL%C3%8DNICA%20VETERIN%C3%81RIA.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Veterin%C3%A1ria)%20Quero%20entender%20o%20fornecimento%20recorrente%20e%20cota%C3%A7%C3%A3o%20dos%20itens%20mais%20utilizados." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
 
         <div class="whats-card">
           <b>Farmácia / Drogaria</b>
           <p>Itens de maior giro com entrega ágil.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20FARM%C3%81CIA%2FDROGARIA.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Farm%C3%A1cia%2FDrogaria)%20Quero%20conhecer%20os%20itens%20de%20maior%20giro%20e%20condi%C3%A7%C3%B5es%20de%20entrega%20da%20J2M%20Medical." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
 
         <div class="whats-card">
           <b>Casa de repouso</b>
           <p>Reposição constante e previsível.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20CASA%20DE%20REPOUSO.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Casa%20de%20repouso)%20Preciso%20melhorar%20a%20reposi%C3%A7%C3%A3o%20dos%20materiais.%20Podem%20me%20enviar%20sugest%C3%B5es%20e%20cota%C3%A7%C3%A3o%3F" target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
 
         <div class="whats-card">
-          <b>Outro</b>
-          <p>Operações profissionais de uso contínuo.</p>
-          <a class="btn primary small full" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Sou%20de%20OUTRO%20SEGMENTO%20PROFISSIONAL.%0ACidade%20%28MS%29%3A%20_____%0AQuero%3A%20%28%29%20Enviar%20lista%20%28%29%20Sugest%C3%A3o%20de%20itens%20%28%29%20Reposi%C3%A7%C3%A3o%20programada" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+          <b>Outro estabelecimento</b>
+          <p>Profissionais de uso contínuo.</p>
+          <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20(Segmento%3A%20Outro)%20Quero%20conhecer%20o%20fornecimento%20da%20J2M%20Medical%20e%20receber%20sugest%C3%B5es%20dos%20itens%20mais%20consumidos%20no%20meu%20tipo%20de%20opera%C3%A7%C3%A3o." target="_blank" rel="noopener">
+            Abrir no WhatsApp
+          </a>
         </div>
       </div>
     </section>
