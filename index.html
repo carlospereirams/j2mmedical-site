@@ -3,8 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>J2M Medical | Distribuição profissional com logística eficiente</title>
-  <meta name="description" content="Distribuição B2B no MS com entregas rápidas, padronização e reposição organizada. Hospitais, clínicas e operações profissionais." />
+
+  <title>J2M Medical | Distribuição B2B com entrega rápida no MS</title>
+  <meta name="description" content="Distribuição B2B no Mato Grosso do Sul com entrega em até 24h, padronização de pedidos e reposição organizada. Atendimento por WhatsApp." />
+
+  <!-- Canonical (domínio final) -->
+  <link rel="canonical" href="https://j2mmedical.com.br/" />
+
+  <!-- Favicon (opcional: coloque favicon.png na raiz) -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Open Graph (WhatsApp / LinkedIn) -->
+  <meta property="og:title" content="J2M Medical | Distribuição B2B com entrega rápida no MS" />
+  <meta property="og:description" content="Reposição organizada, processo padronizado e entrega em até 24h no MS. Atendimento direto no WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://j2mmedical.com.br/" />
+  <meta property="og:image" content="https://j2mmedical.com.br/logo.jpg" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="logo.jpg" />
 
   <style>
     :root{
@@ -45,10 +62,8 @@
       backdrop-filter: blur(10px);
     }
     .brand{display:flex;align-items:center;gap:14px}
-    /* OPÇÃO A: logo institucional com mais presença */
     .brand .logo-box{
-      width:112px;
-      height:88px;
+      width:112px;height:88px;
       display:flex;align-items:center;justify-content:center;
       padding:10px;
       background:#fff;
@@ -59,8 +74,7 @@
     .brand img{
       max-height:68px;
       max-width:100%;
-      width:auto;
-      height:auto;
+      width:auto;height:auto;
       display:block;
       object-fit:contain;
     }
@@ -280,6 +294,25 @@
       font-size:13px;
     }
 
+    /* WhatsApp Floating (mobile) */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:50;
+      display:none;
+    }
+    .wa-float a{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--green),var(--green2));
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 14px 26px rgba(31,143,95,.28);
+      border:1px solid rgba(255,255,255,.2);
+    }
+
     /* Responsive */
     @media (max-width: 1020px){
       .hero-grid{grid-template-columns:1fr}
@@ -298,6 +331,7 @@
       .contact-grid{grid-template-columns:1fr}
       .brand .logo-box{width:98px;height:78px}
       .brand img{max-height:60px}
+      .wa-float{display:block;}
     }
   </style>
 </head>
@@ -307,7 +341,6 @@
     <header>
       <div class="brand">
         <div class="logo-box">
-          <!-- LOGO DO REPO (raiz) -->
           <img src="logo.jpg" alt="J2M Medical" />
         </div>
         <div class="tagline">
@@ -318,7 +351,8 @@
 
       <nav>
         <a href="#produtos">Solução</a>
-        <a href="#diagnostico">Quando trocar</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#cobertura">Cobertura</a>
         <a href="#marcas">Marcas</a>
         <a href="#segmentos">Quem atendemos</a>
         <a href="#como">Como funciona</a>
@@ -351,7 +385,7 @@
           </div>
         </div>
 
-        <!-- BLOCO 2 (eficiência operacional) -->
+        <!-- BLOCO 2 -->
         <div class="panel">
           <div class="badges-row">
             <div class="badge">✓ Abastecimento sem complicação</div>
@@ -447,7 +481,32 @@
       </div>
     </section>
 
-    <!-- MARCAS (CORRIGIDO: arquivos na raiz do repo) -->
+    <!-- COBERTURA -->
+    <section id="cobertura">
+      <h2>Cobertura e prazos</h2>
+      <p class="subtitle">
+        Entrega em até <b>24h</b> no interior do MS, por frota própria ou transportadora — com padrão de atendimento.
+      </p>
+
+      <div class="panel">
+        <div class="mini-grid">
+          <div class="mini">
+            <b>Campo Grande</b>
+            <p>Atendimento contínuo e reposição rápida conforme necessidade.</p>
+          </div>
+          <div class="mini">
+            <b>Interior do MS</b>
+            <p>Entrega em até <b>24h</b> com frota própria ou transportadora (conforme rota/janela de coleta).</p>
+          </div>
+          <div class="mini">
+            <b>Itens críticos</b>
+            <p>Tratativa direta no WhatsApp para alinhar urgência e alternativa equivalente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
     <section id="marcas">
       <h2>Marcas reconhecidas no mercado</h2>
       <p class="subtitle">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
@@ -479,6 +538,8 @@
         <span class="seg">Consultórios</span>
         <span class="seg">Clínicas veterinárias</span>
         <span class="seg">Casas de repouso</span>
+        <span class="seg">Farmácias / Drogarias</span>
+        <span class="seg">Clínicas de estética</span>
       </div>
       <p class="segments-note">
         Também atendemos estabelecimentos profissionais de uso contínuo que precisam de reposição rápida e padronizada.
@@ -521,7 +582,7 @@
       </div>
     </section>
 
-    <!-- COTAÇÃO (CAPTURA SEGMENTO) -->
+    <!-- COTAÇÃO -->
     <section id="cotacao">
       <h2>Solicite sua cotação</h2>
       <p class="subtitle">
@@ -615,6 +676,13 @@
       <div>Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande-MS</div>
       <div>WhatsApp: +55 (67) 98194-0129 • E-mail: comercial@j2mmedical.com.br</div>
     </footer>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <div class="wa-float" aria-label="Atalho para WhatsApp">
+    <a href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+      WhatsApp • Cotação
+    </a>
   </div>
 </body>
 </html>
