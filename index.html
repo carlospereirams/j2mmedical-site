@@ -4,23 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>J2M Medical | Distribuição B2B com entrega rápida no MS</title>
+  <title>J2M Medical | Distribuição com entrega rápida no MS</title>
   <meta name="description" content="Distribuição B2B no Mato Grosso do Sul com entrega em até 24h, padronização de pedidos e reposição organizada. Atendimento por WhatsApp." />
 
-  <!-- Canonical (domínio final) -->
   <link rel="canonical" href="https://j2mmedical.com.br/" />
-
-  <!-- Favicon (opcional: coloque favicon.png na raiz) -->
   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- Open Graph (WhatsApp / LinkedIn) -->
   <meta property="og:title" content="J2M Medical | Distribuição B2B com entrega rápida no MS" />
   <meta property="og:description" content="Reposição organizada, processo padronizado e entrega em até 24h no MS. Atendimento direto no WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://j2mmedical.com.br/" />
   <meta property="og:image" content="https://j2mmedical.com.br/logo.jpg" />
 
-  <!-- Performance -->
   <link rel="preload" as="image" href="logo.jpg" />
 
   <style>
@@ -52,32 +47,34 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
-    /* Header */
     header{
       display:flex;align-items:center;justify-content:space-between;gap:18px;
       padding:14px 0 16px;
       border-bottom:2px solid var(--border);
       position:sticky;top:0;z-index:20;
-      background:rgba(244,248,247,.88);
+      background:rgba(244,248,247,.90);
       backdrop-filter: blur(10px);
     }
     .brand{display:flex;align-items:center;gap:14px}
+
+    /* LOGO maior */
     .brand .logo-box{
-      width:112px;height:88px;
+      width:150px;height:110px;
       display:flex;align-items:center;justify-content:center;
-      padding:10px;
+      padding:12px;
       background:#fff;
       border:1px solid var(--border);
-      border-radius:16px;
-      box-shadow:0 14px 28px rgba(15,35,48,.12);
+      border-radius:18px;
+      box-shadow:0 16px 32px rgba(15,35,48,.14);
     }
     .brand img{
-      max-height:68px;
+      max-height:88px;
       max-width:100%;
       width:auto;height:auto;
       display:block;
       object-fit:contain;
     }
+
     .brand .tagline{display:flex;flex-direction:column;gap:2px}
     .brand .tagline strong{font-size:16px;letter-spacing:.2px}
     .brand .tagline span{font-size:12.5px;color:var(--muted)}
@@ -89,7 +86,6 @@
     }
     nav a:hover{border-color:var(--border);background:rgba(255,255,255,.75);color:var(--text)}
 
-    /* Buttons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 16px;border-radius:14px;
@@ -107,7 +103,6 @@
     .btn.ghost{background:rgba(255,255,255,.65)}
     .btn.small{padding:10px 12px;border-radius:12px;font-size:14px}
 
-    /* Hero */
     .hero{padding:28px 0 12px}
     .hero-grid{
       display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;
@@ -129,7 +124,6 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
     .subnote{margin-top:10px;color:var(--muted);font-size:13px}
 
-    /* Panels */
     .panel{
       background:var(--card);
       border:1px solid var(--border);
@@ -156,12 +150,10 @@
     .mini b{display:block;margin-bottom:4px}
     .mini p{margin:0;color:var(--muted);font-size:14px}
 
-    /* Sections */
     section{padding:18px 0}
     h2{margin:0 0 10px;font-size:22px;letter-spacing:-.3px}
     .subtitle{margin:0 0 12px;color:var(--muted);font-size:14.5px}
 
-    /* Segments */
     .segments{display:flex;flex-wrap:wrap;gap:10px}
     .seg{
       padding:10px 12px;border-radius:999px;
@@ -172,7 +164,6 @@
     }
     .segments-note{margin:10px 0 0;color:var(--muted);font-size:14px}
 
-    /* Brands */
     .brands-wrap{
       background:rgba(255,255,255,.70);
       border:1px solid var(--border);
@@ -202,7 +193,6 @@
       object-fit:contain;
     }
 
-    /* Product tiles */
     .prod-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -227,7 +217,6 @@
       margin-bottom:10px;
     }
 
-    /* Steps */
     .steps{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -255,7 +244,6 @@
     }
     .cta-final span{color:var(--muted);font-size:13px}
 
-    /* Whats niche buttons */
     .whats-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -272,7 +260,6 @@
     .whats-card b{display:block;margin-bottom:6px}
     .whats-card p{margin:0 0 10px;color:var(--muted);font-size:14px}
 
-    /* Contact */
     .contact-grid{
       display:grid;grid-template-columns:1fr 1fr;gap:12px;
       margin-top:10px;
@@ -286,6 +273,14 @@
     .contact b{display:block;margin-bottom:6px}
     .contact p{margin:0;color:var(--muted);font-size:14px}
 
+    .bullets{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .bullets li{margin:6px 0}
+
     footer{
       margin-top:28px;
       padding:18px 0 30px;
@@ -294,7 +289,6 @@
       font-size:13px;
     }
 
-    /* WhatsApp Floating (mobile) */
     .wa-float{
       position:fixed;
       right:16px;
@@ -313,7 +307,6 @@
       border:1px solid rgba(255,255,255,.2);
     }
 
-    /* Responsive */
     @media (max-width: 1020px){
       .hero-grid{grid-template-columns:1fr}
       .brands{grid-template-columns:repeat(4,1fr)}
@@ -329,8 +322,8 @@
       .whats-grid{grid-template-columns:1fr}
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .brand .logo-box{width:98px;height:78px}
-      .brand img{max-height:60px}
+      .brand .logo-box{width:150px;height:118px}
+      .brand img{max-height:96px}
       .wa-float{display:block;}
     }
   </style>
@@ -355,9 +348,11 @@
         <a href="#cobertura">Cobertura</a>
         <a href="#marcas">Marcas</a>
         <a href="#segmentos">Quem atendemos</a>
-        <a href="#porque">Por que J2M</a>
+        <a href="#principios">Princípios</a>
+        <a href="#quemsomos">Quem somos</a>
         <a href="#como">Como funciona</a>
         <a href="#cotacao">Cotação</a>
+        <a href="#doacoes">Doações</a>
         <a href="#contato">Contato</a>
       </nav>
     </header>
@@ -387,7 +382,6 @@
           </div>
         </div>
 
-        <!-- PROVAS -->
         <div class="panel">
           <div class="badges-row">
             <div class="badge">✓ Abastecimento sem complicação</div>
@@ -552,41 +546,81 @@
       </p>
     </section>
 
-    <!-- PORQUE J2M -->
-    <section id="porque">
-      <h2>Por que os clientes continuam comprando</h2>
-      <p class="subtitle">Não é sobre preço. É sobre parar de ter problema.</p>
+    <!-- PRINCÍPIOS -->
+    <section id="principios">
+      <h2>Princípios operacionais</h2>
+      <p class="subtitle">Como pensamos a operação no dia a dia — para você ter previsibilidade.</p>
 
       <div class="panel">
         <div class="mini-grid">
           <div class="mini">
-            <b>Menos urgência</b>
-            <p>Reposição organizada evita correria e compras de última hora.</p>
+            <b>Prazo é compromisso</b>
+            <p>Não prometemos o que não controlamos. Entrega e atendimento com padrão.</p>
           </div>
-
           <div class="mini">
-            <b>Menos fornecedores</b>
-            <p>Centralização reduz retrabalho administrativo.</p>
+            <b>Reposição antes da urgência</b>
+            <p>Trabalhamos para você não comprar correndo e não ficar sem item crítico.</p>
           </div>
-
           <div class="mini">
-            <b>Menos interrupção</b>
-            <p>Procedimentos não param por falta de material.</p>
+            <b>Regularidade acima de “promoção”</b>
+            <p>Preferimos previsibilidade e recorrência a vender uma vez e sumir.</p>
           </div>
-
           <div class="mini">
-            <b>Mais previsibilidade</b>
-            <p>Você sabe quando chega — sem precisar cobrar.</p>
+            <b>Centralizar para simplificar</b>
+            <p>Menos fornecedores e menos retrabalho administrativo para sua equipe.</p>
           </div>
         </div>
 
         <div class="cta" style="margin-top:16px">
           <a class="btn primary"
-             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20um%20teste%20com%20a%20J2M%20Medical%20apenas%20com%20alguns%20itens%20de%20maior%20consumo."
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20um%20teste%20com%20a%20J2M%20Medical%20com%20alguns%20itens%20de%20maior%20consumo."
              target="_blank" rel="noopener">
             Quero fazer um teste (poucos itens)
           </a>
-          <a class="btn ghost" href="#cotacao">Ir para cotação por segmento</a>
+          <a class="btn ghost" href="#cotacao">Ir para cotação</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="quemsomos">
+      <h2>Quem somos — J2M Medical</h2>
+      <p class="subtitle">
+        A J2M Medical é uma distribuidora B2B de produtos médicos e hospitalares criada para atender operações que precisam de
+        <b>previsibilidade no abastecimento</b> — não apenas de um fornecedor.
+      </p>
+
+      <div class="panel">
+        <div class="mini">
+          <b>Onde a maioria perde tempo</b>
+          <p>
+            Nascemos de um problema comum no setor: o cliente não perde tempo escolhendo preço — ele perde tempo <b>corrigindo fornecedor</b>.
+            Por isso estruturamos nossa operação com foco em disponibilidade, logística ágil e atendimento resolutivo.
+          </p>
+        </div>
+
+        <ul class="bullets">
+          <li><b>Disponibilidade e reposição organizada</b></li>
+          <li><b>Logística ágil (até 24h no MS)</b></li>
+          <li><b>Atendimento resolutivo</b></li>
+          <li><b>Processo e conferência para “sair certo na primeira”</b></li>
+        </ul>
+
+        <div class="mini" style="margin-top:12px">
+          <b>Mais do que vender produtos</b>
+          <p>Garantimos <b>continuidade operacional</b> para quem cuida de pessoas.</p>
+        </div>
+
+        <div class="cta" style="margin-top:16px">
+          <a class="btn primary"
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20fazer%20um%20teste%20com%20a%20J2M%20Medical%20e%20entender%20como%20funciona%20a%20reposi%C3%A7%C3%A3o%20organizada."
+             target="_blank" rel="noopener">
+            Quero entender como funciona
+          </a>
+        </div>
+
+        <div class="subnote" style="margin-top:10px">
+          <b>J2M Medical</b> — quando o seu trabalho não pode esperar, o fornecedor também não pode.
         </div>
       </div>
     </section>
@@ -685,6 +719,43 @@
       </div>
     </section>
 
+    <!-- DOAÇÕES -->
+    <section id="doacoes">
+      <h2>Doações para instituições</h2>
+      <p class="subtitle">
+        Também auxiliamos empresas e pessoas que desejam realizar doações corretas para casas de repouso e instituições.
+      </p>
+
+      <div class="panel">
+        <div class="mini-grid">
+          <div class="mini">
+            <b>Escolha adequada</b>
+            <p>Orientamos tamanhos e tipos para evitar desperdício ou troca.</p>
+          </div>
+          <div class="mini">
+            <b>Entrega direta</b>
+            <p>Podemos entregar diretamente na instituição indicada.</p>
+          </div>
+          <div class="mini">
+            <b>Sem compra inadequada</b>
+            <p>Evita que a instituição receba produtos inutilizáveis.</p>
+          </div>
+          <div class="mini">
+            <b>Canal específico</b>
+            <p>Atendimento direcionado, sem misturar com o fluxo B2B.</p>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top:16px">
+          <a class="btn ghost"
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20orienta%C3%A7%C3%A3o%20para%20doa%C3%A7%C3%A3o%20de%20fraldas%20para%20uma%20institui%C3%A7%C3%A3o."
+             target="_blank" rel="noopener">
+            Falar sobre doação
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTATO -->
     <section id="contato">
       <h2>Contato</h2>
@@ -723,7 +794,6 @@
     </footer>
   </div>
 
-  <!-- Floating WhatsApp -->
   <div class="wa-float" aria-label="Atalho para WhatsApp">
     <a href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
       WhatsApp • Cotação
