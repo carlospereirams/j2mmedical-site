@@ -3,14 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>J2M Medical | Distribuição B2B com entrega rápida no MS</title>
   <meta name="description" content="Distribuição B2B no Mato Grosso do Sul com entrega em até 24h, padronização de pedidos e reposição organizada. Catálogo por nicho via WhatsApp." />
 
   <link rel="canonical" href="https://j2mmedical.com.br/" />
-
   <meta property="og:title" content="J2M Medical | Distribuição B2B com entrega rápida no MS" />
-  <meta property="og:description" content="Reposição organizada, processo padronizado e entrega em até 24h no MS. Catálogo por nicho via WhatsApp." />
+  <meta property="og:description" content="Reposição organizada, processo padronizado e entrega em até 24h no MS. Receba catálogo por nicho via WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://j2mmedical.com.br/" />
   <meta property="og:image" content="https://j2mmedical.com.br/logo-cropped.png" />
@@ -46,6 +44,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
+    /* Header */
     header{
       display:flex;align-items:center;justify-content:space-between;gap:18px;
       padding:14px 0 16px;
@@ -55,35 +54,45 @@
       backdrop-filter: blur(10px);
     }
 
-    /* caixa branca permanece padrão */
-.brand .logo-box{
-  width:92px;
-  height:92px;
-  padding:8px;
-  background:#E9EDEE;          /* mesma cor da arte */
-  border-radius:18px;
-  box-shadow:0 10px 22px rgba(15,35,48,.12);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-.brand img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  transform:scale(1.28);       /* menor — agora cabe tudo */
-  transform-origin:center;
-}
-
-}
-
+    .brand{
+      display:flex;align-items:center;gap:14px;
+      min-width:360px; /* ajuda a não esmagar a tagline */
     }
 
-    .brand .tagline{display:flex;flex-direction:column;gap:2px}
+    /* LOGO: quadrado com fundo igual ao da arte + zoom controlado */
+    .brand .logo-box{
+      width:92px;
+      height:92px;
+      padding:8px;
+      background:#E9EDEE;                 /* mesma cor do fundo da logo */
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:0 14px 28px rgba(15,35,48,.14);
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .brand img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      transform:scale(1.28);              /* <<< cabe e preenche sem cortar */
+      transform-origin:center;
+      display:block;
+    }
+
+    /* TAGLINE: não quebra "logística eficiente" */
+    .brand .tagline{display:flex;flex-direction:column;gap:2px;min-width:0}
     .brand .tagline strong{font-size:16px;letter-spacing:.2px}
-    .brand .tagline span{font-size:12.5px;color:var(--muted)}
+    .brand .tagline span{
+      font-size:12.5px;color:var(--muted);
+      display:block;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:360px;
+    }
 
     nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     nav a{
@@ -94,6 +103,7 @@
     }
     nav a:hover{border-color:var(--border);background:rgba(255,255,255,.75);color:var(--text)}
 
+    /* Buttons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 16px;border-radius:14px;
@@ -111,6 +121,7 @@
     .btn.ghost{background:rgba(255,255,255,.65)}
     .btn.small{padding:10px 12px;border-radius:12px;font-size:14px}
 
+    /* Hero */
     .hero{padding:28px 0 12px}
     .hero-grid{
       display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;
@@ -132,6 +143,7 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
     .subnote{margin-top:10px;color:var(--muted);font-size:13px}
 
+    /* Panels */
     .panel{
       background:var(--card);
       border:1px solid var(--border);
@@ -158,34 +170,12 @@
     .mini b{display:block;margin-bottom:4px}
     .mini p{margin:0;color:var(--muted);font-size:14px}
 
+    /* Sections */
     section{padding:18px 0; scroll-margin-top:110px;}
     h2{margin:0 0 10px;font-size:22px;letter-spacing:-.3px}
     .subtitle{margin:0 0 12px;color:var(--muted);font-size:14.5px}
 
-    .prod-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:12px;
-      margin-top:10px;
-    }
-    .prod{
-      background:#fff;border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:0 10px 20px rgba(10,35,48,.05);
-      padding:14px;
-    }
-    .prod b{display:block;margin-bottom:6px}
-    .prod p{margin:0;color:var(--muted);font-size:14px}
-    .prod .tag{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;font-weight:900;
-      color:var(--green2);
-      background:rgba(31,143,95,.10);
-      border:1px solid rgba(31,143,95,.18);
-      padding:6px 10px;border-radius:999px;
-      margin-bottom:10px;
-    }
-
+    /* Segments */
     .segments{display:flex;flex-wrap:wrap;gap:10px}
     .seg{
       padding:10px 12px;border-radius:999px;
@@ -196,6 +186,7 @@
     }
     .segments-note{margin:10px 0 0;color:var(--muted);font-size:14px}
 
+    /* Brands */
     .brands-wrap{
       background:rgba(255,255,255,.70);
       border:1px solid var(--border);
@@ -225,6 +216,32 @@
       object-fit:contain;
     }
 
+    /* Product tiles */
+    .prod-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+    .prod{
+      background:#fff;border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      padding:14px;
+    }
+    .prod b{display:block;margin-bottom:6px}
+    .prod p{margin:0;color:var(--muted);font-size:14px}
+    .prod .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;font-weight:900;
+      color:var(--green2);
+      background:rgba(31,143,95,.10);
+      border:1px solid rgba(31,143,95,.18);
+      padding:6px 10px;border-radius:999px;
+      margin-bottom:10px;
+    }
+
+    /* Steps */
     .steps{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -247,6 +264,13 @@
     .step h3{margin:0 0 6px;font-size:15px}
     .step p{margin:0;color:var(--muted);font-size:14px}
 
+    .cta-final{
+      margin-top:12px;
+      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    }
+    .cta-final span{color:var(--muted);font-size:13px}
+
+    /* Whats niche buttons */
     .whats-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -263,6 +287,7 @@
     .whats-card b{display:block;margin-bottom:6px}
     .whats-card p{margin:0 0 10px;color:var(--muted);font-size:14px}
 
+    /* Contact */
     .contact-grid{
       display:grid;grid-template-columns:1fr 1fr;gap:12px;
       margin-top:10px;
@@ -284,6 +309,7 @@
       font-size:13px;
     }
 
+    /* Floating WhatsApp button */
     .wa-float{
       position:fixed;
       right:16px;
@@ -302,6 +328,7 @@
       border:1px solid rgba(255,255,255,.2);
     }
 
+    /* Responsive */
     @media (max-width: 1020px){
       .hero-grid{grid-template-columns:1fr}
       .brands{grid-template-columns:repeat(4,1fr)}
@@ -309,6 +336,10 @@
       .whats-grid{grid-template-columns:repeat(2,1fr)}
       .prod-grid{grid-template-columns:repeat(2,1fr)}
       section{scroll-margin-top:24px;}
+      .brand{min-width:0}
+      .brand .tagline span{
+        max-width:240px;
+      }
     }
     @media (max-width: 640px){
       header{position:static;background:transparent;backdrop-filter:none}
@@ -319,7 +350,12 @@
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
 
-      .brand .logo-box{ width:86px; height:86px; }
+      .brand .logo-box{width:82px;height:82px}
+      .brand img{transform:scale(1.30)}
+      .brand .tagline span{
+        max-width:220px;
+        white-space:nowrap;
+      }
       .wa-float{display:block;}
     }
   </style>
@@ -333,10 +369,9 @@
           <img src="logo-cropped.png" alt="J2M Medical" />
         </div>
         <div class="tagline">
-  <strong>J2M Medical</strong>
-  <span>Distribuição profissional • logística eficiente</span>
-</div>
-
+          <strong>J2M Medical</strong>
+          <span>Distribuição profissional • logística eficiente</span>
+        </div>
       </div>
 
       <nav>
@@ -345,6 +380,7 @@
         <a href="#cobertura">Cobertura</a>
         <a href="#marcas">Marcas</a>
         <a href="#segmentos">Quem atendemos</a>
+        <a href="#principios">Princípios</a>
         <a href="#como">Como funciona</a>
         <a href="#cotacao">Catálogo</a>
         <a href="#doacoes">Doações</a>
@@ -352,6 +388,7 @@
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="topo">
       <div class="hero-grid">
         <div>
@@ -360,18 +397,18 @@
 
           <p class="lead">
             A J2M organiza seu abastecimento, padroniza seus pedidos e entrega em até <b>24h em todo MS</b>.
-            <br/>Você volta a focar no atendimento — não na falta de estoque.
+            <br/>Receba o <b>catálogo do seu nicho</b> no WhatsApp e faça a cotação na hora.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20cat%C3%A1logo%20do%20meu%20segmento%20e%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+            <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20e%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
               Receber catálogo no WhatsApp
             </a>
             <a class="btn ghost" href="#cotacao">Escolher meu nicho</a>
           </div>
 
           <div class="subnote">
-            Temos um <b>catálogo específico</b> com os principais itens do seu segmento — enviado no WhatsApp.
+            Nosso diferencial não é preço. É <b>atendimento</b> e <b>entrega rápida</b>, com padrão e previsibilidade.
           </div>
         </div>
 
@@ -403,6 +440,7 @@
       </div>
     </section>
 
+    <!-- SOLUÇÃO -->
     <section id="produtos">
       <h2>Uma única solução para tudo que seu atendimento precisa</h2>
       <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos — com reposição organizada e entrega rápida.</p>
@@ -433,6 +471,7 @@
       </div>
     </section>
 
+    <!-- DIAGNÓSTICO -->
     <section id="diagnostico">
       <h2>Talvez não seja preço…</h2>
       <p class="subtitle">
@@ -460,7 +499,7 @@
 
         <div class="cta" style="margin-top:16px">
           <a class="btn primary"
-             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20cat%C3%A1logo%20do%20meu%20segmento%20e%20analisar%20minha%20rotina%20de%20reposi%C3%A7%C3%A3o%20com%20a%20J2M%20Medical."
+             href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20e%20analisar%20minha%20rotina%20de%20reposi%C3%A7%C3%A3o%20com%20a%20J2M%20Medical."
              target="_blank" rel="noopener">
             Receber catálogo e analisar reposição
           </a>
@@ -468,6 +507,7 @@
       </div>
     </section>
 
+    <!-- COBERTURA -->
     <section id="cobertura">
       <h2>Cobertura e prazos</h2>
       <p class="subtitle">
@@ -492,6 +532,7 @@
       </div>
     </section>
 
+    <!-- MARCAS -->
     <section id="marcas">
       <h2>Marcas reconhecidas no mercado</h2>
       <p class="subtitle">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
@@ -514,6 +555,7 @@
       </div>
     </section>
 
+    <!-- QUEM ATENDEMOS -->
     <section id="segmentos">
       <h2>Quem atendemos</h2>
       <div class="segments">
@@ -525,13 +567,41 @@
         <span class="seg">Farmácias / Drogarias</span>
       </div>
       <p class="segments-note">
-        Temos um <b>catálogo específico</b> com os principais itens do seu nicho — enviado no WhatsApp.
+        Temos um <b>catálogo específico</b> com os principais itens do seu segmento — enviado no WhatsApp.
       </p>
     </section>
 
+    <!-- PRINCÍPIOS -->
+    <section id="principios">
+      <h2>Princípios operacionais</h2>
+      <p class="subtitle">O que mantém nossa entrega previsível — e sua rotina sem interrupções.</p>
+
+      <div class="panel">
+        <div class="mini-grid">
+          <div class="mini">
+            <b>Processo acima de promessa</b>
+            <p>Venda com conferência, rastreabilidade e acompanhamento até a chegada.</p>
+          </div>
+          <div class="mini">
+            <b>Padronização de pedidos</b>
+            <p>Menos erro, menos retrabalho e rotina mais previsível para sua equipe.</p>
+          </div>
+          <div class="mini">
+            <b>Resposta rápida</b>
+            <p>Atendimento direto no WhatsApp para resolver, não para “empurrar”.</p>
+          </div>
+          <div class="mini">
+            <b>Reposição organizada</b>
+            <p>O objetivo é reduzir urgência e compras emergenciais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
     <section id="como">
-      <h2>Como funciona</h2>
-      <p class="subtitle">Você não precisa trocar tudo de uma vez. Comece pelo essencial do seu segmento.</p>
+      <h2>Começar é simples</h2>
+      <p class="subtitle">Você não precisa trocar de fornecedor de uma vez. Comece pelos itens de maior consumo do seu nicho.</p>
 
       <div class="steps">
         <div class="step">
@@ -546,21 +616,29 @@
         </div>
         <div class="step">
           <div class="n">3</div>
-          <h3>Teste com poucos itens</h3>
-          <p>Primeiro pedido pequeno para validar prazo e atendimento.</p>
+          <h3>Você testa sem risco</h3>
+          <p>Primeiro pedido pequeno para validar qualidade, prazo e atendimento.</p>
         </div>
         <div class="step">
           <div class="n">4</div>
           <h3>Reposição contínua</h3>
-          <p>Depois você só aprova. Nós separamos e entregamos.</p>
+          <p>Depois você só aprova. Nós lembramos, separamos e entregamos.</p>
         </div>
+      </div>
+
+      <div class="cta-final">
+        <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20e%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+          Receber catálogo agora
+        </a>
+        <span>Resposta em horário comercial • Campo Grande: atendimento contínuo</span>
       </div>
     </section>
 
+    <!-- CATÁLOGO (CAPTURA POR NICHO) -->
     <section id="cotacao">
       <h2>Receba o catálogo do seu nicho</h2>
       <p class="subtitle">
-        Clique no seu segmento e receba uma lista base com os principais itens usados — direto no WhatsApp.
+        Clique no seu segmento e receba uma lista com os principais itens — direto no WhatsApp.
       </p>
 
       <div class="whats-grid">
@@ -595,23 +673,24 @@
         </div>
 
         <div class="whats-card">
-          <b>Outro</b>
+          <b>Outro estabelecimento</b>
           <p>Fale seu nicho e enviamos o catálogo base.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Meu%20segmento%20%C3%A9%20____%20.%20Quero%20receber%20o%20CAT%C3%81LOGO%20base%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
       </div>
     </section>
 
+    <!-- DOAÇÕES -->
     <section id="doacoes">
       <h2>Doações para instituições</h2>
-      <p class="subtitle">Atendemos também pessoas/empresas que querem doar fraldas e itens essenciais para instituições.</p>
+      <p class="subtitle">Atendemos também pessoas/empresas que querem doar fraldas e itens essenciais para asilos e instituições.</p>
 
       <div class="panel">
         <div class="mini-grid">
           <div class="mini"><b>Orientação correta</b><p>Indicamos tamanhos e tipos para evitar desperdício.</p></div>
-          <div class="mini"><b>Entrega direta</b><p>Podemos entregar na instituição indicada.</p></div>
-          <div class="mini"><b>Agilidade</b><p>Sem confusão: atendimento direcionado para doações.</p></div>
-          <div class="mini"><b>Transparência</b><p>Organização e registro do atendimento.</p></div>
+          <div class="mini"><b>Entrega direta</b><p>Podemos entregar na instituição indicada (quando aplicável).</p></div>
+          <div class="mini"><b>Agilidade</b><p>Atendimento direcionado para doações no WhatsApp.</p></div>
+          <div class="mini"><b>Transparência</b><p>Organização do pedido e registro do atendimento.</p></div>
         </div>
 
         <div class="cta" style="margin-top:16px">
@@ -622,16 +701,25 @@
       </div>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato">
       <h2>Contato</h2>
       <div class="contact-grid">
         <div class="contact">
           <b>WhatsApp</b>
-          <p><a class="btn primary small" href="https://wa.me/5567981940129" target="_blank" rel="noopener">+55 (67) 98194-0129</a></p>
+          <p>
+            <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
+              +55 (67) 98194-0129
+            </a>
+          </p>
         </div>
         <div class="contact">
           <b>E-mail</b>
-          <p><a class="btn small" href="mailto:comercial@j2mmedical.com.br" target="_blank" rel="noopener">comercial@j2mmedical.com.br</a></p>
+          <p>
+            <a class="btn small" href="mailto:comercial@j2mmedical.com.br" target="_blank" rel="noopener">
+              comercial@j2mmedical.com.br
+            </a>
+          </p>
         </div>
         <div class="contact">
           <b>Endereço</b>
@@ -639,18 +727,19 @@
         </div>
         <div class="contact">
           <b>Entrega</b>
-          <p>Até 24h no MS • Campo Grande: atendimento contínuo</p>
+          <p>Em até 24h no MS • Campo Grande: atendimento contínuo</p>
         </div>
       </div>
     </section>
 
     <footer>
       <div><b>J2M Medical</b> — distribuição profissional com logística eficiente.</div>
-      <div><b>CNPJ:</b> COLE_AQUI_SEU_CNPJ • Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande-MS</div>
+      <div><b>CNPJ:</b> 36.257.986/0001-27 • Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande-MS</div>
       <div>WhatsApp: +55 (67) 98194-0129 • E-mail: comercial@j2mmedical.com.br</div>
     </footer>
   </div>
 
+  <!-- Botão flutuante -->
   <div class="wa-float" aria-label="Atalho para WhatsApp">
     <a href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
       Catálogo no WhatsApp
