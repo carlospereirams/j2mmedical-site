@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://j2mmedical.com.br/" />
   <meta property="og:image" content="https://j2mmedical.com.br/logo-j2m-oficial.png" />
 
-  <link rel="preload" as="image" href="logo-j2m-oficial.png" />
+  <link rel="preload" as="image" href="./logo-j2m-oficial.png" />
 
   <style>
     :root{
@@ -23,12 +23,12 @@
       --text:#3C4046;
       --muted:#6E747A;
       --border:#DDE3DA;
-      --green:#7B8766;      /* Bosque Luminoso */
+      --green:#7B8766;
       --green-dark:#667154;
       --graphite:#3C4046;
       --graphite-2:#4B5057;
       --white:#FFFFFF;
-      --shadow:0 16px 34px rgba(60,64,70,.08);
+      --shadow:0 18px 40px rgba(60,64,70,.08);
       --shadow-soft:0 10px 24px rgba(60,64,70,.05);
       --radius:20px;
       --radius2:14px;
@@ -37,6 +37,7 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     html{scroll-behavior:smooth}
+
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
@@ -50,61 +51,104 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
+    /* Header */
     header{
-      display:flex;align-items:center;justify-content:space-between;gap:18px;
-      padding:14px 0 16px;
-      border-bottom:1px solid var(--border);
-      position:sticky;top:0;z-index:20;
-      background:rgba(246,247,244,.90);
-      backdrop-filter: blur(10px);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:18px 0 18px;
+      border-bottom:1px solid rgba(221,227,218,.7);
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(246,247,244,.88);
+      backdrop-filter:blur(12px);
+      transition:all .28s ease;
+    }
+
+    header.scrolled{
+      padding:10px 0;
+      background:rgba(255,255,255,.94);
+      box-shadow:0 8px 24px rgba(60,64,70,.08);
+      border-bottom:1px solid rgba(221,227,218,.95);
     }
 
     .brand{
-      display:flex;align-items:center;gap:14px;
-      min-width:340px;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      min-width:420px;
+      transition:all .28s ease;
     }
 
     .brand .logo-box{
-      width:92px;
-      height:92px;
+      width:128px;
+      height:128px;
       padding:10px;
       background:var(--white);
       border:1px solid var(--border);
-      border-radius:20px;
-      box-shadow:0 14px 28px rgba(60,64,70,.10);
+      border-radius:22px;
+      box-shadow:0 14px 28px rgba(60,64,70,.08);
       overflow:hidden;
       display:flex;
       align-items:center;
       justify-content:center;
+      flex-shrink:0;
+      transition:all .28s ease;
+    }
+
+    header.scrolled .brand .logo-box{
+      width:92px;
+      height:92px;
+      border-radius:18px;
     }
 
     .brand img{
       width:100%;
       height:100%;
       object-fit:contain;
+      transform:scale(1.18);
+      transform-origin:center;
       display:block;
+      transition:all .28s ease;
+    }
+
+    header.scrolled .brand img{
+      transform:scale(1.12);
     }
 
     .brand .tagline{
       display:flex;
       flex-direction:column;
-      gap:3px;
+      gap:4px;
       min-width:0;
     }
 
     .brand .tagline strong{
-      font-size:17px;
+      font-size:20px;
       letter-spacing:.2px;
       color:var(--graphite);
+      transition:all .28s ease;
+    }
+
+    header.scrolled .brand .tagline strong{
+      font-size:17px;
     }
 
     .brand .tagline span{
-      font-size:12.8px;
+      font-size:13px;
       color:var(--muted);
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
       max-width:360px;
+      transition:all .28s ease;
+    }
+
+    header.scrolled .brand .tagline span{
+      font-size:12.2px;
+      max-width:300px;
     }
 
     nav{
@@ -126,10 +170,11 @@
 
     nav a:hover{
       border-color:var(--border);
-      background:rgba(255,255,255,.9);
+      background:rgba(255,255,255,.92);
       color:var(--graphite);
     }
 
+    /* Buttons */
     .btn{
       display:inline-flex;
       align-items:center;
@@ -148,27 +193,53 @@
     }
 
     .btn:hover{transform:translateY(-1px)}
+
     .btn.primary{
       background:linear-gradient(135deg,var(--green),var(--green-dark));
       color:#fff;
       border-color:transparent;
       box-shadow:0 16px 28px rgba(123,135,102,.28);
     }
+
     .btn.ghost{
-      background:rgba(255,255,255,.78);
+      background:rgba(255,255,255,.82);
     }
+
     .btn.small{
       padding:10px 12px;
       border-radius:12px;
       font-size:14px;
     }
 
-    .hero{padding:30px 0 12px}
+    /* Hero */
+    .hero{
+      padding:34px 0 14px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"J2M";
+      position:absolute;
+      top:10px;
+      right:10px;
+      font-size:clamp(100px, 20vw, 240px);
+      font-weight:900;
+      letter-spacing:-8px;
+      color:rgba(123,135,102,.08);
+      line-height:1;
+      z-index:0;
+      pointer-events:none;
+      user-select:none;
+    }
+
     .hero-grid{
       display:grid;
       grid-template-columns:1.12fr .88fr;
       gap:20px;
       align-items:start;
+      position:relative;
+      z-index:1;
     }
 
     .kicker{
@@ -180,11 +251,12 @@
     }
 
     h1{
-      font-size:clamp(34px,4.1vw,56px);
+      font-size:clamp(34px,4.2vw,58px);
       line-height:1.03;
       margin:12px 0 14px;
-      letter-spacing:-.9px;
+      letter-spacing:-1px;
       color:var(--graphite);
+      max-width:11ch;
     }
 
     .lead{
@@ -209,6 +281,38 @@
       font-size:13.5px;
     }
 
+    /* Brand strip */
+    .brand-strip{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .brand-signature{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.75);
+      box-shadow:0 8px 18px rgba(60,64,70,.04);
+      font-weight:700;
+    }
+
+    .brand-signature .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--green);
+      flex-shrink:0;
+    }
+
+    /* Panels */
     .panel{
       background:var(--card);
       border:1px solid var(--border);
@@ -259,8 +363,9 @@
       font-size:14px;
     }
 
+    /* Sections */
     section{
-      padding:20px 0;
+      padding:22px 0;
       scroll-margin-top:110px;
     }
 
@@ -277,6 +382,36 @@
       font-size:14.8px;
     }
 
+    /* Section signature */
+    .section-signature{
+      margin-top:14px;
+      display:flex;
+      justify-content:flex-end;
+    }
+
+    .section-signature span{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.72);
+      color:var(--muted);
+      font-size:12.5px;
+      font-weight:700;
+    }
+
+    .section-signature em{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--green);
+      display:inline-block;
+      font-style:normal;
+    }
+
+    /* Segments */
     .segments{
       display:flex;
       flex-wrap:wrap;
@@ -298,6 +433,7 @@
       font-size:14px;
     }
 
+    /* Brands */
     .brands-wrap{
       background:rgba(255,255,255,.74);
       border:1px solid var(--border);
@@ -334,6 +470,7 @@
       object-fit:contain;
     }
 
+    /* Product tiles */
     .prod-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -375,6 +512,7 @@
       margin-bottom:10px;
     }
 
+    /* Steps */
     .steps{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -428,6 +566,7 @@
       font-size:13px;
     }
 
+    /* Whats grid */
     .whats-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -455,6 +594,7 @@
       font-size:14px;
     }
 
+    /* Contact */
     .contact-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -482,14 +622,45 @@
       font-size:14px;
     }
 
+    /* Footer */
     footer{
-      margin-top:30px;
-      padding:18px 0 30px;
+      margin-top:34px;
+      padding:22px 0 34px;
       border-top:1px solid var(--border);
       color:var(--muted);
       font-size:13px;
     }
 
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+
+    .footer-mini-logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      font-weight:800;
+      color:var(--graphite);
+    }
+
+    .footer-mini-logo i{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--green);
+      display:inline-block;
+      font-style:normal;
+    }
+
+    /* Floating WhatsApp */
     .wa-float{
       position:fixed;
       right:16px;
@@ -502,6 +673,7 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      gap:8px;
       padding:14px 16px;
       border-radius:999px;
       background:linear-gradient(135deg,var(--green),var(--green-dark));
@@ -511,6 +683,17 @@
       border:1px solid rgba(255,255,255,.2);
     }
 
+    .wa-float a::before{
+      content:"J2M";
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.3px;
+      padding:4px 7px;
+      border-radius:999px;
+      background:rgba(255,255,255,.18);
+    }
+
+    /* Responsive */
     @media (max-width: 1020px){
       .hero-grid{grid-template-columns:1fr}
       .brands{grid-template-columns:repeat(4,1fr)}
@@ -527,18 +710,45 @@
         position:static;
         background:transparent;
         backdrop-filter:none;
+        box-shadow:none !important;
       }
+
       nav{justify-content:flex-start}
       .brands{grid-template-columns:repeat(2,1fr)}
       .steps{grid-template-columns:1fr}
       .whats-grid{grid-template-columns:1fr}
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      .brand .logo-box{width:82px;height:82px}
+
+      .brand{
+        min-width:0;
+        gap:14px;
+      }
+
+      .brand .logo-box{
+        width:98px;
+        height:98px;
+      }
+
+      .brand img{
+        transform:scale(1.15);
+      }
+
+      .brand .tagline strong{
+        font-size:17px;
+      }
+
       .brand .tagline span{
         max-width:220px;
         white-space:nowrap;
       }
+
+      .hero::before{
+        font-size:120px;
+        top:16px;
+        right:-8px;
+      }
+
       .wa-float{display:block}
     }
   </style>
@@ -546,10 +756,10 @@
 
 <body>
   <div class="wrap">
-    <header>
+    <header id="site-header">
       <div class="brand">
         <div class="logo-box">
-          <img src="logo-j2m-oficial.png" alt="J2M Medical" />
+          <img src="./logo-j2m-oficial.png" alt="J2M Medical" />
         </div>
         <div class="tagline">
           <strong>J2M Medical</strong>
@@ -571,6 +781,7 @@
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="topo">
       <div class="hero-grid">
         <div>
@@ -591,6 +802,13 @@
 
           <div class="subnote">
             Nosso diferencial não é preço. É <b>serviço</b>, <b>resposta rápida</b> e <b>entrega confiável</b>.
+          </div>
+
+          <div class="brand-strip">
+            <div class="brand-signature">
+              <span class="dot"></span>
+              J2M Medical • Eficiência logística para quem cuida de vidas
+            </div>
           </div>
         </div>
 
@@ -622,6 +840,7 @@
       </div>
     </section>
 
+    <!-- SOLUÇÃO -->
     <section id="produtos">
       <h2>Uma solução profissional para o abastecimento da sua operação</h2>
       <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos • Itens de consumo contínuo</p>
@@ -650,8 +869,13 @@
           <p>Menos correria, menos falhas de abastecimento e mais confiança para manter sua rotina funcionando.</p>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- DIAGNÓSTICO -->
     <section id="diagnostico">
       <h2>Talvez o problema não seja o preço</h2>
       <p class="subtitle">
@@ -683,8 +907,13 @@
           </a>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- COBERTURA -->
     <section id="cobertura">
       <h2>Cobertura e prazos</h2>
       <p class="subtitle">
@@ -707,8 +936,13 @@
           </div>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- MARCAS -->
     <section id="marcas">
       <h2>Marcas reconhecidas no mercado</h2>
       <p class="subtitle">Fornecedores selecionados para garantir qualidade, regularidade e segurança no abastecimento.</p>
@@ -729,8 +963,13 @@
           <div class="brand-logo"><img src="m12.jpg" alt="Fornecedor 12" loading="lazy"></div>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- QUEM ATENDEMOS -->
     <section id="segmentos">
       <h2>Quem atendemos</h2>
       <div class="segments">
@@ -744,8 +983,13 @@
       <p class="segments-note">
         Receba um <b>catálogo específico para o seu segmento</b> diretamente no WhatsApp.
       </p>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- PRINCÍPIOS -->
     <section id="principios">
       <h2>Princípios operacionais</h2>
       <p class="subtitle">O que sustenta nossa entrega e reduz interrupções na sua rotina.</p>
@@ -770,8 +1014,13 @@
           </div>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- COMO FUNCIONA -->
     <section id="como">
       <h2>Começar é simples</h2>
       <p class="subtitle">Você pode iniciar pelos itens de maior consumo e validar prazo, atendimento e consistência da operação.</p>
@@ -805,8 +1054,13 @@
         </a>
         <span>Resposta em horário comercial • Campo Grande com atendimento contínuo</span>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- CATÁLOGO -->
     <section id="cotacao">
       <h2>Receba o catálogo do seu nicho</h2>
       <p class="subtitle">
@@ -850,8 +1104,13 @@
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Meu%20segmento%20%C3%A9%20____%20.%20Quero%20receber%20o%20CAT%C3%81LOGO%20base%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- DOAÇÕES -->
     <section id="doacoes">
       <h2>Doações para instituições</h2>
       <p class="subtitle">Atendemos também pessoas e empresas que desejam doar fraldas e itens essenciais para asilos e instituições.</p>
@@ -870,8 +1129,13 @@
           </a>
         </div>
       </div>
+
+      <div class="section-signature">
+        <span><em></em> J2M Medical</span>
+      </div>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato">
       <h2>Contato</h2>
       <div class="contact-grid">
@@ -903,7 +1167,10 @@
     </section>
 
     <footer>
-      <div><b>J2M Medical</b> — distribuição profissional com logística eficiente.</div>
+      <div class="footer-brand">
+        <div class="footer-mini-logo"><i></i> J2M Medical</div>
+        <div>Eficiência logística para quem cuida de vidas.</div>
+      </div>
       <div><b>CNPJ:</b> 36.257.986/0001-27 • Rua Eugenio Silverio, 105 • Nova Lima • Campo Grande-MS</div>
       <div>WhatsApp: +55 (67) 98194-0129 • E-mail: comercial@j2mmedical.com.br</div>
     </footer>
@@ -914,5 +1181,20 @@
       Catálogo no WhatsApp
     </a>
   </div>
+
+  <script>
+    const header = document.getElementById('site-header');
+
+    function handleHeaderScroll() {
+      if (window.scrollY > 70) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', handleHeaderScroll);
+    handleHeaderScroll();
+  </script>
 </body>
 </html>
