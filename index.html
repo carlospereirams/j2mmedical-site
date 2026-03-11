@@ -4,146 +4,211 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>J2M Medical | Distribuição B2B com entrega rápida no MS</title>
-  <meta name="description" content="Distribuição B2B no Mato Grosso do Sul com entrega em até 24h, padronização de pedidos e reposição organizada. Catálogo por nicho via WhatsApp." />
+  <meta name="description" content="Distribuição B2B no Mato Grosso do Sul com entrega em até 24h, reposição organizada e atendimento rápido para hospitais, clínicas, consultórios, veterinárias, farmácias e casas de repouso." />
 
   <link rel="canonical" href="https://j2mmedical.com.br/" />
   <meta property="og:title" content="J2M Medical | Distribuição B2B com entrega rápida no MS" />
-  <meta property="og:description" content="Reposição organizada, processo padronizado e entrega em até 24h no MS. Receba catálogo por nicho via WhatsApp." />
+  <meta property="og:description" content="Distribuição profissional com reposição organizada, atendimento ágil e entrega em até 24h no Mato Grosso do Sul." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://j2mmedical.com.br/" />
-  <meta property="og:image" content="https://j2mmedical.com.br/logo-cropped.png" />
+  <meta property="og:image" content="https://j2mmedical.com.br/logo-j2m-oficial.png" />
 
-  <link rel="preload" as="image" href="logo-cropped.png" />
+  <link rel="preload" as="image" href="logo-j2m-oficial.png" />
 
   <style>
     :root{
-      --bg:#f4f8f7;
-      --card:#ffffff;
-      --text:#0f2330;
-      --muted:#54626d;
-      --border:#e2ebe7;
-      --green:#1f8f5f;
-      --green2:#136a46;
-      --shadow:0 14px 30px rgba(10,35,48,.08);
-      --radius:18px;
+      --bg:#F6F7F4;
+      --bg-soft:#EEF1EB;
+      --card:#FFFFFF;
+      --text:#3C4046;
+      --muted:#6E747A;
+      --border:#DDE3DA;
+      --green:#7B8766;      /* Bosque Luminoso */
+      --green-dark:#667154;
+      --graphite:#3C4046;
+      --graphite-2:#4B5057;
+      --white:#FFFFFF;
+      --shadow:0 16px 34px rgba(60,64,70,.08);
+      --shadow-soft:0 10px 24px rgba(60,64,70,.05);
+      --radius:20px;
       --radius2:14px;
     }
 
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
+    html{scroll-behavior:smooth}
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1000px 520px at 10% 0%, rgba(31,143,95,.11), transparent 55%),
-        radial-gradient(900px 520px at 90% 4%, rgba(15,35,48,.08), transparent 55%),
+        radial-gradient(900px 480px at 8% 0%, rgba(123,135,102,.10), transparent 55%),
+        radial-gradient(900px 520px at 92% 0%, rgba(60,64,70,.06), transparent 55%),
         var(--bg);
-      line-height:1.45;
+      line-height:1.5;
     }
 
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
 
-    /* Header */
     header{
       display:flex;align-items:center;justify-content:space-between;gap:18px;
       padding:14px 0 16px;
-      border-bottom:2px solid var(--border);
+      border-bottom:1px solid var(--border);
       position:sticky;top:0;z-index:20;
-      background:rgba(244,248,247,.90);
+      background:rgba(246,247,244,.90);
       backdrop-filter: blur(10px);
     }
 
     .brand{
       display:flex;align-items:center;gap:14px;
-      min-width:360px; /* ajuda a não esmagar a tagline */
+      min-width:340px;
     }
 
-    /* LOGO: quadrado com fundo igual ao da arte + zoom controlado */
     .brand .logo-box{
       width:92px;
       height:92px;
-      padding:8px;
-      background:#E9EDEE;                 /* mesma cor do fundo da logo */
+      padding:10px;
+      background:var(--white);
       border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:0 14px 28px rgba(15,35,48,.14);
+      border-radius:20px;
+      box-shadow:0 14px 28px rgba(60,64,70,.10);
       overflow:hidden;
       display:flex;
       align-items:center;
       justify-content:center;
     }
+
     .brand img{
       width:100%;
       height:100%;
       object-fit:contain;
-      transform:scale(1.28);              /* <<< cabe e preenche sem cortar */
-      transform-origin:center;
       display:block;
     }
 
-    /* TAGLINE: não quebra "logística eficiente" */
-    .brand .tagline{display:flex;flex-direction:column;gap:2px;min-width:0}
-    .brand .tagline strong{font-size:16px;letter-spacing:.2px}
+    .brand .tagline{
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      min-width:0;
+    }
+
+    .brand .tagline strong{
+      font-size:17px;
+      letter-spacing:.2px;
+      color:var(--graphite);
+    }
+
     .brand .tagline span{
-      font-size:12.5px;color:var(--muted);
-      display:block;
+      font-size:12.8px;
+      color:var(--muted);
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
       max-width:360px;
     }
 
-    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    nav{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
     nav a{
-      font-size:14px;color:var(--muted);
-      padding:8px 10px;border-radius:12px;
+      font-size:14px;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
       border:1px solid transparent;
       white-space:nowrap;
+      transition:.2s ease;
     }
-    nav a:hover{border-color:var(--border);background:rgba(255,255,255,.75);color:var(--text)}
 
-    /* Buttons */
+    nav a:hover{
+      border-color:var(--border);
+      background:rgba(255,255,255,.9);
+      color:var(--graphite);
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 16px;border-radius:14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:13px 17px;
+      border-radius:14px;
       border:1px solid var(--border);
       background:#fff;
-      font-weight:800;font-size:14.5px;
-      box-shadow:0 10px 20px rgba(10,35,48,.06);
+      color:var(--graphite);
+      font-weight:800;
+      font-size:14.5px;
+      box-shadow:var(--shadow-soft);
       cursor:pointer;
+      transition:.2s ease;
     }
-    .btn.primary{
-      background:linear-gradient(135deg,var(--green),var(--green2));
-      color:#fff;border-color:transparent;
-      box-shadow:0 14px 26px rgba(31,143,95,.25);
-    }
-    .btn.ghost{background:rgba(255,255,255,.65)}
-    .btn.small{padding:10px 12px;border-radius:12px;font-size:14px}
 
-    /* Hero */
-    .hero{padding:28px 0 12px}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--green),var(--green-dark));
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 16px 28px rgba(123,135,102,.28);
+    }
+    .btn.ghost{
+      background:rgba(255,255,255,.78);
+    }
+    .btn.small{
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:14px;
+    }
+
+    .hero{padding:30px 0 12px}
     .hero-grid{
-      display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start;
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:20px;
+      align-items:start;
     }
+
     .kicker{
-      color:var(--green2);font-weight:900;font-size:13.5px;
-      letter-spacing:.4px;text-transform:uppercase;
+      color:var(--green-dark);
+      font-weight:900;
+      font-size:13.5px;
+      letter-spacing:.5px;
+      text-transform:uppercase;
     }
+
     h1{
       font-size:clamp(34px,4.1vw,56px);
-      line-height:1.04;margin:10px 0 12px;letter-spacing:-.8px;
+      line-height:1.03;
+      margin:12px 0 14px;
+      letter-spacing:-.9px;
+      color:var(--graphite);
     }
+
     .lead{
       margin:0 0 18px;
-      font-size:16.8px;color:var(--muted);
+      font-size:17px;
+      color:var(--muted);
       max-width:62ch;
     }
-    .lead b{color:var(--text)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .subnote{margin-top:10px;color:var(--muted);font-size:13px}
 
-    /* Panels */
+    .lead b{color:var(--graphite)}
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .subnote{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+
     .panel{
       background:var(--card);
       border:1px solid var(--border);
@@ -151,165 +216,280 @@
       box-shadow:var(--shadow);
       padding:18px;
     }
+
     .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12.5px;font-weight:900;
-      color:var(--green2);
-      background:rgba(31,143,95,.10);
-      border:1px solid rgba(31,143,95,.18);
-      padding:7px 10px;border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12.5px;
+      font-weight:900;
+      color:var(--green-dark);
+      background:rgba(123,135,102,.10);
+      border:1px solid rgba(123,135,102,.20);
+      padding:7px 10px;
+      border-radius:999px;
       margin-bottom:12px;
     }
-    .badges-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+
+    .badges-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:6px;
+    }
+
     .mini-grid{display:grid;gap:12px}
+
     .mini{
       border:1px solid var(--border);
       border-radius:var(--radius2);
-      padding:14px;background:#fff;
+      padding:14px;
+      background:#fff;
     }
-    .mini b{display:block;margin-bottom:4px}
-    .mini p{margin:0;color:var(--muted);font-size:14px}
 
-    /* Sections */
-    section{padding:18px 0; scroll-margin-top:110px;}
-    h2{margin:0 0 10px;font-size:22px;letter-spacing:-.3px}
-    .subtitle{margin:0 0 12px;color:var(--muted);font-size:14.5px}
+    .mini b{
+      display:block;
+      margin-bottom:4px;
+      color:var(--graphite);
+    }
 
-    /* Segments */
-    .segments{display:flex;flex-wrap:wrap;gap:10px}
-    .seg{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.82);
-      box-shadow:0 10px 18px rgba(10,35,48,.04);
+    .mini p{
+      margin:0;
+      color:var(--muted);
       font-size:14px;
     }
-    .segments-note{margin:10px 0 0;color:var(--muted);font-size:14px}
 
-    /* Brands */
+    section{
+      padding:20px 0;
+      scroll-margin-top:110px;
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size:24px;
+      letter-spacing:-.4px;
+      color:var(--graphite);
+    }
+
+    .subtitle{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14.8px;
+    }
+
+    .segments{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .seg{
+      padding:10px 13px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.88);
+      box-shadow:0 8px 18px rgba(60,64,70,.04);
+      font-size:14px;
+    }
+
+    .segments-note{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .brands-wrap{
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.74);
       border:1px solid var(--border);
       border-radius:var(--radius);
-      box-shadow:0 12px 22px rgba(10,35,48,.05);
+      box-shadow:0 12px 22px rgba(60,64,70,.05);
       padding:16px;
     }
+
     .brands{
       display:grid;
       grid-template-columns:repeat(6, 1fr);
       gap:12px;
       align-items:center;
     }
+
     .brand-logo{
       height:72px;
       border:1px solid var(--border);
       border-radius:14px;
       background:#fff;
-      display:flex;align-items:center;justify-content:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       padding:10px;
       overflow:hidden;
     }
+
     .brand-logo img{
-      max-height:52px; max-width:100%;
-      width:auto; height:auto;
+      max-height:52px;
+      max-width:100%;
+      width:auto;
+      height:auto;
       display:block;
       object-fit:contain;
     }
 
-    /* Product tiles */
     .prod-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:12px;
       margin-top:10px;
     }
+
     .prod{
-      background:#fff;border:1px solid var(--border);
+      background:#fff;
+      border:1px solid var(--border);
       border-radius:var(--radius);
-      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      box-shadow:0 10px 20px rgba(60,64,70,.05);
       padding:14px;
     }
-    .prod b{display:block;margin-bottom:6px}
-    .prod p{margin:0;color:var(--muted);font-size:14px}
+
+    .prod b{
+      display:block;
+      margin-bottom:6px;
+      color:var(--graphite);
+    }
+
+    .prod p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .prod .tag{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;font-weight:900;
-      color:var(--green2);
-      background:rgba(31,143,95,.10);
-      border:1px solid rgba(31,143,95,.18);
-      padding:6px 10px;border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      font-weight:900;
+      color:var(--green-dark);
+      background:rgba(123,135,102,.10);
+      border:1px solid rgba(123,135,102,.20);
+      padding:6px 10px;
+      border-radius:999px;
       margin-bottom:10px;
     }
 
-    /* Steps */
     .steps{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:12px;
       margin-top:10px;
     }
+
     .step{
-      background:#fff;border:1px solid var(--border);
+      background:#fff;
+      border:1px solid var(--border);
       border-radius:var(--radius);
-      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      box-shadow:0 10px 20px rgba(60,64,70,.05);
       padding:14px;
     }
+
     .step .n{
-      width:34px;height:34px;border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;color:#fff;
-      background:linear-gradient(135deg,var(--green),var(--green2));
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:#fff;
+      background:linear-gradient(135deg,var(--green),var(--green-dark));
       margin-bottom:10px;
     }
-    .step h3{margin:0 0 6px;font-size:15px}
-    .step p{margin:0;color:var(--muted);font-size:14px}
+
+    .step h3{
+      margin:0 0 6px;
+      font-size:15px;
+      color:var(--graphite);
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
 
     .cta-final{
       margin-top:12px;
-      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    .cta-final span{color:var(--muted);font-size:13px}
 
-    /* Whats niche buttons */
+    .cta-final span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
     .whats-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:12px;
       margin-top:10px;
     }
+
     .whats-card{
       background:#fff;
       border:1px solid var(--border);
       border-radius:var(--radius);
-      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      box-shadow:0 10px 20px rgba(60,64,70,.05);
       padding:14px;
     }
-    .whats-card b{display:block;margin-bottom:6px}
-    .whats-card p{margin:0 0 10px;color:var(--muted);font-size:14px}
 
-    /* Contact */
+    .whats-card b{
+      display:block;
+      margin-bottom:6px;
+      color:var(--graphite);
+    }
+
+    .whats-card p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .contact-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:12px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
       margin-top:10px;
     }
+
     .contact{
-      background:#fff;border:1px solid var(--border);
+      background:#fff;
+      border:1px solid var(--border);
       border-radius:var(--radius);
-      box-shadow:0 10px 20px rgba(10,35,48,.05);
+      box-shadow:0 10px 20px rgba(60,64,70,.05);
       padding:14px;
     }
-    .contact b{display:block;margin-bottom:6px}
-    .contact p{margin:0;color:var(--muted);font-size:14px}
+
+    .contact b{
+      display:block;
+      margin-bottom:6px;
+      color:var(--graphite);
+    }
+
+    .contact p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
 
     footer{
-      margin-top:28px;
+      margin-top:30px;
       padding:18px 0 30px;
-      border-top:2px solid var(--border);
+      border-top:1px solid var(--border);
       color:var(--muted);
       font-size:13px;
     }
 
-    /* Floating WhatsApp button */
     .wa-float{
       position:fixed;
       right:16px;
@@ -317,46 +497,49 @@
       z-index:50;
       display:none;
     }
+
     .wa-float a{
-      display:inline-flex;align-items:center;justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding:14px 16px;
       border-radius:999px;
-      background:linear-gradient(135deg,var(--green),var(--green2));
+      background:linear-gradient(135deg,var(--green),var(--green-dark));
       color:#fff;
       font-weight:900;
-      box-shadow:0 14px 26px rgba(31,143,95,.28);
+      box-shadow:0 14px 26px rgba(123,135,102,.28);
       border:1px solid rgba(255,255,255,.2);
     }
 
-    /* Responsive */
     @media (max-width: 1020px){
       .hero-grid{grid-template-columns:1fr}
       .brands{grid-template-columns:repeat(4,1fr)}
       .steps{grid-template-columns:repeat(2,1fr)}
       .whats-grid{grid-template-columns:repeat(2,1fr)}
       .prod-grid{grid-template-columns:repeat(2,1fr)}
-      section{scroll-margin-top:24px;}
+      section{scroll-margin-top:24px}
       .brand{min-width:0}
-      .brand .tagline span{
-        max-width:240px;
-      }
+      .brand .tagline span{max-width:240px}
     }
+
     @media (max-width: 640px){
-      header{position:static;background:transparent;backdrop-filter:none}
+      header{
+        position:static;
+        background:transparent;
+        backdrop-filter:none;
+      }
       nav{justify-content:flex-start}
       .brands{grid-template-columns:repeat(2,1fr)}
       .steps{grid-template-columns:1fr}
       .whats-grid{grid-template-columns:1fr}
       .prod-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-
       .brand .logo-box{width:82px;height:82px}
-      .brand img{transform:scale(1.30)}
       .brand .tagline span{
         max-width:220px;
         white-space:nowrap;
       }
-      .wa-float{display:block;}
+      .wa-float{display:block}
     }
   </style>
 </head>
@@ -366,7 +549,7 @@
     <header>
       <div class="brand">
         <div class="logo-box">
-          <img src="logo-cropped.png" alt="J2M Medical" />
+          <img src="logo-j2m-oficial.png" alt="J2M Medical" />
         </div>
         <div class="tagline">
           <strong>J2M Medical</strong>
@@ -388,17 +571,16 @@
       </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero" id="topo">
       <div class="hero-grid">
         <div>
           <div class="kicker">Distribuição B2B • Mato Grosso do Sul</div>
-          <h1>Logística médica simples e eficiente que você pode confiar.</h1>
+          <h1>Reposição organizada e entrega rápida para quem não pode parar.</h1>
 
           <p class="lead">
-Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previsível em até <b>24h em todo MS</b>.
-<br/>Solicite seu <b>catálogo no WhatsApp</b> e receba atendimento imediato.
-</p>
+            A <b>J2M Medical</b> organiza seu abastecimento com mais previsibilidade, menos urgência e entrega em até <b>24h no Mato Grosso do Sul</b>.
+            Solicite seu <b>catálogo no WhatsApp</b> e receba atendimento rápido.
+          </p>
 
           <div class="cta">
             <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20e%20solicitar%20uma%20cota%C3%A7%C3%A3o%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
@@ -408,93 +590,89 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
           </div>
 
           <div class="subnote">
-            Nosso diferencial não é preço. É <b>atendimento</b> e <b>entrega rápida</b>, com padrão e previsibilidade.
+            Nosso diferencial não é preço. É <b>serviço</b>, <b>resposta rápida</b> e <b>entrega confiável</b>.
           </div>
         </div>
 
         <div class="panel">
           <div class="badges-row">
-            <div class="badge">✓ Abastecimento sem complicação</div>
+            <div class="badge">✓ Atendimento rápido</div>
             <div class="badge">+400 clientes/mês</div>
           </div>
 
           <div class="mini-grid">
             <div class="mini">
               <b>Entrega previsível</b>
-              <p>Você sabe quando chega — sem precisar cobrar.</p>
+              <p>Você sabe quando chega e reduz a dependência de cobranças e urgências.</p>
             </div>
             <div class="mini">
               <b>Processo padronizado</b>
-              <p>Pedido sempre do mesmo jeito, com menos retrabalho.</p>
+              <p>Pedido sempre com mais organização, menos erro e menos retrabalho.</p>
             </div>
             <div class="mini">
               <b>Reposição organizada</b>
-              <p>Menos urgência e menos compras emergenciais.</p>
+              <p>Menos compras emergenciais e mais continuidade no atendimento.</p>
             </div>
             <div class="mini">
-              <b>Resposta rápida</b>
-              <p>Atendimento direto no WhatsApp comercial.</p>
+              <b>Estrutura para atender</b>
+              <p>Operação preparada para responder com agilidade em Campo Grande e interior.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SOLUÇÃO -->
     <section id="produtos">
-      <h2>Uma única solução para tudo que seu atendimento precisa</h2>
-      <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos — com reposição organizada e entrega rápida.</p>
+      <h2>Uma solução profissional para o abastecimento da sua operação</h2>
+      <p class="subtitle">Medicamentos • Controlados • Soros • Materiais médicos • Itens de consumo contínuo</p>
 
       <div class="prod-grid">
         <div class="prod">
           <div class="tag">Reposição diária</div>
           <b>Materiais descartáveis</b>
-          <p>Luva, seringa, agulha, gaze, máscara, papel lençol e itens de consumo contínuo.</p>
+          <p>Luva, seringa, agulha, gaze, máscara, papel lençol e itens de rotina com alto giro.</p>
         </div>
         <div class="prod">
           <div class="tag">Linha clínica</div>
           <b>Soros e soluções</b>
-          <p>Itens críticos de rotina, com entrega previsível e padronização.</p>
+          <p>Itens essenciais para a rotina clínica com reposição mais previsível.</p>
         </div>
         <div class="prod">
           <div class="tag">Centralização</div>
           <b>Medicamentos e controlados</b>
-          <p>Uma operação só para reduzir retrabalho, urgências e compras emergenciais.</p>
+          <p>Mais organização para reduzir compras quebradas, urgências e retrabalho da equipe.</p>
         </div>
       </div>
 
       <div class="panel" style="margin-top:12px">
         <div class="mini">
-          <b>Por que isso importa?</b>
-          <p>Menos pedidos quebrados, menos correria da equipe e mais previsibilidade de estoque.</p>
+          <b>O que isso gera na prática?</b>
+          <p>Menos correria, menos falhas de abastecimento e mais confiança para manter sua rotina funcionando.</p>
         </div>
       </div>
     </section>
 
-    <!-- DIAGNÓSTICO -->
     <section id="diagnostico">
-      <h2>Talvez não seja preço…</h2>
+      <h2>Talvez o problema não seja o preço</h2>
       <p class="subtitle">
-        Às vezes o problema não está no valor do produto, mas no impacto da falta dele.
-        Quando a equipe precisa parar para procurar material, adaptar procedimento ou reorganizar agenda por falta de reposição,
-        o custo não aparece na nota — aparece na rotina.
+        Muitas vezes o maior custo não está no item. Está na falta dele, no atraso da entrega, na quebra da rotina e no retrabalho da equipe.
       </p>
 
       <div class="panel">
         <div class="mini">
-          <b>Sinais de que a operação pode melhorar</b>
+          <b>Sinais de que sua operação pode melhorar</b>
           <p>
             • pedidos feitos sempre em cima da hora<br>
             • compras divididas em vários fornecedores<br>
             • equipe perguntando diariamente se “chegou material”<br>
-            • procedimentos adaptados por falta de item específico<br>
-            • entregas fora de sequência
+            • adaptação de procedimento por falta de item<br>
+            • entrega fora de sequência
           </p>
         </div>
 
         <div class="mini" style="margin-top:12px">
-          <b>Se isso acontece com frequência</b>
-          <p>Normalmente não é uma questão de preço — é organização de abastecimento.</p>
+          <b>Quando isso vira rotina</b>
+          <p>Normalmente não é uma questão de preço. É abastecimento sem padrão e sem previsibilidade.</p>
         </div>
 
         <div class="cta" style="margin-top:16px">
@@ -507,35 +685,33 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
       </div>
     </section>
 
-    <!-- COBERTURA -->
     <section id="cobertura">
       <h2>Cobertura e prazos</h2>
       <p class="subtitle">
-        Entrega em até <b>24h</b> no interior do MS, por frota própria ou transportadora — com padrão de atendimento.
+        Entrega em até <b>24h no MS</b>, com operação organizada e atendimento rápido.
       </p>
 
       <div class="panel">
         <div class="mini-grid">
           <div class="mini">
             <b>Campo Grande</b>
-            <p>Atendimento contínuo e reposição rápida conforme necessidade.</p>
+            <p>Atendimento contínuo e resposta rápida para a rotina da capital.</p>
           </div>
           <div class="mini">
             <b>Interior do MS</b>
-            <p>Entrega em até <b>24h</b> com frota própria ou transportadora (conforme rota/janela de coleta).</p>
+            <p>Entrega em até <b>24h</b> por frota própria ou transportadora, conforme rota e janela de coleta.</p>
           </div>
           <div class="mini">
             <b>Itens críticos</b>
-            <p>Tratativa direta no WhatsApp para alinhar urgência e alternativa equivalente.</p>
+            <p>Tratativa direta no WhatsApp para alinhamento rápido de urgência e alternativa equivalente.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MARCAS -->
     <section id="marcas">
       <h2>Marcas reconhecidas no mercado</h2>
-      <p class="subtitle">Trabalhamos com fornecedores selecionados para garantir qualidade e regularidade.</p>
+      <p class="subtitle">Fornecedores selecionados para garantir qualidade, regularidade e segurança no abastecimento.</p>
 
       <div class="brands-wrap">
         <div class="brands" aria-label="Logos de fornecedores">
@@ -555,7 +731,6 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
       </div>
     </section>
 
-    <!-- QUEM ATENDEMOS -->
     <section id="segmentos">
       <h2>Quem atendemos</h2>
       <div class="segments">
@@ -567,62 +742,60 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
         <span class="seg">Farmácias / Drogarias</span>
       </div>
       <p class="segments-note">
-        Temos um <b>catálogo específico</b> com os principais itens do seu segmento — enviado no WhatsApp.
+        Receba um <b>catálogo específico para o seu segmento</b> diretamente no WhatsApp.
       </p>
     </section>
 
-    <!-- PRINCÍPIOS -->
     <section id="principios">
       <h2>Princípios operacionais</h2>
-      <p class="subtitle">O que mantém nossa entrega previsível — e sua rotina sem interrupções.</p>
+      <p class="subtitle">O que sustenta nossa entrega e reduz interrupções na sua rotina.</p>
 
       <div class="panel">
         <div class="mini-grid">
           <div class="mini">
-            <b>Processo acima de promessa</b>
-            <p>Venda com conferência, rastreabilidade e acompanhamento até a chegada.</p>
+            <b>Processo acima de improviso</b>
+            <p>Conferência, rastreabilidade e acompanhamento até a entrega.</p>
           </div>
           <div class="mini">
             <b>Padronização de pedidos</b>
-            <p>Menos erro, menos retrabalho e rotina mais previsível para sua equipe.</p>
+            <p>Menos falha operacional, menos retrabalho e mais previsibilidade.</p>
           </div>
           <div class="mini">
             <b>Resposta rápida</b>
-            <p>Atendimento direto no WhatsApp para resolver, não para “empurrar”.</p>
+            <p>Atendimento comercial para resolver com agilidade, não para enrolar.</p>
           </div>
           <div class="mini">
-            <b>Reposição organizada</b>
-            <p>O objetivo é reduzir urgência e compras emergenciais.</p>
+            <b>Reposição contínua</b>
+            <p>Redução de urgências e mais organização na sua rotina de compra.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
     <section id="como">
       <h2>Começar é simples</h2>
-      <p class="subtitle">Você não precisa trocar de fornecedor de uma vez. Comece pelos itens de maior consumo do seu nicho.</p>
+      <p class="subtitle">Você pode iniciar pelos itens de maior consumo e validar prazo, atendimento e consistência da operação.</p>
 
       <div class="steps">
         <div class="step">
           <div class="n">1</div>
           <h3>Escolha seu nicho</h3>
-          <p>Você clica e recebe o catálogo do seu segmento no WhatsApp.</p>
+          <p>Você seleciona o segmento e recebe o catálogo correspondente no WhatsApp.</p>
         </div>
         <div class="step">
           <div class="n">2</div>
           <h3>Envie sua lista</h3>
-          <p>Você manda sua lista atual ou foto do pedido.</p>
+          <p>Pode ser lista atual, foto do pedido ou relação dos itens de maior consumo.</p>
         </div>
         <div class="step">
           <div class="n">3</div>
-          <h3>Você testa sem risco</h3>
-          <p>Primeiro pedido pequeno para validar qualidade, prazo e atendimento.</p>
+          <h3>Teste a operação</h3>
+          <p>Faça um primeiro pedido e valide prazo, atendimento e organização.</p>
         </div>
         <div class="step">
           <div class="n">4</div>
-          <h3>Reposição contínua</h3>
-          <p>Depois você só aprova. Nós lembramos, separamos e entregamos.</p>
+          <h3>Estruture sua reposição</h3>
+          <p>Depois disso, sua rotina ganha mais padrão, previsibilidade e agilidade.</p>
         </div>
       </div>
 
@@ -630,67 +803,65 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
         <a class="btn primary" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20e%20come%C3%A7ar%20pelos%20itens%20de%20maior%20consumo%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
           Receber catálogo agora
         </a>
-        <span>Resposta em horário comercial • Campo Grande: atendimento contínuo</span>
+        <span>Resposta em horário comercial • Campo Grande com atendimento contínuo</span>
       </div>
     </section>
 
-    <!-- CATÁLOGO (CAPTURA POR NICHO) -->
     <section id="cotacao">
       <h2>Receba o catálogo do seu nicho</h2>
       <p class="subtitle">
-        Clique no seu segmento e receba uma lista com os principais itens — direto no WhatsApp.
+        Clique no seu segmento e fale direto com a J2M no WhatsApp.
       </p>
 
       <div class="whats-grid">
         <div class="whats-card">
           <b>Hospital / Clínica</b>
-          <p>Catálogo com itens de maior consumo.</p>
+          <p>Itens de maior consumo e reposição organizada para a rotina assistencial.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20o%20CAT%C3%81LOGO%20do%20segmento%20HOSPITAL%2FCL%C3%8DNICA%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
 
         <div class="whats-card">
           <b>Consultório</b>
-          <p>Catálogo com itens essenciais de rotina.</p>
+          <p>Itens essenciais para manter atendimento com mais previsibilidade.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20o%20CAT%C3%81LOGO%20do%20segmento%20CONSULT%C3%93RIO%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
 
         <div class="whats-card">
           <b>Veterinária</b>
-          <p>Catálogo com itens recorrentes para clínica.</p>
+          <p>Itens recorrentes para clínica e operação veterinária.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20o%20CAT%C3%81LOGO%20do%20segmento%20VETERIN%C3%81RIA%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
 
         <div class="whats-card">
           <b>Farmácia / Drogaria</b>
-          <p>Catálogo com itens de giro e reposição.</p>
+          <p>Itens de giro e reposição com atendimento rápido.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20o%20CAT%C3%81LOGO%20do%20segmento%20FARM%C3%81CIA%2FDROGARIA%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
 
         <div class="whats-card">
           <b>Casa de repouso</b>
-          <p>Catálogo com itens de uso contínuo.</p>
+          <p>Itens de uso contínuo com mais regularidade na entrega.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20o%20CAT%C3%81LOGO%20do%20segmento%20CASA%20DE%20REPOUSO%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
 
         <div class="whats-card">
           <b>Outro estabelecimento</b>
-          <p>Fale seu nicho e enviamos o catálogo base.</p>
+          <p>Informe seu segmento e enviamos um catálogo base para começar.</p>
           <a class="btn primary small" href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Meu%20segmento%20%C3%A9%20____%20.%20Quero%20receber%20o%20CAT%C3%81LOGO%20base%20e%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Receber no WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- DOAÇÕES -->
     <section id="doacoes">
       <h2>Doações para instituições</h2>
-      <p class="subtitle">Atendemos também pessoas/empresas que querem doar fraldas e itens essenciais para asilos e instituições.</p>
+      <p class="subtitle">Atendemos também pessoas e empresas que desejam doar fraldas e itens essenciais para asilos e instituições.</p>
 
       <div class="panel">
         <div class="mini-grid">
-          <div class="mini"><b>Orientação correta</b><p>Indicamos tamanhos e tipos para evitar desperdício.</p></div>
-          <div class="mini"><b>Entrega direta</b><p>Podemos entregar na instituição indicada (quando aplicável).</p></div>
-          <div class="mini"><b>Agilidade</b><p>Atendimento direcionado para doações no WhatsApp.</p></div>
-          <div class="mini"><b>Transparência</b><p>Organização do pedido e registro do atendimento.</p></div>
+          <div class="mini"><b>Orientação correta</b><p>Indicamos tamanhos e tipos para reduzir erro e desperdício.</p></div>
+          <div class="mini"><b>Entrega direta</b><p>Podemos entregar na instituição indicada, quando aplicável.</p></div>
+          <div class="mini"><b>Agilidade</b><p>Atendimento direcionado no WhatsApp para facilitar a doação.</p></div>
+          <div class="mini"><b>Organização</b><p>Registro do pedido e condução com mais clareza.</p></div>
         </div>
 
         <div class="cta" style="margin-top:16px">
@@ -701,7 +872,6 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
       </div>
     </section>
 
-    <!-- CONTATO -->
     <section id="contato">
       <h2>Contato</h2>
       <div class="contact-grid">
@@ -727,7 +897,7 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
         </div>
         <div class="contact">
           <b>Entrega</b>
-          <p>Em até 24h no MS • Campo Grande: atendimento contínuo</p>
+          <p>Em até 24h no MS • Campo Grande com atendimento contínuo</p>
         </div>
       </div>
     </section>
@@ -739,7 +909,6 @@ Padronizamos seu abastecimento, evitamos urgências e garantimos entrega previs�
     </footer>
   </div>
 
-  <!-- Botão flutuante -->
   <div class="wa-float" aria-label="Atalho para WhatsApp">
     <a href="https://wa.me/5567981940129?text=Ol%C3%A1%21%20Quero%20receber%20o%20CAT%C3%81LOGO%20do%20meu%20segmento%20com%20a%20J2M%20Medical." target="_blank" rel="noopener">
       Catálogo no WhatsApp
