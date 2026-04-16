@@ -15,7 +15,8 @@
 <link rel="preload" as="image" href="./logo-j2m-oficial.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --ink:#0e1117;
@@ -36,177 +37,988 @@
   --r-md:14px;
   --max:1240px;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+
 body{
-  font-family:'DM Sans',system-ui,sans-serif;
+  font-family:'Inter',system-ui,sans-serif;
   background:var(--cream);
   color:var(--ink);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
+
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
+
 body::before{
   content:"";
   position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events:none;z-index:1000;opacity:.4;
 }
+
 .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-.header-shell{position:sticky;top:0;z-index:90;transition:.3s ease}
+
+.header-shell{
+  position:sticky;top:0;z-index:90;transition:.3s ease
+}
+
 .header-shell.scrolled .header-inner{
-  background:rgba(249,248,245,.92);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);box-shadow:0 4px 32px rgba(14,17,23,.06);
+  background:rgba(249,248,245,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 4px 32px rgba(14,17,23,.06);
 }
+
 .header-inner{
-  padding:0 32px;max-width:var(--max);margin:0 auto;height:80px;
-  display:flex;align-items:center;justify-content:space-between;gap:20px;transition:.3s ease;
+  padding:0 32px;
+  max-width:var(--max);
+  margin:0 auto;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  transition:.3s ease;
 }
-.brand{display:flex;align-items:center;gap:14px}
-.brand-mark{width:48px;height:48px;border-radius:14px;background:var(--sage);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.brand-mark img{width:100%;height:100%;object-fit:contain;transform:scale(1.3)}
-.brand-name{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em}
-.brand-sub{font-size:12px;color:var(--muted);margin-top:1px}
-nav.desk{display:flex;align-items:center;gap:2px}
-nav.desk a{padding:8px 14px;border-radius:10px;font-size:13.5px;font-weight:500;color:var(--muted);transition:.18s ease}
-nav.desk a:hover{background:rgba(14,17,23,.06);color:var(--ink)}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand-mark{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:var(--sage);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.brand-mark img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transform:scale(1.3);
+}
+
+.brand-name{
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:18px;
+  letter-spacing:-.02em;
+}
+
+.brand-sub{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:1px;
+}
+
+nav.desk{
+  display:flex;
+  align-items:center;
+  gap:2px;
+}
+
+nav.desk a{
+  padding:8px 14px;
+  border-radius:10px;
+  font-size:13.5px;
+  font-weight:500;
+  color:var(--muted);
+  transition:.18s ease;
+}
+
+nav.desk a:hover{
+  background:rgba(14,17,23,.06);
+  color:var(--ink);
+}
+
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:0 20px;height:44px;border-radius:12px;font-size:13.5px;font-weight:600;
-  border:none;cursor:pointer;transition:.2s ease;white-space:nowrap;font-family:inherit;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:0 20px;
+  height:44px;
+  border-radius:12px;
+  font-size:13.5px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition:.2s ease;
+  white-space:nowrap;
+  font-family:inherit;
 }
-.btn-primary{background:var(--sage);color:#fff;box-shadow:0 8px 24px rgba(92,107,74,.28)}
-.btn-primary:hover{background:var(--sage-light);transform:translateY(-1px);box-shadow:0 12px 32px rgba(92,107,74,.32)}
-.btn-ghost{background:var(--white);color:var(--ink);border:1.5px solid var(--border)}
-.btn-ghost:hover{border-color:rgba(14,17,23,.2);transform:translateY(-1px)}
+
+.btn-primary{
+  background:var(--sage);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(92,107,74,.28);
+}
+
+.btn-primary:hover{
+  background:var(--sage-light);
+  transform:translateY(-1px);
+  box-shadow:0 12px 32px rgba(92,107,74,.32);
+}
+
+.btn-ghost{
+  background:var(--white);
+  color:var(--ink);
+  border:1.5px solid var(--border);
+}
+
+.btn-ghost:hover{
+  border-color:rgba(14,17,23,.2);
+  transform:translateY(-1px);
+}
+
 .menu-btn{
-  display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--border);
-  background:var(--white);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1.5px solid var(--border);
+  background:var(--white);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
 }
-.menu-btn span{display:block;width:18px;height:1.5px;background:var(--ink);border-radius:2px;transition:.2s ease}
+
+.menu-btn span{
+  display:block;
+  width:18px;
+  height:1.5px;
+  background:var(--ink);
+  border-radius:2px;
+  transition:.2s ease;
+}
+
 .menu-btn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .menu-btn.open span:nth-child(2){opacity:0}
 .menu-btn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
 .mobile-nav{
-  display:none;position:fixed;inset:0;top:80px;
-  background:rgba(249,248,245,.97);backdrop-filter:blur(20px);
-  z-index:88;padding:24px 32px;flex-direction:column;gap:8px;overflow-y:auto;
+  display:none;
+  position:fixed;
+  inset:0;
+  top:80px;
+  background:rgba(249,248,245,.97);
+  backdrop-filter:blur(20px);
+  z-index:88;
+  padding:24px 32px;
+  flex-direction:column;
+  gap:8px;
+  overflow-y:auto;
 }
+
 .mobile-nav.open{display:flex}
-.mobile-nav a{padding:14px 16px;border-radius:14px;font-size:17px;font-weight:600;color:var(--ink);border:1.5px solid var(--border-light);background:var(--white);transition:.15s ease}
-.mobile-nav a:hover{border-color:var(--sage);color:var(--sage)}
-.hero{padding:80px 0 64px;position:relative;overflow:hidden}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
-.hero-orb-1{width:700px;height:700px;background:radial-gradient(circle,rgba(92,107,74,.14) 0%,transparent 70%);top:-200px;right:-150px}
-.hero-orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(10,147,150,.10) 0%,transparent 70%);bottom:-100px;left:-100px}
-.hero-grid{display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:center;position:relative;z-index:1}
-.hero-label{
-  display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:999px;
-  background:var(--sage-pale);border:1.5px solid rgba(92,107,74,.22);color:var(--sage);
-  font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px;
+
+.mobile-nav a{
+  padding:14px 16px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:600;
+  color:var(--ink);
+  border:1.5px solid var(--border-light);
+  background:var(--white);
+  transition:.15s ease;
 }
-.hero-label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sage)}
-h1{font-family:'Syne',sans-serif;font-size:clamp(38px,4.5vw,64px);line-height:1.00;letter-spacing:-.04em;font-weight:800;margin-bottom:24px}
-h1 em{font-style:normal;color:var(--sage);position:relative}
-h1 em::after{content:"";position:absolute;left:0;bottom:-4px;right:0;height:3px;background:linear-gradient(90deg,var(--sage),var(--teal-light));border-radius:2px;opacity:.6}
-.hero-desc{font-size:17px;color:var(--muted);max-width:52ch;line-height:1.65;margin-bottom:36px}
-.hero-desc strong{color:var(--ink);font-weight:600}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
-.hero-trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.hero-trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:500}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--sage-light)}
-.hero-card{background:var(--white);border:1.5px solid var(--border);border-radius:28px;padding:28px;box-shadow:0 32px 80px rgba(14,17,23,.08),0 2px 8px rgba(14,17,23,.04);position:relative;overflow:hidden}
-.hero-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(92,107,74,.04) 0%,transparent 60%);pointer-events:none}
-.hc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-.hc-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px}
-.hc-badge{padding:5px 10px;border-radius:8px;background:rgba(10,147,150,.1);color:var(--teal);font-size:11.5px;font-weight:700;border:1px solid rgba(10,147,150,.18)}
-.hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.hc-item{padding:14px;border-radius:16px;background:var(--cream);border:1px solid var(--border-light)}
-.hc-item-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
-.hc-item-val{font-family:'Syne',sans-serif;font-weight:700;font-size:22px;color:var(--ink)}
-.hc-item-sub{font-size:12px;color:var(--muted);margin-top:2px}
-.hc-quote{padding:16px;border-radius:16px;background:linear-gradient(135deg,var(--sage),var(--sage-light));color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;line-height:1.35;letter-spacing:-.01em;position:relative;z-index:1}
-.hc-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.hc-chip{padding:6px 12px;border-radius:999px;background:rgba(14,17,23,.05);font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--border-light)}
+
+.mobile-nav a:hover{
+  border-color:var(--sage);
+  color:var(--sage);
+}
+
+.hero{
+  padding:80px 0 64px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+}
+
+.hero-orb-1{
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle,rgba(92,107,74,.14) 0%,transparent 70%);
+  top:-200px;
+  right:-150px;
+}
+
+.hero-orb-2{
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(10,147,150,.10) 0%,transparent 70%);
+  bottom:-100px;
+  left:-100px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 480px;
+  gap:48px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.hero-label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:7px 14px;
+  border-radius:999px;
+  background:var(--sage-pale);
+  border:1.5px solid rgba(92,107,74,.22);
+  color:var(--sage);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+
+.hero-label::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--sage);
+}
+
+h1{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(38px,4.5vw,64px);
+  line-height:1.00;
+  letter-spacing:-.04em;
+  font-weight:800;
+  margin-bottom:24px;
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--sage);
+  position:relative;
+}
+
+h1 em::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--sage),var(--teal-light));
+  border-radius:2px;
+  opacity:.6;
+}
+
+.hero-desc{
+  font-size:17px;
+  color:var(--muted);
+  max-width:52ch;
+  line-height:1.65;
+  margin-bottom:36px;
+}
+
+.hero-desc strong{
+  color:var(--ink);
+  font-weight:600;
+}
+
+.hero-ctas{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.hero-trust{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hero-trust-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  color:var(--muted);
+  font-weight:500;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--sage-light);
+}
+
+.hero-card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 32px 80px rgba(14,17,23,.08),0 2px 8px rgba(14,17,23,.04);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(92,107,74,.04) 0%,transparent 60%);
+  pointer-events:none;
+}
+
+.hc-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+.hc-title{
+  font-family:'Manrope',sans-serif;
+  font-weight:700;
+  font-size:15px;
+}
+
+.hc-badge{
+  padding:5px 10px;
+  border-radius:8px;
+  background:rgba(10,147,150,.1);
+  color:var(--teal);
+  font-size:11.5px;
+  font-weight:700;
+  border:1px solid rgba(10,147,150,.18);
+}
+
+.hc-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.hc-item{
+  padding:14px;
+  border-radius:16px;
+  background:var(--cream);
+  border:1px solid var(--border-light);
+}
+
+.hc-item-label{
+  font-size:11px;
+  color:var(--muted);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:4px;
+}
+
+.hc-item-val{
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:22px;
+  color:var(--ink);
+}
+
+.hc-item-sub{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.hc-quote{
+  padding:16px;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--sage),var(--sage-light));
+  color:#fff;
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:14px;
+  line-height:1.35;
+  letter-spacing:-.01em;
+  position:relative;
+  z-index:1;
+}
+
+.hc-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+.hc-chip{
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(14,17,23,.05);
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  border:1px solid var(--border-light);
+}
+
 section{padding:80px 0}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sage);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
-.eyebrow::before{content:"";width:24px;height:1.5px;background:var(--sage);border-radius:2px}
-h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-bottom:14px}
-.section-desc{font-size:16px;color:var(--muted);max-width:60ch;line-height:1.65}
-.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
-.stats-band{background:var(--ink);border-radius:28px;padding:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;overflow:hidden;position:relative}
-.stats-band::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 0% 50%,rgba(92,107,74,.2),transparent 60%),radial-gradient(400px 300px at 100% 50%,rgba(10,147,150,.15),transparent 60%);pointer-events:none}
-.stat-item{text-align:center;padding:32px 24px;position:relative;z-index:1}
-.stat-item:not(:last-child)::after{content:"";position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.1)}
-.stat-val{font-family:'Syne',sans-serif;font-size:clamp(52px,6vw,80px);font-weight:800;line-height:1;letter-spacing:-.05em;color:var(--white);margin-bottom:10px}
-.stat-label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--sage);
+  font-size:11.5px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:24px;
+  height:1.5px;
+  background:var(--sage);
+  border-radius:2px;
+}
+
+h2{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(28px,3vw,44px);
+  font-weight:800;
+  letter-spacing:-.04em;
+  line-height:1.05;
+  margin-bottom:14px;
+}
+
+.section-desc{
+  font-size:16px;
+  color:var(--muted);
+  max-width:60ch;
+  line-height:1.65;
+}
+
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+}
+
+.stats-band{
+  background:var(--ink);
+  border-radius:28px;
+  padding:48px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  overflow:hidden;
+  position:relative;
+}
+
+.stats-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(600px 300px at 0% 50%,rgba(92,107,74,.2),transparent 60%),
+    radial-gradient(400px 300px at 100% 50%,rgba(10,147,150,.15),transparent 60%);
+  pointer-events:none;
+}
+
+.stat-item{
+  text-align:center;
+  padding:32px 24px;
+  position:relative;
+  z-index:1;
+}
+
+.stat-item:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:20%;
+  height:60%;
+  width:1px;
+  background:rgba(255,255,255,.1);
+}
+
+.stat-val{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(52px,6vw,80px);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.05em;
+  color:var(--white);
+  margin-bottom:10px;
+}
+
+.stat-label{
+  font-size:13px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  font-weight:600;
+}
+
 .cards-grid{display:grid;gap:14px}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 .g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:24px;transition:.22s ease;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;bottom:-60px;right:-60px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(92,107,74,.07),transparent 70%);pointer-events:none}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(14,17,23,.09);border-color:rgba(92,107,74,.25)}
-.card h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
-.card p{font-size:14.5px;color:var(--muted);line-height:1.6}
-.tag{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border-radius:999px;background:var(--sage-pale);border:1px solid rgba(92,107,74,.18);color:var(--sage);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
-.tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--sage)}
-.step-num{width:38px;height:38px;border-radius:12px;background:var(--ink);color:var(--white);font-family:'Syne',sans-serif;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.slogan{background:linear-gradient(135deg,var(--sage) 0%,var(--sage-light) 60%,var(--teal) 100%);border-radius:28px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
-.slogan::after{content:"";position:absolute;right:-80px;bottom:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.08);pointer-events:none}
-.slogan::before{content:"";position:absolute;left:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
-.slogan-quote{font-family:'Syne',sans-serif;font-size:clamp(24px,3vw,38px);font-weight:800;letter-spacing:-.04em;color:#fff;line-height:1.05;max-width:18ch;position:relative;z-index:1}
-.slogan-text{color:rgba(255,255,255,.75);font-size:15px;max-width:400px;line-height:1.65;position:relative;z-index:1}
-.brands-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:28px;padding:28px;box-shadow:0 8px 32px rgba(14,17,23,.05)}
-.brands-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.brand-tile{height:80px;border-radius:14px;border:1.5px solid var(--border-light);background:var(--cream);display:flex;align-items:center;justify-content:center;padding:10px;transition:.2s ease}
-.brand-tile:hover{border-color:rgba(92,107,74,.25);background:var(--white)}
-.brand-tile img{max-height:48px;width:auto;object-fit:contain}
-.premium{background:var(--white);border:1.5px solid var(--border);border-radius:28px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;box-shadow:0 8px 32px rgba(14,17,23,.05);margin-bottom:14px}
-.premium p{color:var(--muted);max-width:620px;font-size:15.5px;line-height:1.65;margin-top:12px}
-.cta-band{background:var(--ink-2);border-radius:28px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
-.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 0% 100%,rgba(92,107,74,.18),transparent 60%);pointer-events:none}
-.cta-band h2{color:var(--white);position:relative;z-index:1}
-.cta-band p{color:rgba(255,255,255,.55);max-width:540px;font-size:15px;line-height:1.65;position:relative;z-index:1}
-.cta-actions{position:relative;z-index:1}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.contact-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:28px;transition:.2s ease}
-.contact-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(14,17,23,.08)}
-.contact-card h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
-.contact-card p{font-size:14.5px;color:var(--muted);margin-bottom:16px}
-.contact-info{font-size:14px;color:var(--muted);line-height:1.65}
-.cat-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:24px;transition:.22s ease}
-.cat-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(14,17,23,.09);border-color:rgba(92,107,74,.25)}
-.cat-card h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
-.cat-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px}
-footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color:var(--muted);font-size:13.5px}
-.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:20px}
-.footer-brand-name{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;color:var(--ink);letter-spacing:-.02em}
-.footer-slogan{font-family:'Syne',sans-serif;font-weight:700;color:var(--sage);font-size:14px;margin-top:3px}
-.footer-links{display:flex;gap:6px;flex-wrap:wrap}
-.footer-links a{padding:7px 12px;border-radius:9px;font-size:13px;color:var(--muted);font-weight:500;border:1px solid var(--border-light);background:var(--white);transition:.15s ease}
-.footer-links a:hover{color:var(--sage);border-color:rgba(92,107,74,.25)}
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:95;display:none}
-.wa-float a{display:inline-flex;align-items:center;gap:10px;padding:0 20px;height:52px;border-radius:999px;background:linear-gradient(135deg,var(--sage),var(--sage-light));color:#fff;font-weight:700;font-size:14px;box-shadow:0 16px 40px rgba(92,107,74,.32);transition:.2s ease}
-.wa-float a:hover{transform:translateY(-2px);box-shadow:0 20px 50px rgba(92,107,74,.36)}
-.wa-dot{width:9px;height:9px;border-radius:50%;background:#fff;opacity:.7;animation:pulse 1.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.4);opacity:1}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.show{opacity:1;transform:translateY(0)}
+
+.card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--r-xl);
+  padding:24px;
+  transition:.22s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  bottom:-60px;
+  right:-60px;
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(92,107,74,.07),transparent 70%);
+  pointer-events:none;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(14,17,23,.09);
+  border-color:rgba(92,107,74,.25);
+}
+
+.card h3{
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+
+.card p{
+  font-size:14.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:var(--sage-pale);
+  border:1px solid rgba(92,107,74,.18);
+  color:var(--sage);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:14px;
+}
+
+.tag::before{
+  content:"";
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--sage);
+}
+
+.step-num{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:var(--ink);
+  color:var(--white);
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+}
+
+.slogan{
+  background:linear-gradient(135deg,var(--sage) 0%,var(--sage-light) 60%,var(--teal) 100%);
+  border-radius:28px;
+  padding:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+  position:relative;
+  overflow:hidden;
+}
+
+.slogan::after{
+  content:"";
+  position:absolute;
+  right:-80px;
+  bottom:-80px;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  pointer-events:none;
+}
+
+.slogan::before{
+  content:"";
+  position:absolute;
+  left:-60px;
+  top:-60px;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  pointer-events:none;
+}
+
+.slogan-quote{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(24px,3vw,38px);
+  font-weight:800;
+  letter-spacing:-.04em;
+  color:#fff;
+  line-height:1.05;
+  max-width:18ch;
+  position:relative;
+  z-index:1;
+}
+
+.slogan-text{
+  color:rgba(255,255,255,.75);
+  font-size:15px;
+  max-width:400px;
+  line-height:1.65;
+  position:relative;
+  z-index:1;
+}
+
+.brands-wrap{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 8px 32px rgba(14,17,23,.05);
+}
+
+.brands-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
+}
+
+.brand-tile{
+  height:80px;
+  border-radius:14px;
+  border:1.5px solid var(--border-light);
+  background:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+  transition:.2s ease;
+}
+
+.brand-tile:hover{
+  border-color:rgba(92,107,74,.25);
+  background:var(--white);
+}
+
+.brand-tile img{
+  max-height:48px;
+  width:auto;
+  object-fit:contain;
+}
+
+.premium{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:28px;
+  padding:40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+  box-shadow:0 8px 32px rgba(14,17,23,.05);
+  margin-bottom:14px;
+}
+
+.premium p{
+  color:var(--muted);
+  max-width:620px;
+  font-size:15.5px;
+  line-height:1.65;
+  margin-top:12px;
+}
+
+.cta-band{
+  background:var(--ink-2);
+  border-radius:28px;
+  padding:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+  position:relative;
+  overflow:hidden;
+}
+
+.cta-band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(700px 400px at 0% 100%,rgba(92,107,74,.18),transparent 60%);
+  pointer-events:none;
+}
+
+.cta-band h2{
+  color:var(--white);
+  position:relative;
+  z-index:1;
+}
+
+.cta-band p{
+  color:rgba(255,255,255,.55);
+  max-width:540px;
+  font-size:15px;
+  line-height:1.65;
+  position:relative;
+  z-index:1;
+}
+
+.cta-actions{
+  position:relative;
+  z-index:1;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.contact-card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--r-xl);
+  padding:28px;
+  transition:.2s ease;
+}
+
+.contact-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 40px rgba(14,17,23,.08);
+}
+
+.contact-card h3{
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-.02em;
+  margin-bottom:6px;
+}
+
+.contact-card p{
+  font-size:14.5px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.contact-info{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.cat-card{
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:var(--r-xl);
+  padding:24px;
+  transition:.22s ease;
+}
+
+.cat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(14,17,23,.09);
+  border-color:rgba(92,107,74,.25);
+}
+
+.cat-card h3{
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+
+.cat-card p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:16px;
+}
+
+footer{
+  border-top:1.5px solid var(--border);
+  padding:40px 0;
+  margin-top:40px;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+.footer-grid{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.footer-brand-name{
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  font-size:17px;
+  color:var(--ink);
+  letter-spacing:-.02em;
+}
+
+.footer-slogan{
+  font-family:'Manrope',sans-serif;
+  font-weight:700;
+  color:var(--sage);
+  font-size:14px;
+  margin-top:3px;
+}
+
+.footer-links{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  padding:7px 12px;
+  border-radius:9px;
+  font-size:13px;
+  color:var(--muted);
+  font-weight:500;
+  border:1px solid var(--border-light);
+  background:var(--white);
+  transition:.15s ease;
+}
+
+.footer-links a:hover{
+  color:var(--sage);
+  border-color:rgba(92,107,74,.25);
+}
+
+.wa-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:95;
+  display:none;
+}
+
+.wa-float a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:0 20px;
+  height:52px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--sage),var(--sage-light));
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 16px 40px rgba(92,107,74,.32);
+  transition:.2s ease;
+}
+
+.wa-float a:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 50px rgba(92,107,74,.36);
+}
+
+.wa-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#fff;
+  opacity:.7;
+  animation:pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:.7}
+  50%{transform:scale(1.4);opacity:1}
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
 @media(max-width:1100px){
   .hero-grid{grid-template-columns:1fr}
   .g4{grid-template-columns:repeat(2,1fr)}
   .brands-grid{grid-template-columns:repeat(4,1fr)}
   .contact-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:820px){
-  nav.desk,.header-inner .btn-primary{display:none}
+  nav.desk,
+  .header-inner .btn-primary{display:none}
   .menu-btn{display:flex}
   .section-head{display:block}
   .section-head > *{margin-bottom:12px}
 }
+
 @media(max-width:700px){
   .wrap{padding:0 20px}
   section{padding:56px 0}
@@ -219,6 +1031,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
   .wa-float{display:block}
   .contact-grid{grid-template-columns:1fr}
 }
+
 @media(prefers-reduced-motion:reduce){
   .reveal,.card,.btn{transition:none!important}
   html{scroll-behavior:auto}
@@ -238,6 +1051,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <div class="brand-sub">Distribuição médica profissional</div>
       </div>
     </a>
+
     <nav class="desk">
       <a href="#solucao">Solução</a>
       <a href="#diferenciais">Diferenciais</a>
@@ -246,6 +1060,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
       <a href="#como-funciona">Como funciona</a>
       <a href="#contato">Contato</a>
     </nav>
+
     <div style="display:flex;align-items:center;gap:10px">
       <a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20receber%20o%20cat%C3%A1logo%20da%20J2M%20Medical." target="_blank" rel="noopener">Catálogo no WhatsApp</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
@@ -271,27 +1086,36 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
 <section class="hero" id="topo">
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
+
   <div class="wrap">
     <div class="hero-grid">
       <div class="reveal">
         <div class="hero-label">Distribuição B2B · Mato Grosso do Sul</div>
         <h1>Distribuição médica com <em>resposta rápida</em> para quem não pode parar</h1>
-        <p class="hero-desc">A <strong>J2M Medical</strong> atende hospitais, clínicas, consultórios, veterinárias, farmácias e outros estabelecimentos de saúde com <strong>agilidade comercial</strong>, operação confiável e <strong>entrega em até 24h no MS</strong>.</p>
+
+        <p class="hero-desc">
+          A <strong>J2M Medical</strong> atende hospitais, clínicas, consultórios, veterinárias, farmácias e outros estabelecimentos de saúde com
+          <strong>agilidade comercial</strong>, operação confiável e <strong>entrega em até 24h no MS</strong>.
+        </p>
+
         <div class="hero-ctas">
           <a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20receber%20o%20cat%C3%A1logo%20da%20J2M%20Medical%20e%20falar%20com%20o%20time%20comercial." target="_blank" rel="noopener">Receber catálogo no WhatsApp</a>
           <a class="btn btn-ghost" href="#solucao">Conhecer a solução</a>
         </div>
+
         <div class="hero-trust">
           <div class="hero-trust-item"><div class="dot"></div>+500 clientes atendidos</div>
           <div class="hero-trust-item"><div class="dot"></div>+800 produtos</div>
           <div class="hero-trust-item"><div class="dot"></div>5 anos de história</div>
         </div>
       </div>
+
       <div class="hero-card reveal">
         <div class="hc-header">
           <div class="hc-title">Operação J2M</div>
           <div class="hc-badge">Ativo</div>
         </div>
+
         <div class="hc-grid">
           <div class="hc-item">
             <div class="hc-item-label">Entrega</div>
@@ -314,7 +1138,9 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
             <div class="hc-item-sub">tipos de operação</div>
           </div>
         </div>
+
         <div class="hc-quote">"Cada caixa que sai daqui impacta uma vida."</div>
+
         <div class="hc-chips">
           <span class="hc-chip">Resposta rápida</span>
           <span class="hc-chip">Entrega confiável</span>
@@ -322,6 +1148,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         </div>
       </div>
     </div>
+
     <div class="stats-band reveal" style="margin-top:56px">
       <div class="stat-item">
         <div class="stat-val" data-target="500" data-prefix="+">0</div>
@@ -357,12 +1184,14 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Medicamentos, controlados, soros, materiais médicos e itens de uso contínuo com atendimento rápido e organização comercial.</p>
       </div>
     </div>
+
     <div class="cards-grid g4 reveal" style="margin-bottom:14px">
       <div class="card"><div style="font-size:22px;margin-bottom:12px">⚡</div><h3>Menos urgência</h3><p>Mais previsibilidade para sua rotina de compra e reposição.</p></div>
       <div class="card"><div style="font-size:22px;margin-bottom:12px">🔄</div><h3>Menos fricção</h3><p>Processo mais simples entre cotação, pedido e entrega.</p></div>
       <div class="card"><div style="font-size:22px;margin-bottom:12px">📦</div><h3>Mais continuidade</h3><p>Operação pensada para reduzir quebra de abastecimento.</p></div>
       <div class="card"><div style="font-size:22px;margin-bottom:12px">🤝</div><h3>Mais confiança</h3><p>Atendimento comercial com foco em resposta e consistência.</p></div>
     </div>
+
     <div class="cards-grid g3 reveal">
       <article class="card"><div class="tag">Reposição recorrente</div><h3>Materiais de rotina</h3><p>Luvas, seringas, agulhas, gazes, máscaras, papel lençol e outros itens de alto giro para manter a operação fluindo com padrão.</p></article>
       <article class="card"><div class="tag">Linha clínica</div><h3>Soros e soluções</h3><p>Itens essenciais para a rotina assistencial com atendimento mais organizado e suporte comercial ágil.</p></article>
@@ -381,6 +1210,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
       </div>
       <a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20falar%20com%20o%20time%20comercial%20da%20J2M%20Medical." target="_blank" rel="noopener">Falar com o comercial</a>
     </div>
+
     <div class="cards-grid g4 reveal">
       <article class="card"><div class="step-num" style="background:var(--sage)">→</div><h3>Resposta rápida</h3><p>Agilidade real para atender cotações, reposições e demandas da rotina comercial.</p></article>
       <article class="card"><div class="step-num" style="background:var(--teal)">📍</div><h3>Cobertura logística</h3><p>Estrutura voltada ao atendimento de Campo Grande e do interior do Mato Grosso do Sul.</p></article>
@@ -399,6 +1229,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Estrutura comercial preparada para realidades de consumo, reposição e urgência diferentes.</p>
       </div>
     </div>
+
     <div class="cards-grid g3 reveal">
       <article class="card"><h3>Hospitais e clínicas</h3><p>Abastecimento com agilidade para operações assistenciais de alta exigência.</p></article>
       <article class="card"><h3>Consultórios e ambulatórios</h3><p>Reposição organizada para rotinas clínicas que dependem de continuidade.</p></article>
@@ -419,6 +1250,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Parcerias selecionadas para fortalecer qualidade, regularidade de abastecimento e segurança na operação.</p>
       </div>
     </div>
+
     <div class="brands-wrap reveal">
       <div class="brands-grid">
         <div class="brand-tile"><img src="m01.jpg" alt="Fornecedor 01" loading="lazy"></div>
@@ -447,6 +1279,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Você pode iniciar pelos itens de maior consumo e validar prazo, atendimento e consistência da operação.</p>
       </div>
     </div>
+
     <div class="cards-grid g4 reveal">
       <article class="card"><div class="step-num">1</div><h3>Escolha seu segmento</h3><p>Direcionamos o atendimento conforme a realidade da sua operação.</p></article>
       <article class="card"><div class="step-num">2</div><h3>Envie sua lista</h3><p>Pode ser lista atual, foto do pedido ou relação dos itens de maior consumo.</p></article>
@@ -465,6 +1298,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Clique no seu segmento e fale direto com o time comercial da J2M Medical.</p>
       </div>
     </div>
+
     <div class="cards-grid g3 reveal">
       <div class="cat-card"><h3>Hospital / Clínica</h3><p>Itens de maior consumo e reposição organizada para rotina assistencial.</p><a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20o%20cat%C3%A1logo%20do%20segmento%20Hospital%20e%20Cl%C3%ADnica." target="_blank" rel="noopener">Receber no WhatsApp</a></div>
       <div class="cat-card"><h3>Consultório</h3><p>Itens essenciais para manter a rotina clínica com mais previsibilidade.</p><a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20o%20cat%C3%A1logo%20do%20segmento%20Consult%C3%B3rio." target="_blank" rel="noopener">Receber no WhatsApp</a></div>
@@ -484,6 +1318,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <h2>Também apoiamos ações de doação</h2>
         <p>Atendemos pessoas e empresas que desejam doar fraldas e itens essenciais para asilos e instituições com mais clareza e agilidade.</p>
       </div>
+
       <div class="cta-actions">
         <a class="btn btn-ghost" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20apoio%20para%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20uma%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar sobre doação</a>
       </div>
@@ -500,11 +1335,29 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <p class="section-desc">Atendimento comercial rápido para receber catálogo, iniciar cotação ou estruturar sua rotina de reposição.</p>
       </div>
     </div>
+
     <div class="contact-grid reveal">
-      <div class="contact-card"><h3>WhatsApp comercial</h3><p>Canal direto para catálogo, cotação e tratativas rápidas.</p><a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20falar%20com%20o%20comercial%20da%20J2M%20Medical." target="_blank" rel="noopener">+55 (67) 99806-8866</a></div>
-      <div class="contact-card"><h3>E-mail institucional</h3><p>Canal para contato comercial e demandas administrativas.</p><a class="btn btn-ghost" href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a></div>
-      <div class="contact-card"><h3>Base operacional</h3><p class="contact-info">Rua Eugênio Silvério, 105<br>Bairro Nova Lima<br>Campo Grande-MS</p></div>
-      <div class="contact-card"><h3>Cobertura logística</h3><p class="contact-info">Campo Grande com atendimento contínuo e entregas em até <strong>24h no Mato Grosso do Sul</strong>.</p></div>
+      <div class="contact-card">
+        <h3>WhatsApp comercial</h3>
+        <p>Canal direto para catálogo, cotação e tratativas rápidas.</p>
+        <a class="btn btn-primary" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20falar%20com%20o%20comercial%20da%20J2M%20Medical." target="_blank" rel="noopener">+55 (67) 99806-8866</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>E-mail institucional</h3>
+        <p>Canal para contato comercial e demandas administrativas.</p>
+        <a class="btn btn-ghost" href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Base operacional</h3>
+        <p class="contact-info">Rua Eugênio Silvério, 105<br>Bairro Nova Lima<br>Campo Grande-MS</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Cobertura logística</h3>
+        <p class="contact-info">Campo Grande com atendimento contínuo e entregas em até <strong>24h no Mato Grosso do Sul</strong>.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -518,6 +1371,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <div class="footer-brand-name">J2M Medical</div>
         <div class="footer-slogan">Cada caixa que sai daqui impacta uma vida.</div>
       </div>
+
       <div class="footer-links">
         <a href="#solucao">Solução</a>
         <a href="#segmentos">Quem atendemos</a>
@@ -525,6 +1379,7 @@ footer{border-top:1.5px solid var(--border);padding:40px 0;margin-top:40px;color
         <a href="#contato">Contato</a>
       </div>
     </div>
+
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:20px;border-top:1px solid var(--border-light);color:var(--muted);font-size:13px">
       <span><strong style="color:var(--ink)">CNPJ:</strong> 36.257.986/0001-27 · Rua Eugênio Silvério, 105 · Nova Lima · Campo Grande-MS</span>
       <span>WhatsApp: +55 (67) 99806-8866 · contato@j2mmedical.com.br</span>
@@ -547,11 +1402,13 @@ window.addEventListener('scroll', () => {
 
 const menuBtn = document.getElementById('menuBtn');
 const mobileNav = document.getElementById('mobileNav');
+
 menuBtn.addEventListener('click', () => {
   const open = mobileNav.classList.toggle('open');
   menuBtn.classList.toggle('open', open);
   menuBtn.setAttribute('aria-expanded', String(open));
 });
+
 mobileNav.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     mobileNav.classList.remove('open');
@@ -563,30 +1420,42 @@ mobileNav.querySelectorAll('a').forEach(a => {
 const animCounter = el => {
   const target = +el.dataset.target;
   const prefix = el.dataset.prefix || '';
-  const dur = 1800, start = performance.now();
+  const dur = 1800;
+  const start = performance.now();
+
   const tick = now => {
     const p = Math.min((now - start) / dur, 1);
     const ease = 1 - Math.pow(1 - p, 3);
     el.textContent = prefix + Math.floor(target * ease);
+
     if (p < 1) requestAnimationFrame(tick);
     else el.textContent = prefix + target;
   };
+
   requestAnimationFrame(tick);
 };
 
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+    if (e.isIntersecting) {
+      e.target.classList.add('show');
+      obs.unobserve(e.target);
+    }
   });
 }, { threshold: 0.12 });
+
 reveals.forEach(r => obs.observe(r));
 
 const cObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) { animCounter(e.target); cObs.unobserve(e.target); }
+    if (e.isIntersecting) {
+      animCounter(e.target);
+      cObs.unobserve(e.target);
+    }
   });
 }, { threshold: 0.5 });
+
 document.querySelectorAll('.stat-val').forEach(c => cObs.observe(c));
 </script>
 </body>
