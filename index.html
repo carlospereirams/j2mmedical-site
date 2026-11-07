@@ -67,15 +67,30 @@ footer .logo img{height:72px}footer .lg{background:#fff;border-radius:20px;paddi
 .rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
 @media(max-width:1000px){.hg,.fm,.pn{grid-template-columns:1fr}.g4{grid-template-columns:repeat(2,1fr)}.bgd{grid-template-columns:repeat(4,1fr)}nav.d,.hi>.btn{display:none}.mb{display:block}}
 @media(max-width:640px){.g3,.g4,.r2,.stats{grid-template-columns:1fr}.bgd{grid-template-columns:repeat(3,1fr)}section{padding:56px 0}.hero{padding:48px 0;margin:0 10px}.hi{height:84px}.mn{inset:84px 0 0}.logo img,.logo-fb{height:64px}.band{padding:32px 24px;margin:0 10px}.pn{padding:28px 22px}}
+.lic-hd{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-bottom:20px}
+.lic-msg{background:var(--deep);color:#fff;border-radius:30px;padding:38px}.lic-msg h3{font-size:26px;line-height:1.15;margin-bottom:14px}.lic-msg p{color:rgba(255,255,255,.82);font-size:15.5px;margin-bottom:10px}
+.lic-why{display:grid;gap:12px}.lic-why .c{display:flex;gap:16px;align-items:flex-start;padding:20px 22px}.lic-why .ic{margin:0;flex-shrink:0}.lic-why h3{font-size:16px;margin-bottom:4px}
+.lic{display:flex;flex-direction:column;gap:8px}.lic .org{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.lic h3{font-size:16.5px}.lic .num{font:700 14px Manrope,sans-serif;color:var(--ink)}.lic p{font-size:13.5px}.lic .val{font-size:12.5px;color:var(--muted)}
+.bdg{align-self:flex-start;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;background:var(--pale);color:var(--deep)}.bdg.r{background:#fdf0d5;color:#8a5a00}
+.lic .btn{height:42px;margin-top:auto;font-size:13.5px}
+.lic-note{margin-top:20px;font-size:14px;color:var(--muted);text-align:center}.lic-note a{color:var(--sage);font-weight:600;text-decoration:underline}
+@media(max-width:1000px){.lic-hd{grid-template-columns:1fr}}
+.chk{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.chk li{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:#fff;border:1.5px solid var(--line);font-size:14.5px}
+.chk li::before{content:"✓";flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--pale);color:var(--sage);font-weight:800;display:flex;align-items:center;justify-content:center}
+.alt{background:#fdf0d5;border:1.5px solid #ecd49a;color:#5f4100;border-radius:22px;padding:20px 24px;font-size:15px;display:flex;gap:14px;align-items:flex-start}.alt b{color:#4a3200}
+.emb-h{font-size:20px;margin:26px 0 0}
+@media(max-width:700px){.chk{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header id="hd"><div class="wrap hi">
 <a class="logo" href="#topo" aria-label="J2M Medical"><img data-logo alt="J2M Medical" width="200" height="90"></a>
-<nav class="d"><a href="#segmentos">Segmentos</a><a href="#produtos">Produtos</a><a href="#diferenciais">Diferenciais</a><a href="#marcas">Marcas</a><a href="#faq">Dúvidas</a></nav>
+<nav class="d"><a href="#segmentos">Segmentos</a><a href="#produtos">Produtos</a><a href="#diferenciais">Diferenciais</a><a href="#licencas">Licenças</a><a href="#marcas">Marcas</a><a href="#faq">Dúvidas</a></nav>
 <a class="btn bp" href="#cotacao">Solicitar cotação</a><button class="mb" id="mb" aria-label="Menu">☰</button></div></header>
-<nav class="mn" id="mn"><a href="#segmentos">Segmentos</a><a href="#produtos">Produtos</a><a href="#diferenciais">Diferenciais</a><a href="#marcas">Marcas</a><a href="#faq">Dúvidas</a><a class="btn bp" href="#cotacao">Solicitar cotação</a></nav>
+<nav class="mn" id="mn"><a href="#segmentos">Segmentos</a><a href="#produtos">Produtos</a><a href="#diferenciais">Diferenciais</a><a href="#licencas">Licenças</a><a href="#marcas">Marcas</a><a href="#faq">Dúvidas</a><a class="btn bp" href="#cotacao">Solicitar cotação</a></nav>
 
 <main id="topo">
 <div class="hero"><div class="wrap hg">
@@ -83,7 +98,7 @@ footer .logo img{height:72px}footer .lg{background:#fff;border-radius:20px;paddi
 <h1>Abastecimento de saúde com <em>resposta rápida</em> e operação confiável</h1>
 <p class="hd">A J2M Medical fornece medicamentos, soros, materiais médicos e itens de uso contínuo para hospitais, clínicas, consultórios, veterinárias e farmácias, com cotação ágil e atendimento comercial direto.</p>
 <div class="cta"><a class="btn bw" href="#cotacao">Solicitar cotação</a><a class="btn bp" style="background:rgba(255,255,255,.16);box-shadow:none" href="#segmentos">Ver catálogo do meu nicho</a></div>
-<div class="chips"><span>Cotação rápida</span><span>Envio nacional</span><span>Catálogo por segmento</span></div></div>
+<div class="chips"><span>Cotação rápida</span><span>Envio nacional</span><span>Catálogo por segmento</span><span>Embalagem original lacrada</span><span>Empresa regularizada: Anvisa, Vigilância Sanitária e CRF-MS</span></div></div>
 <div class="logocard rv"><img data-logo alt="J2M Medical" width="200" height="90"><q>“Cada caixa que sai daqui impacta uma vida.”</q><small>Distribuição médica profissional</small></div>
 </div></div>
 
@@ -124,6 +139,48 @@ footer .logo img{height:72px}footer .lg{background:#fff;border-radius:20px;paddi
 <div class="c"><div class="sn">4</div><h3>Estruture a reposição</h3><p>Rotina de compra mais padronizada e previsível.</p></div>
 </div></div></section>
 
+<section id="licencas" style="padding-top:0"><div class="wrap">
+<div class="sh rv"><div class="ey">Segurança e conformidade</div><h2>Distribuir saúde exige autorização. Aqui, tudo está documentado.</h2><p class="sd">Operação regularizada, com autorizações sanitárias, fiscais e profissionais que você pode conferir.</p></div>
+<div class="lic-hd rv">
+<div class="lic-msg"><h3>Por que a regularização do seu fornecedor importa?</h3>
+<p>Medicamentos e produtos para saúde só podem ser distribuídos por empresas autorizadas pela Anvisa e pela Vigilância Sanitária, com farmacêutico responsável técnico à frente da operação.</p>
+<p>Comprar de quem não tem essa regularização pode expor o seu estabelecimento a produtos de origem incerta, falta de rastreabilidade e problemas em fiscalizações.</p>
+<p><b>Na J2M, cada autorização está documentada e pode ser verificada por você.</b></p></div>
+<div class="lic-why">
+<div class="c"><div class="ic">🔎</div><div><h3>Origem segura e rastreável</h3><p>Fornecedor autorizado ajuda a comprovar a procedência de cada item que chega ao seu estoque.</p></div></div>
+<div class="c"><div class="ic">🛡️</div><div><h3>Tranquilidade na fiscalização</h3><p>Compra de empresa regularizada facilita a sua conformidade com a vigilância sanitária.</p></div></div>
+<div class="c"><div class="ic">⚕️</div><div><h3>Responsável técnico farmacêutico</h3><p>Operação acompanhada por farmacêutica inscrita no CRF-MS (nº 5763).</p></div></div>
+</div></div>
+<div class="g g4 rv" id="licGrid"></div>
+<p class="lic-note rv">Confira a autenticidade: consulte as autorizações no portal <a href="https://consultas.anvisa.gov.br" target="_blank" rel="noopener">consultas.anvisa.gov.br</a> e a certidão do CRF-MS em <a href="http://crfms.org.br" target="_blank" rel="noopener">crfms.org.br</a>.</p>
+</div></section>
+
+<section id="embalagem" style="padding-top:0"><div class="wrap">
+<div class="sh rv"><div class="ey">Compromisso de procedência</div><h2>Medicamento seguro chega lacrado, na embalagem original do fabricante.</h2><p class="sd">A J2M Medical é distribuidora atacadista: armazenamos, vendemos e transportamos os produtos exatamente como saem do fabricante. Não fracionamos nem reembalamos: cada embalagem comercial sai inteira e lacrada, como veio do fabricante.</p></div>
+<div class="lic-hd rv">
+<div class="lic-msg"><h3>Distribuidora não é farmácia. E isso importa para você.</h3>
+<p>Segundo a Anvisa (RDC nº 80/2006, art. 10), o fracionamento de medicamentos é privativo de farmácias e drogarias regularizadas. Uma distribuidora não pode fracionar.</p>
+<p>Quando uma caixa é aberta, dividida ou reembalada fora desse contexto, perdem-se informações essenciais, como lote, validade e registro, e a integridade do produto deixa de ser garantida.</p>
+<p><b>Por isso, na J2M você recebe cada item como o fabricante entregou: embalagem íntegra, lacrada e identificada.</b></p></div>
+<div class="lic-why">
+<div class="c"><div class="ic">🏷️</div><div><h3>Rastreabilidade preservada</h3><p>Lote, validade, registro e dados do fabricante permanecem visíveis em cada embalagem.</p></div></div>
+<div class="c"><div class="ic">🧪</div><div><h3>Integridade do produto</h3><p>Sem abrir nem reembalar, reduz-se o risco de contaminação, troca de produto e perda de estabilidade, principalmente em injetáveis.</p></div></div>
+<div class="c"><div class="ic">📋</div><div><h3>Segurança para o seu estabelecimento</h3><p>Produto íntegro e com documentação regular facilita a comprovação de procedência em fiscalizações e auditorias.</p></div></div>
+</div></div>
+<div class="alt rv"><span style="font-size:24px">⚠️</span><div><b>Atenção redobrada com injetáveis e controlados.</b> Nesses produtos, a rastreabilidade e a integridade são ainda mais críticas. Não compre injetáveis ou medicamentos controlados soltos, fora da caixa do fabricante ou com etiquetas improvisadas.</div></div>
+<h3 class="emb-h rv">Checklist antes de comprar de qualquer distribuidor</h3>
+<ul class="chk rv">
+<li>Embalagem lacrada, íntegra e com lote, validade e registro impressos pelo fabricante.</li>
+<li>Nota fiscal com descrição, lote e quantidade compatíveis com o que você recebeu.</li>
+<li>Autorização de Funcionamento (AFE) e, para controlados, Autorização Especial válidas, conferidas no portal da Anvisa.</li>
+<li>Farmacêutico responsável técnico identificado e certidão de regularidade do CRF em dia.</li>
+<li>Desconfie de preço muito abaixo do mercado, caixas abertas, ampolas ou frascos soltos e etiquetas improvisadas.</li>
+<li>Suspeitou de irregularidade? Comunique a Vigilância Sanitária do seu município e a Anvisa.</li>
+</ul>
+<p class="lic-note rv" style="margin:14px 0 0">Fonte: <a href="https://www.gov.br/anvisa/pt-br/acessoainformacao/perguntasfrequentes/administrativo/autorizacao-de-funcionamento-afe-ou-ae/distribuidora-importadora-e-transportadora" target="_blank" rel="noopener">Anvisa, perguntas frequentes sobre distribuidoras</a>.</p>
+<p class="lic-note rv"><a href="#licencas">Conferir as licenças da J2M</a> · <a href="#cotacao">Solicitar cotação</a></p>
+</div></section>
+
 <section id="marcas" style="padding-top:0"><div class="wrap">
 <div class="sh rv"><div class="ey">Marcas</div><h2>Fornecedores reconhecidos no mercado</h2><p class="sd">Parcerias selecionadas para garantir qualidade e regularidade de abastecimento.</p></div>
 <div class="bw2 rv"><div class="bgd" id="bg"></div></div>
@@ -145,6 +202,7 @@ footer .logo img{height:72px}footer .lg{background:#fff;border-radius:20px;paddi
 <details><summary>Vocês entregam em todo o Brasil?</summary><p>Sim. Atendemos clientes de todo o país. O prazo e o frete variam conforme a região e são informados na cotação.</p></details>
 <details><summary>Existe pedido mínimo?</summary><p>As condições dependem do segmento e dos itens. Envie sua lista e retornamos com a melhor proposta.</p></details>
 <details><summary>Como funciona a venda de controlados?</summary><p>Itens controlados exigem documentação e cadastro regulares. Nosso time comercial orienta todo o processo.</p></details>
+<details><summary>A J2M fraciona ou reembala medicamentos?</summary><p>Não. Somos distribuidora atacadista e entregamos os produtos na embalagem original do fabricante, lacrada, com lote e validade preservados.</p></details>
 <details><summary>Posso receber o catálogo antes de comprar?</summary><p>Claro. Escolha seu segmento acima e receba o catálogo direto no WhatsApp.</p></details>
 </div></div></section>
 
@@ -154,7 +212,7 @@ footer .logo img{height:72px}footer .lg{background:#fff;border-radius:20px;paddi
 
 <footer><div class="wrap fi">
 <div><span class="lg logo"><img data-logo alt="J2M Medical" width="200" height="90"></span></div>
-<div style="text-align:right;line-height:1.8"><b>J2M Medical</b> · CNPJ 36.257.986/0001-27<br>Campo Grande/MS<br><!-- Se houver: AFE ANVISA nº ____ · Licença Sanitária nº ____ · Resp. Técnico: ____ (CRF-MS ____) --><a href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a> · +55 (67) 99806-8866</div>
+<div style="text-align:right;line-height:1.8"><b>J2M Medical</b> · CNPJ 36.257.986/0001-27<br>Campo Grande/MS<br><span style="font-size:12.5px">AFE Anvisa 1.44051.0 · AE 1.44052.3 · Licença Sanitária nº 94156 · Resp. Técnica: Ana Carla Santana dos Santos (CRF-MS 5763)</span><br><a href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a> · +55 (67) 99806-8866</div>
 </div></footer>
 <a class="wa" id="wa" target="_blank" rel="noopener"><i></i>WhatsApp</a>
 
@@ -177,6 +235,18 @@ wa.href=wl("Olá! Quero receber o catálogo da J2M Medical.");
 f.onsubmit=e=>{e.preventDefault();const seg=sel.value==="outro"?"Outro":S[sel.value][0];
 open(wl(`Olá! Sou ${n.value}, da empresa ${e.value||document.getElementById("e").value}.\nSegmento: ${seg}\nCidade/UF: ${c.value||"-"}\nItens de interesse: ${i.value||"-"}\nQuero uma cotação.`),"_blank")};
 bg.innerHTML=Array.from({length:12},(_,k)=>{const x=String(k+1).padStart(2,"0");return `<div class="bt"><img src="m${x}.jpg" alt="Marca parceira ${x}" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`}).join("");
+const LIC=[
+{o:"Anvisa",t:"AFE · Medicamentos",n:"nº 1.44051.0",d:"Autorizada a armazenar, distribuir e expedir medicamentos.",v:"Publicada no DOU em 23/09/2026",f:"lic-afe-medicamentos.pdf"},
+{o:"Anvisa",t:"Autorização Especial · Controlados",n:"nº 1.44052.3",d:"Medicamentos sujeitos a controle especial (Portaria SVS/MS 344/98).",v:"Publicada no DOU em 23/09/2026",f:"lic-ae-controlados.pdf"},
+{o:"Anvisa",t:"AFE · Produtos para saúde",n:"Processo 25351.169830/2026-49",d:"Autorizada a distribuir produtos para saúde.",v:"Publicada no DOU em 23/09/2026",f:"lic-afe-produtos-saude.pdf"},
+{o:"Anvisa",t:"AFE · Saneantes",n:"nº 3.15841.0",d:"Armazenar, distribuir e expedir saneantes domissanitários.",v:"Publicada no DOU em 23/09/2026",f:"lic-afe-saneantes.pdf"},
+{o:"Anvisa",t:"AFE · Cosméticos e higiene",n:"nº 2.12907.1",d:"Cosméticos, perfumes e produtos de higiene.",v:"Publicada no DOU em 23/09/2026",f:"lic-afe-cosmeticos.pdf"},
+{o:"Vigilância Sanitária Municipal",t:"Licença Sanitária",n:"nº 94156",d:"Comércio atacadista de medicamentos, materiais médico-hospitalares, cosméticos e saneantes.",v:"Validade: 29/10/2027",e:"2027-10-29",f:"lic-licenca-sanitaria.pdf"},
+{o:"CRF-MS",t:"Certidão de Regularidade",n:"Cadastro nº 7765",d:"Distribuidora de medicamentos com responsável técnica farmacêutica (CRF-MS 5763).",v:"Validade: 05/02/2027",e:"2027-02-05",f:"lic-certidao-crf-ms.pdf"},
+{o:"Prefeitura de Campo Grande",t:"Alvará de Funcionamento",n:"Inscrição 00347829005",d:"Localização e funcionamento da atividade atacadista.",v:"Válido até 31/03/2027",e:"2027-03-31",f:"lic-alvara-funcionamento.pdf"}
+];
+licGrid.innerHTML=LIC.map(l=>{const ok=!l.e||new Date(l.e+"T23:59:59")>=new Date();const b=l.e?(ok?"Vigente":"Em renovação"):"Concedida";
+return `<article class="c lic"><span class="org">${l.o}</span><h3>${l.t}</h3><span class="num">${l.n}</span><p>${l.d}</p><span class="val">${l.v}</span><span class="bdg${ok?"":" r"}">${b}</span><a class="btn bg" href="${l.f}" target="_blank" rel="noopener">Ver documento (PDF)</a></article>`}).join("");
 const H=document.getElementById("hd");addEventListener("scroll",()=>H.classList.toggle("s",scrollY>20),{passive:true});
 mb.onclick=()=>mn.classList.toggle("o");mn.querySelectorAll("a").forEach(a=>a.onclick=()=>mn.classList.remove("o"));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.1});
