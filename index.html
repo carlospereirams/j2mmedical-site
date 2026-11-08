@@ -88,6 +88,15 @@ img{max-width:100%}
 .c,.lic-msg,.pn,.alt,.chk li,form label{overflow-wrap:anywhere}
 .wa{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 28px)}
 .cat{display:flex;flex-direction:column;gap:6px;min-height:150px}.cat .n{font:800 30px/1 Manrope,sans-serif;color:var(--sage)}.cat h3{font-size:16px;margin:0}.cat .go{margin-top:auto;font-size:13px;font-weight:600;color:var(--sage)}
+footer{background:#e2e4de;color:#566055;padding:60px 0 92px;border-top:1px solid rgba(16,23,15,.08)}
+footer b{color:#2b312a}
+.fg{display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:40px;align-items:start}
+footer h4{font:700 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2b312a;margin-bottom:14px}
+footer .fg>div:not(:first-child){display:grid;gap:8px;align-content:start;font-size:14px}
+footer a:not(.logo){transition:.2s}footer a:not(.logo):hover{color:var(--sage)}
+.fsl{margin-top:16px;font:800 17px/1.3 Manrope,sans-serif;color:var(--deep);max-width:20ch}
+.fb{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid rgba(16,23,15,.12);font-size:13px}
+@media(max-width:800px){.fg{grid-template-columns:1fr;gap:28px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -223,9 +232,13 @@ img{max-width:100%}
 <a class="btn bw" target="_blank" rel="noopener" href="https://wa.me/5567998068866?text=Ol%C3%A1%21%20Quero%20apoio%20para%20fazer%20uma%20doa%C3%A7%C3%A3o%20para%20uma%20institui%C3%A7%C3%A3o.">Falar sobre doação</a></div>
 </main>
 
-<footer><div class="wrap fi">
-<div><span class="lg logo"><img data-logo alt="J2M Medical" width="200" height="90"></span></div>
-<div style="text-align:right;line-height:1.8"><b>J2M Medical</b> · CNPJ 36.257.986/0001-27<br>Campo Grande/MS<br><span style="font-size:12.5px">AFE Anvisa 1.44051.0 · AE 1.44052.3 · Licença Sanitária nº 94156 · Resp. Técnica: Ana Carla Santana dos Santos (CRF-MS 5763)</span><br><a href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a> · +55 (67) 99806-8866</div>
+<footer><div class="wrap">
+<div class="fg">
+<div><a class="logo" href="#topo" aria-label="J2M Medical"><img data-logo alt="J2M Medical" width="200" height="90"></a><p class="fsl">Cada caixa que sai daqui impacta uma vida.</p></div>
+<div><h4>Contato</h4><a href="https://wa.me/5567998068866" target="_blank" rel="noopener">WhatsApp +55 (67) 99806-8866</a><a href="mailto:contato@j2mmedical.com.br">contato@j2mmedical.com.br</a><a href="#cotacao">Solicitar cotação</a></div>
+<div><h4>Regularização</h4><span>AFE Anvisa 1.44051.0</span><span>Autorização Especial 1.44052.3</span><span>Licença Sanitária nº 94156</span><span>Resp. Técnica: Ana Carla Santana dos Santos · CRF-MS 5763</span><a href="#licencas">Ver documentos</a></div>
+</div>
+<div class="fb"><span><b>J2M Medical</b> · CNPJ 36.257.986/0001-27 · Campo Grande/MS</span><span>© 2026 J2M Medical. Todos os direitos reservados.</span></div>
 </div></footer>
 <a class="wa" id="wa" target="_blank" rel="noopener"><i></i>WhatsApp</a>
 
